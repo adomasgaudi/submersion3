@@ -1,0 +1,59 @@
+
+
+
+
+
+//fonts
+    h1 { font-size: 50px;}
+
+    @media only screen and (max-width: 600px) {
+        h1{ font-size: 30px;}
+       }
+
+
+
+// COLORS 
+
+       section:nth-child(odd) {background-color: aliceblue;};
+    //    section {background-color: aliceblue;}
+
+
+
+
+section{
+    width: 100%;
+    
+    .container{ 
+        max-width: 800px; margin: auto;}
+    .box{    }
+    .card{ }
+}
+
+
+@media only screen and (max-width: 600px) {
+ 
+}
+
+
+
+header {
+
+}
+
+@media only screen and (max-width: 600px) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
