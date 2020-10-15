@@ -16,7 +16,7 @@ section:nth-child(odd) {
 }
 
 header {
-  background-color: black;
+  background-color: darkcyan;
   color: white;
 }
 header a {
