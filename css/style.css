@@ -16,7 +16,7 @@ section:nth-child(odd) {
 }
 
 header {
-  background-color: darkcyan;
+  background-color: #006161;
   color: white;
 }
 header a {
@@ -43,7 +43,6 @@ section .container {
   max-width: 800px;
   width: 80%;
   margin: auto;
-  padding: 100px;
 }
 header {
   width: 100%;
@@ -53,7 +52,6 @@ header .container {
   max-width: 800px;
   width: 80%;
   margin: auto;
-  padding: 1px;
 }
 header span {
   display: inline-block;
