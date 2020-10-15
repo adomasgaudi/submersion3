@@ -49,7 +49,11 @@
     }
 
 
-
+    aside {
+        
+        background-color: lightcoral;
+        .container{background-color: lightcoral;}
+    }
 
 
 
@@ -68,8 +72,27 @@
 
 body {
     margin: 0;
+    
+}
+
+.all{
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+main{
     min-height: 100vh;
 }
+
+
+aside{
+    min-height: 100vh;
+    height: 100vh;
+    max-width: 20%;
+}
+
+
 
 
 section{
@@ -79,10 +102,10 @@ section{
     .container{ 
         max-width: 800px; width: 80% ; margin: auto;
         //inside
-        
+        padding: 1% 0;
     }
+    .card{ display: block;}
     .box{    }
-    .card{ }
 }
 
 @media only screen and (max-width: 600px) {
@@ -112,13 +135,15 @@ header {
 
 
 footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     min-height: 40px;
 
     .container{
         max-width: 800px; width: 80%; margin: auto;
+        //IN
+        padding: 1px 0;
     }
 }
 

@@ -31,9 +31,31 @@ footer a {
   color: white;
 }
 
+aside {
+  background-color: lightcoral;
+}
+aside .container {
+  background-color: lightcoral;
+}
+
 body {
   margin: 0;
+}
+
+.all {
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+main {
   min-height: 100vh;
+}
+
+aside {
+  min-height: 100vh;
+  height: 100vh;
+  max-width: 20%;
 }
 
 section {
@@ -43,6 +65,10 @@ section .container {
   max-width: 800px;
   width: 80%;
   margin: auto;
+  padding: 1% 0;
+}
+section .card {
+  display: block;
 }
 header {
   width: 100%;
@@ -59,7 +85,7 @@ header span {
 }
 
 footer {
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
   min-height: 40px;
@@ -68,4 +94,5 @@ footer .container {
   max-width: 800px;
   width: 80%;
   margin: auto;
+  padding: 1px 0;
 }
