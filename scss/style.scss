@@ -9,6 +9,16 @@
     @media only screen and (max-width: 600px) {
         h1{ font-size: 30px;}
        }
+    
+    
+
+
+
+
+
+
+
+
 
 
 
@@ -17,6 +27,31 @@
        section:nth-child(odd) {background-color: aliceblue;};
     //    section {background-color: aliceblue;}
 
+       header {
+            background-color: black;
+            color: white;
+                a{color: white}
+        }
+       footer {
+            background-color: black;
+            color: white;
+                a{color: white}
+        }
+       
+
+
+
+
+
+
+
+
+body {
+    margin: 0;
+}
+
+
+
 
 
 
@@ -24,7 +59,7 @@ section{
     width: 100%;
     
     .container{ 
-        max-width: 800px; margin: auto;}
+        max-width: 800px; width: 80% ; margin: auto;}
     .box{    }
     .card{ }
 }
@@ -37,7 +72,13 @@ section{
 
 
 header {
-
+    width: 100%;
+    min-height: 20px;
+    
+    .container{
+        max-width: 800px; width: 80%; margin: auto;
+    }
+    
 }
 
 @media only screen and (max-width: 600px) {
@@ -48,7 +89,14 @@ header {
 
 
 
+footer {
+    width: 100%;
+    min-height: 20px;
 
+    .container{
+        max-width: 800px; width: 80%; margin: auto;
+    }
+}
 
 
 
