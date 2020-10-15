@@ -29,6 +29,7 @@ footer a {
 
 body {
   margin: 0;
+  min-height: 100vh;
 }
 
 section {
@@ -41,17 +42,24 @@ section .container {
 }
 header {
   width: 100%;
-  min-height: 20px;
+  min-height: 40px;
 }
 header .container {
   max-width: 800px;
   width: 80%;
   margin: auto;
+  padding: 1px;
+}
+header span {
+  display: inline-block;
+  margin: 1rem;
 }
 
 footer {
+  position: fixed;
+  bottom: 0;
   width: 100%;
-  min-height: 20px;
+  min-height: 40px;
 }
 footer .container {
   max-width: 800px;

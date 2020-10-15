@@ -48,6 +48,7 @@
 
 body {
     margin: 0;
+    min-height: 100vh;
 }
 
 
@@ -73,11 +74,16 @@ section{
 
 header {
     width: 100%;
-    min-height: 20px;
+    min-height: 40px;
     
     .container{
         max-width: 800px; width: 80%; margin: auto;
+        //inner
+        padding: 1px;
     }
+    span {
+        display: inline-block; 
+        margin: 1rem; }
     
 }
 
@@ -90,8 +96,10 @@ header {
 
 
 footer {
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    min-height: 20px;
+    min-height: 40px;
 
     .container{
         max-width: 800px; width: 80%; margin: auto;
