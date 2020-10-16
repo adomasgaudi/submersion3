@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -7,12 +8,8 @@ body {
   min-height: 100vh;
 }
 
-header nav li, header nav a {
+header li, header a, footer li, footer a {
   color: white;
-}
-
-p, h1, h2 {
-  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -39,6 +36,10 @@ main {
 
 aside {
   background-color: lightcoral;
+}
+
+footer {
+  background-color: black;
 }
 
 header {
@@ -80,10 +81,15 @@ header nav li a {
   padding: 1rem;
 }
 
+@media only screen and (max-width: 600px) {
+  #brandimg {
+    display: none;
+  }
+}
 section {
   width: 100%;
   max-width: 100%;
-  min-height: 50px;
+  min-height: 100px;
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -102,12 +108,18 @@ aside {
   max-width: 250px;
   min-height: 100px;
 }
+aside .asideTop {
+  padding: 0 1rem;
+}
+aside .container {
+  padding: 1rem;
+}
 
 @media only screen and (max-width: 600px) {
   section {
     width: 100%;
     max-width: none;
-    min-height: 50px;
+    min-height: 100px;
     flex-direction: column;
   }
 
@@ -124,13 +136,29 @@ aside {
     min-height: 50px;
     margin: auto;
   }
-  aside .asideTop {
-    padding: 0 1rem;
-  }
-  aside .container {
-    padding: 1rem;
-  }
 }
-footer img {
-  width: 30px;
+footer {
+  margin-top: auto;
+}
+footer .container {
+  width: 80%;
+  max-width: calc(50% + 250px + 1rem);
+  min-height: 30px;
+  margin: auto;
+}
+footer .container ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+footer .container li a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.5rem;
+}
+footer .container li a .img {
+  background-color: red;
 }
