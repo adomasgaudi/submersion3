@@ -17,6 +17,7 @@ header{
     }
 }
 
+p, h1, h2{ font-family: 'Roboto', sans-serif; }
 
 
 //COLORS
@@ -42,7 +43,7 @@ header{ @include bgc( darkcyan);
 
 section{ @include bgc( lightgray ) }
 
-main{ @include bgc( lightsalmon ) }
+main{ @include bgc( lightgrey ) }
 
 aside{ @include bgc( lightcoral ) }
 
@@ -88,7 +89,7 @@ header{ @include box(100%, 100%, 30px);
     padding: 0;    
     
     nav{
-        @include box( 80%, 1200px, 30px );
+        @include box( 80%, calc(50% + 250px + 1rem), 30px );
         margin: auto; 
 
         
@@ -129,20 +130,65 @@ header{ @include box(100%, 100%, 30px);
 }
 
 
+
+
+
+
+//SECTION
+
   //     -----------  wid, maxw, minh
-section{ @include box(100%, 100%, 50px); 
-    display: flex; justify-content: center; 
+section{
+    @include box(100%, 100%, 50px); 
+    display: flex; justify-content: center; flex-direction: row;
+    padding-top: 2rem;
+
 }
+
+
 
 
 main{ @include box( 50%, none, 100px); margin-right: 1rem; ;}
 
 aside{ @include box(30%, 250px, 100px) }
 
-footer{}
 
 
 
 
 
+@media only screen and (max-width: 600px) {
+    section{
+        @include box( 100%, none, 50px );
+        flex-direction: column;
+    }
+    main{
+        @include box( 95%, none, 50px );
+        margin: auto;
+    }
+    aside {
+        @include box( 95%, none, 50px );
+        margin: auto;
+        //IN
+        .asideTop {
+            padding:  0 1rem; 
+        }
+        .container {
+            padding: 1rem;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    img{width: 30px;}
+}
 
