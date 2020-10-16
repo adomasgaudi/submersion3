@@ -96,3 +96,7 @@ footer .container {
   margin: auto;
   padding: 1px 0;
 }
+footer img {
+  width: 30px;
+  height: auto;
+}
