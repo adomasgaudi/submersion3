@@ -6,6 +6,7 @@
 body {
   margin: 0;
   min-height: 100vh;
+  position: relative;
 }
 
 header li, header a, footer li, footer a {
@@ -13,7 +14,7 @@ header li, header a, footer li, footer a {
 }
 
 body {
-  background-color: lightgray;
+  background-color: whitesmoke;
 }
 
 header {
@@ -27,11 +28,11 @@ header nav li a:hover {
 }
 
 section {
-  background-color: lightgray;
+  background-color: whitesmoke;
 }
 
 main {
-  background-color: lightgrey;
+  background-color: whitesmoke;
 }
 
 aside {
@@ -137,8 +138,20 @@ aside .container {
     margin: auto;
   }
 }
+.main-container {
+  min-height: 100vh;
+  /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 50px;
+  /* height of your footer */
+}
+
 footer {
-  margin-top: auto;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 footer .container {
   width: 80%;

@@ -3,7 +3,7 @@
 *{   box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
  }
-body{ margin: 0; min-height: 100vh;}
+body{ margin: 0; min-height: 100vh; position:relative;}
 
 //TEST
 
@@ -30,7 +30,7 @@ header, footer{
 
 
 
-body{ @include bgc(lightgray) };
+body{ @include bgc(whitesmoke) };
 
 header{ @include bgc( darkcyan);
     nav{
@@ -43,9 +43,9 @@ header{ @include bgc( darkcyan);
 
 
 
-section{ @include bgc( lightgray ) }
+section{ @include bgc( whitesmoke ) }
 
-main{ @include bgc( lightgrey ) }
+main{ @include bgc( whitesmoke ) }
 
 aside{ @include bgc( lightcoral ) }
 
@@ -193,13 +193,20 @@ aside{ @include box(30%, 250px, 100px) ;
 
 
 
-
-
+.main-container {
+    min-height: 100vh; /* will cover the 100% of viewport */
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 50px; /* height of your footer */
+   }
+   
 
 footer{
-    
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 
-    margin-top:auto;
 
     .container{
         @include box( 80%, calc(50% + 250px + 1rem), 30px );
