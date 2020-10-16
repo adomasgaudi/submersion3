@@ -11,23 +11,32 @@
     <link rel="stylesheet" href="/css/style.css">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
 
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"> </script>
+     
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <!-- <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script> -->
     <!-- <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script> -->
+    <script > 
+        $( function(){  
+            $("header").load("/html/reusable/header.html");
+            $("footer").load("/html/reusable/footer.html")
+        });
+    </script>
 </head>
 <body>
     
 
     <div class="main-container">
         
-            <header id="header"></header>
+            <header id="header" ></header>
         
         
         
             <section>
                 <main>
                     <div class="container">
-                        <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, unde!</h1>
+                        <h1 id="h1" onclick="runbtn()"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, unde!</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, unde! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, voluptas. Quam repudiandae eum corrupti ducimus. Molestiae, tempore! Eveniet necessitatibus quibusdam fuga sed itaque ullam nihil numquam recusandae explicabo molestias, repellat fugiat earum perspiciatis expedita consequuntur vel eaque beatae iure perferendis. Soluta dolores recusandae repellat autem aliquid et voluptatem quasi, consequuntur voluptate quam voluptatibus iusto nobis, maiores eum delectus accusantium ut quo magni. Asperiores suscipit a est excepturi neque facilis delectus ut reiciendis vitae? Enim saepe placeat, repudiandae eum Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ipsam minima consequuntur nulla, eligendi voluptatum facere? Similique amet debitis, voluptate magnam unde atque nostrum sunt nemo suscipit, ad aliquam vel odio blanditiis at impedit illo facere eum? Odio error est voluptas mollitia fugit totam eos odit neque, tempora illum at repellendus dolorum sapiente aut laborum, laudantium asperiores ea atque beatae iure veniam, id consequuntur quasi possimus! Quo sunt architecto ullam doloribus! Eum debitis laborum quod aliquam enim perspiciatis nesciunt ab, temporibus tempora obcaecati laboriosam, praesentium eius maiores quidem itaque dolorum eos id quam? Nemo in perferendis voluptates et eos tenetur delectus id architecto autem eveniet tempora sunt ducimus culpa rerum deserunt unde, pariatur ea temporibus? Nihil molestiae odit aperiam amet nam, quo, aut deleniti harum excepturi expedita omnis assumenda aspernatur neque eum! Eum impedit quam tempore veniam, asperiores ipsa ut consequatur nulla iusto debitis similique temporibus odio voluptatibus quasi perferendis, magni hic vel laborum iure, molestias explicabo nihil nesciunt dolor error. Repudiandae, eveniet? Sapiente pariatur alias, ipsa optio et quidem aliquid vero eveniet maiores? Omnis soluta, qui sint quo repellendus magni minima cupiditate pariatur nemo aliquid, quaerat tempore obcaect voluptates a error veritatis minima amet nobis animi porro eos, vero saepe. Sint sit quos error eum magni commodi dolore quo praesentium officia inventore vero dicta nisi amet quod possimus ducimus iusto dolorum nesciunt, esse in, maiores suscipit ut incidunt. Vero aliquid, deleniti veniam praesentium qui alias nisi tenetur! dolorem minus, rem quas corrupti, ipsam veritatis suscipit hic minima. Eum cupiditate corporis repellat dolorum cum ab, dolor exercitationem quae, quisquam, odit velit. Dolor provident explicabo veritatis modi dolorem, sequi quisquam fugit ipsa esse repellendus voluptas tempore sunt fugiat magnam! Sunt, dignissimos tempore? Molestiae quibusdam quaerat dolores voluptas nostrum? Deleniti porro, quia fugit voluptatem facilis enim volt nobis. Eius quas, qui numquam officia obcaecati asperiores perferendis incidunt placeat beatae libero excepturi voluptate cumque iusto porro commodi, error quaerat sint in m!</p>
                     </div>
                 </main>
@@ -56,17 +65,10 @@
 
 
 
-     <!-- JQUERY -->
-     <script src="https://code.jquery.com/jquery-3.5.1.js"> </script>
      <!-- BOOTSTRAP -->
      <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script> -->
      <!-- LOAD PARTS -->
-     <script > 
-         $( function(){  
-             $("header").load("/html/reusable/header.html");
-             $("footer").load("/html/reusable/footer.html")
-         });
-     </script>
+    
  
      <!-- FIREBASE -->
      
