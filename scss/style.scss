@@ -1,6 +1,11 @@
 
 
-*{box-sizing: border-box; }
+*{   box-sizing: border-box; }
+body{ margin: 0; min-height: 100vh;}
+
+//TEST
+
+// *{border: 1px solid black;}
 
 //FONTS
 
@@ -18,12 +23,16 @@ header{
 @mixin bgc($col){
     background-color: $col;
 }
-body{ @include bgc(lightcoral) };
+
+
+
+
+body{ @include bgc(lightgray) };
 
 header{ @include bgc( darkcyan);
     nav{
-        @include bgc( darkgreen );
-        li a:hover{background-color: #111;}
+        @include bgc( darkcyan );
+        li a:hover{background-color: rgb(0, 82, 82);}
     }
 }
 
@@ -31,24 +40,14 @@ header{ @include bgc( darkcyan);
 
 
 
-
-
-
-
-
-
-
-
-
-//-----------------------------------
 section{ @include bgc( lightgray ) }
 
-main{}
+main{ @include bgc( lightsalmon ) }
 
-aside{}
+aside{ @include bgc( lightcoral ) }
 
 
-//-----------------------------------
+
 
 footer{}
 
@@ -59,8 +58,21 @@ footer{}
 
 
 
-//SECTIONS
 
+
+
+
+
+
+
+
+
+
+
+//SECTIONS -----------------------------------
+//SECTIONS -----------------------------------
+
+    //wid, maxw, minh
     @mixin box($w, $maxw, $minh){
         width: $w;
         max-width: $maxw;
@@ -69,15 +81,15 @@ footer{}
 
 
 
-body{ margin: 0; min-height: 100vh;}
 
+  //wid, maxw, minh
 header{ @include box(100%, 100%, 30px);
     //IN
-    padding: 1rem;    
+    padding: 0;    
     
     nav{
         @include box( 80%, 1200px, 30px );
-        margin: auto;
+        margin: auto; 
 
         
                 ul {
@@ -86,10 +98,20 @@ header{ @include box(100%, 100%, 30px);
                     overflow: hidden;
                     //IN
                     padding: 0;
+                    display: flex;
+                    align-content: center;
+                    align-items: center;
+                    
                 }
                 
                 li {
+                    
                     float: left;
+                    &:first-child a{
+                        position: relative;
+                        top: 6px;
+                        padding: 0 1rem 0 0 ;
+                    }
                     &:last-child {
                         float: right;
                     }
@@ -97,26 +119,25 @@ header{ @include box(100%, 100%, 30px);
                         display: block;
                         text-align: center;
                         text-decoration: none;
-                        padding: 14px 16px;
+                        padding: 1rem;
+                       
                     }
                 }
-                
-                
-
-
-
 
     }
 
-    
 }
 
-section{ @include box(100%, 100%, 50px)}
+
+  //     -----------  wid, maxw, minh
+section{ @include box(100%, 100%, 50px); 
+    display: flex; justify-content: center; 
+}
 
 
-main{}
+main{ @include box( 50%, none, 100px); margin-right: 1rem; ;}
 
-aside{}
+aside{ @include box(30%, 250px, 100px) }
 
 footer{}
 

@@ -2,38 +2,46 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
 header nav li, header nav a {
   color: white;
 }
 
 body {
-  background-color: lightcoral;
+  background-color: lightgray;
 }
 
 header {
   background-color: darkcyan;
 }
 header nav {
-  background-color: darkgreen;
+  background-color: darkcyan;
 }
 header nav li a:hover {
-  background-color: #111;
+  background-color: #005252;
 }
 
 section {
   background-color: lightgray;
 }
 
-body {
-  margin: 0;
-  min-height: 100vh;
+main {
+  background-color: lightsalmon;
+}
+
+aside {
+  background-color: lightcoral;
 }
 
 header {
   width: 100%;
   max-width: 100%;
   min-height: 30px;
-  padding: 1rem;
+  padding: 0;
 }
 header nav {
   width: 80%;
@@ -46,9 +54,17 @@ header nav ul {
   margin: 0;
   overflow: hidden;
   padding: 0;
+  display: flex;
+  align-content: center;
+  align-items: center;
 }
 header nav li {
   float: left;
+}
+header nav li:first-child a {
+  position: relative;
+  top: 6px;
+  padding: 0 1rem 0 0;
 }
 header nav li:last-child {
   float: right;
@@ -57,11 +73,26 @@ header nav li a {
   display: block;
   text-align: center;
   text-decoration: none;
-  padding: 14px 16px;
+  padding: 1rem;
 }
 
 section {
   width: 100%;
   max-width: 100%;
   min-height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  width: 50%;
+  max-width: none;
+  min-height: 100px;
+  margin-right: 1rem;
+}
+
+aside {
+  width: 30%;
+  max-width: 250px;
+  min-height: 100px;
 }
