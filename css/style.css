@@ -2,12 +2,22 @@
   box-sizing: border-box;
 }
 
+header nav li, header nav a {
+  color: white;
+}
+
 body {
-  background-color: red;
+  background-color: lightcoral;
 }
 
 header {
   background-color: darkcyan;
+}
+header nav {
+  background-color: darkgreen;
+}
+header nav li a:hover {
+  background-color: #111;
 }
 
 section {
@@ -16,12 +26,38 @@ section {
 
 body {
   margin: 0;
+  min-height: 100vh;
 }
 
 header {
   width: 100%;
   max-width: 100%;
   min-height: 30px;
+  padding: 1rem;
+}
+header nav {
+  width: 80%;
+  max-width: 1200px;
+  min-height: 30px;
+  margin: auto;
+}
+header nav ul {
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+header nav li {
+  float: left;
+}
+header nav li:last-child {
+  float: right;
+}
+header nav li a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 14px 16px;
 }
 
 section {

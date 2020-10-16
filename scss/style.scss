@@ -4,7 +4,13 @@
 
 //FONTS
 
-
+header{
+    nav{
+        li, a{
+            color: white;
+        }
+    }
+}
 
 
 
@@ -12,9 +18,26 @@
 @mixin bgc($col){
     background-color: $col;
 }
-body{ @include bgc(red) };
+body{ @include bgc(lightcoral) };
 
-header{ @include bgc( darkcyan) }
+header{ @include bgc( darkcyan);
+    nav{
+        @include bgc( darkgreen );
+        li a:hover{background-color: #111;}
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //-----------------------------------
@@ -38,15 +61,55 @@ footer{}
 
 //SECTIONS
 
-@mixin box($w, $maxw, $minh){
-    width: $w;
-    max-width: $maxw;
-    min-height: $minh;
+    @mixin box($w, $maxw, $minh){
+        width: $w;
+        max-width: $maxw;
+        min-height: $minh;
+    }
+
+
+
+body{ margin: 0; min-height: 100vh;}
+
+header{ @include box(100%, 100%, 30px);
+    //IN
+    padding: 1rem;    
+    
+    nav{
+        @include box( 80%, 1200px, 30px );
+        margin: auto;
+
+        
+                ul {
+                    list-style-type: none;
+                    margin: 0;
+                    overflow: hidden;
+                    //IN
+                    padding: 0;
+                }
+                
+                li {
+                    float: left;
+                    &:last-child {
+                        float: right;
+                    }
+                    a{
+                        display: block;
+                        text-align: center;
+                        text-decoration: none;
+                        padding: 14px 16px;
+                    }
+                }
+                
+                
+
+
+
+
+    }
+
+    
 }
-
-body{ margin: 0;}
-
-header{ @include box(100%, 100%, 30px)}
 
 section{ @include box(100%, 100%, 50px)}
 
