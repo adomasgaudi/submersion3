@@ -1,3 +1,31 @@
 * {
   box-sizing: border-box;
 }
+
+body {
+  background-color: red;
+}
+
+header {
+  background-color: darkcyan;
+}
+
+section {
+  background-color: lightgray;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  max-width: 100%;
+  min-height: 30px;
+}
+
+section {
+  width: 100%;
+  max-width: 100%;
+  min-height: 50px;
+}

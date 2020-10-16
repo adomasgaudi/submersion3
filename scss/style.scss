@@ -9,6 +9,56 @@
 
 
 //COLORS
+@mixin bgc($col){
+    background-color: $col;
+}
+body{ @include bgc(red) };
+
+header{ @include bgc( darkcyan) }
+
+
+//-----------------------------------
+section{ @include bgc( lightgray ) }
+
+main{}
+
+aside{}
+
+
+//-----------------------------------
+
+footer{}
+
+
+
+
+
+
+
 
 //SECTIONS
+
+@mixin box($w, $maxw, $minh){
+    width: $w;
+    max-width: $maxw;
+    min-height: $minh;
+}
+
+body{ margin: 0;}
+
+header{ @include box(100%, 100%, 30px)}
+
+section{ @include box(100%, 100%, 50px)}
+
+
+main{}
+
+aside{}
+
+footer{}
+
+
+
+
+
 
