@@ -1,4 +1,5 @@
-// alert();
+alert("10/17/2020 21:13");
+console.log("10/17/2020 21:13")
 // Check if a new cache is available on page load.
 // window.addEventListener('load', function(e) {
 
