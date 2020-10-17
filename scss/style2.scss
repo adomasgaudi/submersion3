@@ -1,0 +1,172 @@
+
+
+@import './resets';
+@import './variables';
+
+
+
+
+body{ margin: 0; min-height: 100vh; position: relative;};
+
+//TEST 
+
+*{border: border(o)}
+
+
+$bgc: "background:";
+
+
+
+
+
+
+
+
+
+
+// --------------------------------------------------
+
+// FONTS  ---------------------------------------
+
+*{font-family: 'Roboto', sans-serif;}
+h1{ font-size: 50px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// COLORS -------------------------------------
+
+    body{ @include col(light, o ) ; }
+
+
+
+    header{
+        @include col(col1, o );
+
+        nav{
+            @include col(col1, w);
+            li a{ color: font(w) };
+            li a:hover{@include col(col1d, w)}    
+        }
+    }
+
+    
+
+
+
+    section{ 
+        
+        @include col(light, o );
+
+        main{ @include col(light, o )}
+        aside{ @include col(col1l, o)}
+    }
+
+
+
+
+
+
+    footer{ 
+        @include col(col1d, w);
+        li a{ color: font(w) };
+        li a:hover{@include col(col1d, w)}  
+        
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//SECTIONS ----------------------------------
+
+
+
+
+
+
+body{}
+
+.main-content{}
+
+
+
+
+
+
+header{}
+
+
+
+
+
+
+
+
+
+
+
+section{}
+main{}
+aside{}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

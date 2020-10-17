@@ -1,0 +1,135 @@
+
+$breakIpadpro: 1100px ;
+$breakIpad: 768px ;
+$breakPlus: 430px;
+$breakPhone: 400px ;
+$breakSmall: 350px ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//COLORS ------------------------
+
+
+//color map
+$col: (
+    "dark": rgb(31, 31, 31),
+    "light": rgb(221, 221, 221),
+    "col1": rgb(1, 94, 94),
+    "col1l": rgb(134, 202, 202),
+    "col1d": rgb(0, 51, 51),
+    "col2": rgba(235, 154, 154, 0.616),
+
+
+    //fonts
+    "f-light": white,
+    "f-dark": rgb(24, 24, 24),
+);
+
+@function colmap($name){
+    @return map-get($col, $name);
+}
+
+@function font($font_types){
+    @if $font_types == w {
+        @return map-get($col, f-light);
+    }
+    @else {
+        @return map-get($col, f-dark);
+    }
+}
+
+@mixin col($bg_col, $font_type ) {
+    
+    background: colmap($bg_col);
+    color: font($font_type);
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// flex plus media direction
+@mixin flex($direction){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+
+
+$cdark: black;
+$clight: white;
+
+
+
+
+
+
+
+
+
+
+
+//SIZE ----------------------------------------
+@mixin box($w, $maxw, $minh){
+    width: $w;
+    max-width: $maxw;
+    min-height: $minh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// TEST ----------------------------------------
+@function border($on){
+    @if $on == on { @return 1px solid black; }
+    @else {@return 0px }
+}
+
+
+
+
