@@ -90,7 +90,7 @@ $col: (
 
 @mixin flex($direction){
     display: flex;
-    flex-direction: $direction;
+    flex-flow: $direction wrap;
 }
 
 

@@ -13,7 +13,7 @@ body {
 * {
   outline-color: rgba(139, 3, 3, 0.514);
   outline-width: thin;
-  outline-style: none;
+  outline-style: dotted(o);
 }
 
 * {
@@ -39,6 +39,10 @@ header {
   color: #181818;
 }
 header nav {
+  background: #015e5e;
+  color: white;
+}
+header nav li {
   background: #015e5e;
   color: white;
 }
@@ -114,45 +118,44 @@ header nav {
   max-width: calc(50% + 250px);
   min-height: 30px;
   margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 header nav #brandimg2 {
   display: none;
 }
 header nav ul {
+  align-self: flex-end;
   list-style-type: none;
   overflow: hidden;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-flow: row wrap;
 }
-header nav ul li {
-  float: left;
-  text-align: center;
-}
-header nav ul li:last-child {
-  float: right;
-}
-header nav ul li:first-child a {
-  position: relative;
-  padding: 0.5rem 1rem 0 1rem;
-}
-header nav ul li:nth-child(2) a {
-  position: relative;
-  padding: 0.5rem 1rem 0 1rem;
-}
-header nav ul li a {
+header nav ul a {
   display: block;
   text-align: center;
   padding: 1rem;
   margin: 0;
 }
-header nav ul li > button {
+header nav ul:first-child li {
+  text-align: center;
+}
+header nav ul:first-child li:first-child a {
+  position: relative;
+  padding: 0.5rem 1rem 0 1rem;
+}
+header nav ul:first-child li:nth-child(2) a {
+  position: relative;
+  padding: 0.5rem 1rem 0 1rem;
+}
+header nav ul:last-child li > button {
   display: block;
   text-align: center;
   padding: 1rem;
   margin: 0;
 }
-header nav ul li .screencover {
+header nav ul:last-child .screencover {
   display: none;
   position: absolute;
   top: 0;
@@ -161,7 +164,7 @@ header nav ul li .screencover {
   height: 100vh;
   background: rgba(7, 7, 7, 0.562);
 }
-header nav ul li .popup {
+header nav ul:last-child .popup {
   width: 250px;
   height: 400px;
   position: absolute;
@@ -184,7 +187,7 @@ section {
   max-width: 100%;
   min-height: 100px;
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   padding-top: 2rem;
@@ -196,11 +199,11 @@ main {
   min-height: 100px;
   padding-right: 1rem;
 }
-main .container {
+main .container p {
   border-left: 0.5rem solid #494949;
   padding-left: 0.5rem;
 }
-main .container:hover {
+main .container p:hover {
   transform: translateX(2px);
   transition: 0.2s;
   border-left: 0.5rem solid #242424;
@@ -222,7 +225,7 @@ aside .container {
 @media only screen and (max-width: 768px) {
   section {
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
   }
 
   main {
@@ -244,7 +247,7 @@ aside .container {
 @media only screen and (max-width: 430px) {
   section {
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
   }
 
   main {
@@ -277,7 +280,7 @@ footer .container {
 footer .container ul {
   list-style-type: none;
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   margin: 1rem 0;
