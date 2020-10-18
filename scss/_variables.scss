@@ -129,7 +129,7 @@ $clight: white;
 
 // TEST ----------------------------------------
 @function border($on){
-    @if $on == on { @return solid; }
+    @if $on == on { @return dotted; }
     @else {@return none }
 }
 

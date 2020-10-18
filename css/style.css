@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -10,81 +11,149 @@ body {
 }
 
 * {
-  border: 1px solid black;
+  outline-color: rgba(139, 3, 3, 0.514);
+  outline-width: thin;
+  outline-style: dotted;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 50px;
 }
 
 body {
-  background-color: whitesmoke;
+  background: #dddddd;
+  color: #181818;
 }
 
 header {
-  background-color: darkcyan;
-  color: white;
+  background: #015e5e;
+  color: #181818;
 }
 header nav {
-  background-color: darkcyan;
+  background: #015e5e;
+  color: white;
 }
-header nav li a:hover {
-  background-color: #005252;
+header nav li > a {
+  color: white;
+  text-decoration: none;
+}
+header nav li > button {
+  background: #015e5e;
+  color: white;
+  text-decoration: none;
+  border: none;
+}
+header nav li > a:hover {
+  background: #003333;
+  color: white;
+}
+header nav li > button:hover {
+  background: #003333;
+  color: white;
 }
 
 section {
-  background-color: whitesmoke;
+  background: #dddddd;
+  color: #181818;
 }
-
-main {
-  background: whitesmoke;
+section main {
+  background: #dddddd;
+  color: #181818;
 }
-
-aside {
-  background-color: #ec9494;
+section aside {
+  background: #86caca;
+  color: #181818;
 }
 
 footer {
+  background: #003333;
   color: white;
-  background-color: black;
+}
+footer li a {
+  color: white;
+}
+footer li a:hover {
+  background: #003333;
+  color: white;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 200px;
 }
 
 header {
   width: 100%;
   max-width: 100%;
   min-height: 30px;
-  padding: 0;
 }
 header nav {
   width: 80%;
-  max-width: calc(50% + 250px + 1rem);
+  max-width: calc(50% + 250 + 1rem);
   min-height: 30px;
   margin: auto;
 }
 header nav ul {
   list-style-type: none;
-  margin: 0;
   overflow: hidden;
-  padding: 0;
   display: flex;
-  align-content: center;
+  justify-content: center;
   align-items: center;
+  flex-direction: row;
 }
-header nav li {
+header nav ul li {
   float: left;
 }
-header nav li:first-child a {
+header nav ul li:last-child {
+  float: right;
+}
+header nav ul li:first-child a {
   position: relative;
   top: 6px;
   padding: 0 1rem 0 0;
 }
-header nav li:last-child {
-  float: right;
-}
-header nav li a {
+header nav ul li a {
   display: block;
   text-align: center;
-  text-decoration: none;
   padding: 1rem;
+  margin: 0;
+}
+header nav ul li > button {
+  display: block;
+  text-align: center;
+  padding: 1rem;
+  margin: 0;
+}
+header nav ul li .screencover {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(7, 7, 7, 0.562);
+}
+header nav ul li .popup {
+  display: none;
+  width: 250px;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: red;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 430px) {
   #brandimg {
     display: none;
   }
@@ -95,6 +164,7 @@ section {
   min-height: 100px;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: row;
   padding-top: 2rem;
 }
@@ -106,19 +176,20 @@ main {
   margin-right: 1rem;
 }
 main .container {
-  border-left: 0.5rem solid #6e6e6e;
+  border-left: 0.5rem solid #494949;
   padding-left: 0.5rem;
 }
 main .container:hover {
   transform: translateX(2px);
-  border-left: 0.5rem solid #383838;
   transition: 0.2s;
+  border-left: 0.5rem solid #242424;
 }
 
 aside {
   width: 30%;
   max-width: 250px;
   min-height: 100px;
+  align-self: flex-start;
 }
 aside .asideTop {
   padding: 0 1rem;
@@ -127,38 +198,54 @@ aside .container {
   padding: 1rem;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   section {
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  main {
+    width: 85%;
     max-width: none;
     min-height: 100px;
+    margin: auto;
+  }
+  main .container {
+    padding: 0 0 0 0.5rem;
+  }
+  aside {
+    width: 85%;
+    max-width: none;
+    min-height: 100px;
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 430px) {
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
   }
 
   main {
     width: 95%;
     max-width: none;
-    min-height: 50px;
+    min-height: 100px;
     margin: auto;
   }
-
+  main .container {
+    padding: 0 0 0 0.5rem;
+  }
   aside {
     width: 95%;
     max-width: none;
-    min-height: 50px;
+    min-height: 100px;
     margin: auto;
   }
 }
-.main-container {
-  min-height: 100vh;
-  /* will cover the 100% of viewport */
-  overflow: hidden;
-  display: block;
-  position: relative;
-  padding-bottom: 200px;
-  /* height of your footer */
-}
-
 footer {
   position: absolute;
   bottom: 0;
@@ -172,10 +259,10 @@ footer .container {
 }
 footer .container ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
 }
 footer .container li a {
   display: block;
@@ -184,80 +271,19 @@ footer .container li a {
   padding: 0.5rem;
 }
 footer .container li a .img {
-  background-color: red;
+  background: red;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-/* Button used to open the contact form - fixed at the bottom of the page */
-.open-button {
-  background-color: #555;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  opacity: 0.8;
-  bottom: 23px;
-  right: 28px;
-  width: 180px;
-}
-
-/* The popup form - hidden by default */
-.form-popup {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  right: 15px;
-  border: 3px solid #f1f1f1;
-  z-index: 9;
-}
-
-/* Add styles to the form container */
-.form-container {
-  max-width: 300px;
-  padding: 10px;
-  background-color: white;
-}
-
-/* Full-width input fields */
-.form-container input[type=text], .form-container input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
-}
-
-/* When the inputs get focus, do something */
-.form-container input[type=text]:focus, .form-container input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-/* Set a style for the submit/login button */
-.form-container .btn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom: 10px;
-  opacity: 0.8;
-}
-
-/* Add a red background color to the cancel button */
-.form-container .cancel {
-  background-color: red;
-}
-
-/* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
-  opacity: 1;
+@media only screen and (max-width: 430px) {
+  footer .container {
+    width: 95%;
+    max-width: 95%;
+    min-height: 30px;
+  }
+  footer .container ul {
+    margin: 1rem 0;
+  }
+  footer .container li a {
+    padding: 0 0.2rem;
+  }
 }

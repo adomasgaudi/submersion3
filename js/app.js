@@ -27,15 +27,17 @@
     //     console.log("alert");
     //   alert("console.log")
     // }
+
     console.log(document.getElementById("signupbtn"))
 
-
-
+   
     
-    function openForm() {
-        document.getElementById("myForm").style.display = "block";
-      }
-      
-      function closeForm() {
-        document.getElementById("myForm").style.display = "none";
-      }
+    
+    function popup_close(){
+      document.getElementById("popup").style.display = "none";
+      document.getElementById("screencover").style.display = "none";
+    }
+    function popup_open(){
+      document.getElementById("popup").style.display = "block";
+      document.getElementById("screencover").style.display = "block";
+    }
