@@ -126,11 +126,11 @@ header nav #brandimg2 {
   display: none;
 }
 header nav ul {
-  align-self: flex-end;
-  list-style-type: none;
-  overflow: hidden;
   display: flex;
   flex-flow: row wrap;
+  align-items: center;
+  list-style-type: none;
+  overflow: hidden;
 }
 header nav ul a {
   display: block;
@@ -141,18 +141,31 @@ header nav ul a {
 header nav ul:first-child li {
   text-align: center;
 }
-header nav ul:first-child li:first-child a {
+header nav ul:first-child li:nth-child(1) a {
   position: relative;
-  padding: 0.5rem 1rem 0 1rem;
+  top: 4px;
+  padding: 0.5rem 1rem;
 }
 header nav ul:first-child li:nth-child(2) a {
   position: relative;
-  padding: 0.5rem 1rem 0 1rem;
+  top: 4px;
+  padding: 0.5rem 1rem;
+}
+header nav ul:last-child {
+  display: flex;
+  align-items: center;
+}
+header nav ul:last-child li {
+  text-align: center;
+}
+header nav ul:last-child li a {
+  position: relative;
+  padding: 0.5rem 1rem;
 }
 header nav ul:last-child li > button {
   display: block;
   text-align: center;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   margin: 0;
 }
 header nav ul:last-child .screencover {
@@ -178,8 +191,36 @@ header nav ul:last-child .popup {
     display: none;
   }
 
+  header nav {
+    width: 85%;
+    max-width: none;
+    min-height: 20px;
+  }
   header nav #brandimg2 {
     display: block;
+  }
+  header nav ul {
+    display: flex;
+    align-items: center;
+  }
+  header nav ul a, header nav ul button {
+    padding: 0.5rem;
+  }
+  header nav ul:last-child .popup {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  header nav {
+    width: 95%;
+    max-width: none;
+    min-height: 20px;
+  }
+  header nav ul:last-child .popup {
+    top: 10%;
+    left: 10%;
   }
 }
 section {
