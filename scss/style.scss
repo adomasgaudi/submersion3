@@ -13,7 +13,7 @@ body{ margin: 0; min-height: 100vh; position: relative;};
 *{  
     outline-color:rgba(139, 3, 3, 0.514);    
     outline-width: thin;
-    outline-style: border(on);
+    outline-style: border(o);
 }
 
 
@@ -34,6 +34,7 @@ $bgc: "background:";
 
 *{font-family: 'Roboto', sans-serif; font-size: 16px;}
 h1{ font-size: 50px;}
+h2{ font-size: 30px;}
 
 
 
@@ -72,8 +73,12 @@ h1{ font-size: 50px;}
                 border: none; 
             };
 
-            li > a:hover{@include col(col1d, w)}   
+            li > a:hover{@include col(col1d, w)}  
+            li:first-child:hover {@include col(col1d, w)}   
             li > button:hover{@include col(col1d, w)} 
+            .popup {
+                @include col(light, o)
+            }
         }
     }
 
@@ -95,7 +100,7 @@ h1{ font-size: 50px;}
 
 
     footer{ 
-        @include col(col1d, w);
+        @include col(dark, w);
         li a{ color: font(w) };
         li a:hover{@include col(col1d, w)}  
         
@@ -147,22 +152,37 @@ header{
     @include box(100%, 100%, 30px);
     
     nav{
-        @include box( 80%, calc(50% + 250 + 1rem), 30px );
+        @include box( 80%, calc(50% + 250px), 30px );
         margin: auto;
+        #brandimg2{display: none;}
+
         ul{
             //IN
             list-style-type: none;
             overflow: hidden;
+            
             @include flex(row);
+            align-items: center; 
 
             li{
                 float: left;
+                
+                text-align: center;
                 &:last-child{    float: right;   }
                 
                 &:first-child a{
+                    
                     position: relative;
-                    top: 6px;
-                    padding: 0 1rem 0 0;
+                    
+                    padding: .5rem 1rem 0 1rem;
+                    
+                }
+                &:nth-child(2) a{
+                    
+                    position: relative;
+                    
+                    padding: .5rem 1rem 0 1rem;
+                    
                 }
                 a{
                     display: block;
@@ -182,6 +202,7 @@ header{
                 .screencover {
                     display: none;
                     position: absolute;
+
                     top: 0;
                     left: 0;
                     width: 100vw;
@@ -190,13 +211,16 @@ header{
                 }
 
                 .popup{
-                    display: none;
+                    
                     width: 250px ; 
                     height: 400px ; 
                     position: absolute;
-                    top: 0;
-                    left: 0;
-                    background: red;
+                    top: 10%;
+                    left: 40%;
+
+                    // IN]
+                    padding: 1rem;
+                    
                 }
 
             }
@@ -207,8 +231,14 @@ header{
 }
 
 
-@media only screen and (max-width: $breakPlus){
+@media only screen and (max-width: $breakIpad){
     #brandimg{display: none;}
+    header{
+        nav{
+
+            #brandimg2{display: block;}
+        }
+    }
 }
 
 
@@ -227,12 +257,13 @@ header{
 section{
     @include box(100%, 100%, 100px);
     @include flex(row);
+    @include flexcenter();
     padding-top: 2rem;
 }
 
 main{ 
     @include box(50%, none, 100px); 
-    margin-right: 1rem;
+    padding-right: 1rem;
     .container{
         border-left: .5rem solid col(side);
         padding-left: .5rem;
@@ -336,9 +367,8 @@ footer{
         margin: auto;
         ul{
             list-style-type: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flex(row);
+            @include flexcenter();
             margin: 1rem 0 ;
         }
         li{

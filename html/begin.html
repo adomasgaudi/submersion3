@@ -18,7 +18,7 @@
     
 
     <!-- JQUERY -->
-    <script src="https://code.jquery.com/jquery-3.5.1.js"> </script>
+    
      
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <!-- <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script> -->
@@ -46,17 +46,24 @@
                 <nav>
         
                     <ul>
-                        <li>
-                            <a href="https://fontmeme.com/famous-fonts/"><img src="https://fontmeme.com/permalink/201016/d26616e75909643b3a9e801367608d7a.png" alt="famous-fonts" border="0" id="brandimg"></a>
+                        <li id="brandimg">
+                            <a href="https://fontmeme.com/famous-fonts/"><img src="https://fontmeme.com/permalink/201016/d26616e75909643b3a9e801367608d7a.png" alt="famous-fonts" border="0" ></a>
                         </li>
-                        <li><a href="#top">TOP posts</a></li>
+                        <li id="brandimg2">
+                            <a href="https://fontmeme.com/famous-fonts/"><img src="https://fontmeme.com/permalink/201018/1ee64f903a868304ce3ec9ffd8418a78.png" alt="famous-fonts" border="0"></a>
+                        </li>
+                        <li><a href="#top">Top posts</a></li>
                         <li><a href="#">I'm stupid!</a></li>
                         <li>
-                            <button onclick="popup_open()">Sign-up</button>
+                            <button onclick="popup_open()">Log&#x2011;in</button>
                             
                             <div class="screencover" id="screencover">
-                                <div class="popup" id="popup" >
+                                <div class="popup" id="" >
+                                    <h2>Log in</h2>
+                                    <input type="text">
+                                    <input type="text">
                                     <button onclick="popup_close()">cancel</button>
+                                    <button onclick="">login</button>
                                 </div>
                             </div>
                         </li>
@@ -191,7 +198,7 @@
         
 
 
-     
+    <script src="https://code.jquery.com/jquery-3.5.1.js"> </script>
      <script src="/js/app.js"></script>
 
 

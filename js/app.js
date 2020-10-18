@@ -28,16 +28,20 @@
     //   alert("console.log")
     // }
 
-    console.log(document.getElementById("signupbtn"))
+    console.log($("#screencover").css('display', 'none'));
 
    
     
     
     function popup_close(){
-      document.getElementById("popup").style.display = "none";
-      document.getElementById("screencover").style.display = "none";
+      $("#screencover").css('display', 'none');
     }
+
     function popup_open(){
-      document.getElementById("popup").style.display = "block";
-      document.getElementById("screencover").style.display = "block";
+      $("#screencover").css('display', 'block');
     }
+
+
+    // document.getElementById("screencover").addEventListener("click", (w)=>{
+    //   $("#screencover").css('display', 'none');
+    // })
