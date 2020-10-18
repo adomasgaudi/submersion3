@@ -11,7 +11,9 @@ body {
 }
 
 * {
-  border: 0px;
+  outline-color: red;
+  outline-width: thin;
+  outline-style: solid;
 }
 
 * {
@@ -37,6 +39,7 @@ header nav {
 }
 header nav li a {
   color: white;
+  text-decoration: none;
 }
 header nav li a:hover {
   background: #003333;
@@ -66,4 +69,120 @@ footer li a {
 footer li a:hover {
   background: #003333;
   color: white;
+}
+
+.main-content {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 200px;
+}
+
+header {
+  width: 100%;
+  max-width: 100%;
+  min-height: 30px;
+}
+header nav {
+  width: 80%;
+  max-width: calc(50% + 250 + 1rem);
+  min-height: 30px;
+  margin: auto;
+}
+header nav ul {
+  list-style-type: none;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+header nav ul li {
+  float: left;
+}
+header nav ul li:last-child {
+  float: right;
+}
+header nav ul li:first-child a {
+  position: relative;
+  top: 6px;
+  padding: 0 1rem 0 0;
+}
+header nav ul li a {
+  display: block;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media only screen and (max-width: 430px) {
+  #brandimg {
+    display: none;
+  }
+}
+section {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 2rem;
+}
+
+main {
+  width: 50%;
+  max-width: none;
+  min-height: 100px;
+  margin-right: 1rem;
+}
+main .container {
+  border-left: 0.5rem solid #494949;
+  padding-left: 0.5rem;
+}
+main .container:hover {
+  transform: translateX(2px);
+  transition: 0.2s;
+  border-left: 0.5rem solid #242424;
+}
+
+aside {
+  width: 30%;
+  max-width: 250px;
+  min-height: 100px;
+}
+aside .asideTop {
+  padding: 0 1rem;
+}
+aside .container {
+  padding: 1rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+footer .container {
+  width: 80%;
+  max-width: calc(50% + 250px + 1rem);
+  min-height: 30px;
+  margin: auto;
+}
+footer .container ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+footer .container li a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.5rem;
+}
+footer .container li a .img {
+  background: red;
 }

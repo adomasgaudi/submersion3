@@ -34,13 +34,16 @@ $col: (
     "col1d": rgb(0, 51, 51),
     "col2": rgba(235, 154, 154, 0.616),
 
+    "side": rgb(73, 73, 73),
+    "sided": rgb(36, 36, 36),
+
 
     //fonts
     "f-light": white,
     "f-dark": rgb(24, 24, 24),
 );
 
-@function colmap($name){
+@function col($name){
     @return map-get($col, $name);
 }
 
@@ -55,7 +58,7 @@ $col: (
 
 @mixin col($bg_col, $font_type ) {
     
-    background: colmap($bg_col);
+    background: col($bg_col);
     color: font($font_type);
     
 
@@ -80,7 +83,7 @@ $col: (
 
 
 // flex plus media direction
-@mixin flex($direction){
+@mixin flex($direction){ 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -126,8 +129,8 @@ $clight: white;
 
 // TEST ----------------------------------------
 @function border($on){
-    @if $on == on { @return 1px solid black; }
-    @else {@return 0px }
+    @if $on == on { @return solid; }
+    @else {@return none }
 }
 
 

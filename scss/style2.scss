@@ -10,7 +10,11 @@ body{ margin: 0; min-height: 100vh; position: relative;};
 
 //TEST 
 
-*{border: border(o)}
+*{  
+    outline-color:red;    
+    outline-width:thin;
+    outline-style: border(on);
+}
 
 
 $bgc: "background:";
@@ -47,6 +51,8 @@ h1{ font-size: 50px;}
 
 
 
+
+
 // COLORS -------------------------------------
 
     body{ @include col(light, o ) ; }
@@ -58,7 +64,7 @@ h1{ font-size: 50px;}
 
         nav{
             @include col(col1, w);
-            li a{ color: font(w) };
+            li a{ color: font(w); text-decoration: none;};
             li a:hover{@include col(col1d, w)}    
         }
     }
@@ -106,6 +112,7 @@ h1{ font-size: 50px;}
 
 
 //SECTIONS ----------------------------------
+//SECTIONS ----------------------------------
 
 
 
@@ -114,14 +121,57 @@ h1{ font-size: 50px;}
 
 body{}
 
-.main-content{}
+.main-content{
+    @include box( 100%, 100%, 100vh);
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 200px;
+
+}
 
 
 
 
 
 
-header{}
+header{ 
+    @include box(100%, 100%, 30px);
+    
+    nav{
+        @include box( 80%, calc(50% + 250 + 1rem), 30px );
+        margin: auto;
+        ul{
+            //IN
+            list-style-type: none;
+            overflow: hidden;
+            @include flex(row);
+
+            li{
+                float: left;
+                &:last-child{    float: right;   }
+                
+                &:first-child a{
+                    position: relative;
+                    top: 6px;
+                    padding: 0 1rem 0 0;
+                }
+                a{
+                    display: block;
+                    text-align: center;
+                    padding: 1rem;
+                }
+            }
+        }
+        
+    }
+
+}
+
+
+@media only screen and (max-width: $breakPlus){
+    #brandimg{display: none;}
+}
 
 
 
@@ -133,9 +183,38 @@ header{}
 
 
 
-section{}
-main{}
-aside{}
+
+
+
+section{
+    @include box(100%, 100%, 100px);
+    @include flex(row);
+    padding-top: 2rem;
+}
+
+main{ 
+    @include box(50%, none, 100px); 
+    margin-right: 1rem;
+    .container{
+        border-left: .5rem solid col(side);
+        padding-left: .5rem;
+        &:hover {
+            transform: translateX(2px);
+            transition: .2s;
+            border-left: .5rem solid col(sided);
+        }
+    }
+}
+
+aside{
+    @include box(30%, 250px, 100px);
+    .asideTop{
+        padding: 0 1rem;
+    }
+    .container {
+        padding: 1rem
+    }
+}
 
 
 
@@ -150,7 +229,32 @@ aside{}
 
 
 
-footer{}
+footer{
+
+    position: absolute; 
+    bottom: 0;
+    width: 100%;
+    .container{
+        @include box(80%, calc(50% + 250px + 1rem), 30px);
+        margin: auto;
+        ul{
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+        }
+        li{
+            a{
+                display: block;
+                text-decoration: none; 
+                text-align: center;
+                padding: .5rem;
+                .img { background: red }
+            }
+        }
+    }
+
+}
+
 
 
 
