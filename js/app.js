@@ -191,6 +191,13 @@ $(form_login).on("submit", (e)=>{
 // AUTH CHANGE
 auth.onAuthStateChanged(user => {
   console.log("STATE CHANGED: ", user);
+
+  if(user){
+
+  }else{
+    
+  }
+
 })
 
 
