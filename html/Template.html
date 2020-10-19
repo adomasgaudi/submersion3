@@ -53,13 +53,13 @@
                             <div class="screencover" id="screencover">
                                 <div class="popup" id="" >
                                     <h2>Log in</h2>
-                                    <form action="">
-                                        <input type="text" autocomplete="off" required>
+                                    <form action="" id="form_login">
+                                        <input type="text" name="login_name" placeholder="name" autocomplete="off" required>
                                         <button type="submit" onclick="">login</button>
                                     </form>
                                     <h2>Add account</h2>
-                                    <form action="">
-                                        <input type="text" autocomplete="off" >
+                                    <form action="" id="form_add">
+                                        <input type="text" name="add_name" placeholder="name" autocomplete="off" >
                                         <button type="submit" onclick="">add account</button>
                                     </form>
                                     <button onclick="popup_close()">cancel</button>
@@ -67,7 +67,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li><a href="#">-----</a></li>
+                        <li><a href="" id="user">-----</a></li>
                         
                     </ul>
                     
@@ -95,7 +95,7 @@
                 </main>
         
                 <aside>
-                    <div class="asideTop"><h2>Lorem ipsum dolor sit amet.</h2></div>
+                    <div class="asideTop" ><h2 id='score'>Lorem ipsum dolor sit amet.</h2></div>
                     <div class="container">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates distinctio veritatis est numquam quos incidunt, quam tenetur totam reprehenderit laudantium qui cum vero corrupti, harum quas eveniet odio iste. Rerum vero unde dolor sed. Et eveniet, ut iste nisi pariatur fugiat impedit minima facilis porro placeat facere ipsam? Esse, labore.</p>
                     </div>
@@ -165,6 +165,7 @@
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"> </script>
+    <script src="/js/firebase.js"></script>
     <script src="/js/app.js"></script>
 
 

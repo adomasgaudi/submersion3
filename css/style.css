@@ -5,38 +5,13 @@
 }
 
 body {
-  margin: 0;
-  min-height: 100vh;
-  position: relative;
-}
-
-* {
-  outline-color: rgba(139, 3, 3, 0.514);
-  outline-width: thin;
-  outline-style: dotted(o);
-}
-
-* {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-}
-
-h1 {
-  font-size: 50px;
-}
-
-h2 {
-  font-size: 30px;
-}
-
-body {
   background: white;
   color: #181818;
 }
 
 header {
   background: #015e5e;
-  color: #181818;
+  color: white;
 }
 header nav {
   background: #015e5e;
@@ -96,6 +71,30 @@ footer li a {
 footer li a:hover {
   background: #003636;
   color: white;
+}
+
+* {
+  outline-color: rgba(139, 3, 3, 0.514);
+  outline-width: thin;
+  outline-style: dotted(o);
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
 }
 
 .main-container {
@@ -245,7 +244,7 @@ main .container p {
   padding-left: 0.5rem;
 }
 main .container p:hover {
-  transform: translateX(2px);
+  transform: translateX(1px);
   transition: 0.2s;
   border-left: 0.5rem solid #242424;
 }

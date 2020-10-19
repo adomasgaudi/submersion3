@@ -2,11 +2,11 @@
 
 @import './resets';
 @import './variables';
+@import './colors';
 
 
 
 
-body{ margin: 0; min-height: 100vh; position: relative;};
 
 //TEST 
 
@@ -55,68 +55,6 @@ h2{ font-size: 30px;}
 
 
 
-// COLORS -------------------------------------
-
-    body{ @include col(light, o ) ; }
-
-
-
-    header{
-        @include col(col1, o );
-
-        nav{
-            @include col(col1, w);
-            li{@include col(col1, w)}
-            li > a{ color: font(w); text-decoration: none;};
-            li > button{ 
-                @include col(col1, w);
-                text-decoration: none;
-                border: none; 
-            };
-
-            li > a:hover{@include col(col1d, w)}  
-            li:first-child:hover {@include col(col1d, w)}   
-            li > button:hover{@include col(col1d, w)} 
-            .popup {
-                @include col(light, o)
-            }
-        }
-    }
-
-    
-
-
-
-    section{ 
-        
-        @include col(light, o );
-
-        main{ @include col(light, o )}
-        aside{ @include col(col1l, o)}
-    }
-
-
-
-
-
-
-    footer{ 
-        @include col(dark, w);
-        li a{ color: font(w) };
-        li a:hover{@include col(col1d, w)}  
-        
-    }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -133,7 +71,7 @@ h2{ font-size: 30px;}
 
 
 
-body{}
+body{min-height: 100vh; position: relative;}
 
 .main-container{
     @include box( 100%, 100%, 100vh);
@@ -319,7 +257,7 @@ main{
             border-left: .5rem solid col(side);
             padding-left: .5rem;
             &:hover {
-                transform: translateX(2px);
+                transform: translateX(1px);
                 transition: .2s;
                 border-left: .5rem solid col(sided);
             }
