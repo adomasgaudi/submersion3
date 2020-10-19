@@ -3,7 +3,7 @@
 /////////////////////////////////////////////////////////////////
 
 
-let fusers = db.collection("users");
+
 
 
 
@@ -13,11 +13,13 @@ let fusers = db.collection("users");
   // POPUP  
   
 function popup_close(){
-  $("#screencover").css('display', 'none');
+  // $("#screencover").css('display', 'none');
+  $("#screencover").slideUp();
+
 }
 
 function popup_open(){
-  $("#screencover").css('display', 'block');
+  $("#screencover").slideDown();
 }
 
 
@@ -55,154 +57,6 @@ function popup_open(){
 
 
 
- //check
-//  console.log(form_add, form_login)
- 
- function findattr(attribute, value, element_type)    {
-     element_type = element_type || "*";
- 
-     var All = document.getElementsByTagName(element_type);
-     for (var i = 0; i < All.length; i++)       {
-       if (All[i].getAttribute(attribute) == value) { return All[i]; }
-     }
-     
-   }
- 
-
-   //FIRESTORE OLD FUNCTIONS
- 
- function renderuser(doc) {
-
-    //  // creates elements
-    //  let lidoc = document.createElement("li");
-    //  let namespan = document.createElement("span");
-    //  let paswspan = document.createElement("span");
-    //  let scorespan = document.createElement("span");
-    //  let cross = document.createElement("div");
- 
-     //future
-    //  lidoc.setAttribute("data-id", doc.id);
- 
-     //fills elements
-    //  namespan.textContent = "name: " + doc.data().name + " " ;
-    //  namespan.setAttribute("name", doc.data().name )
-    //  paswspan.textContent = "pasw: " + doc.data().pasw + " " ;
-    //  scorespan.textContent = "score: " + doc.data().score + " " ; 
-    //  cross.textContent = "delete";
-    //  cross.classList += "button";
- 
-    //  lidoc.appendChild(namespan);
-    //  lidoc.appendChild(paswspan);
-    //  lidoc.appendChild(scorespan);
-    //  lidoc.appendChild(cross)
- 
-    //  userlist.appendChild(lidoc)
- 
- 
-    //  cross.addEventListener("click", (e)=>{
-    //      e.stopPropagation();
-    //      let id = e.target.parentElement.getAttribute("data-id");
-    //      db.collection("users").doc(id).delete();
- 
-    //      console.log("deleted?", db.collection("users").doc(id) )
-    //      console.log(    "if this works...",  db.collection('users').doc(id).get().then((doc) => {doc.get("name")})        );
-    //  })
- 
- 
- 
- 
-     
- }
- 
- 
- db.collection("users").get().then((snapshot)=>{
-    //  console.log(snapshot.docs)
-     snapshot.docs.forEach( doc => {
-        //  console.log(doc.data());
-        //  renderuser(doc);
-     } )
- })
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- //FORMS
- 
-
-// CONSTS
- const form_add = document.querySelector("#form_add");
- const form_login = document.querySelector("#form_login");
-
-
- //ADD USER
- $(form_add).on("submit", (e) => {
-
-     e.preventDefault();
-
-    const email = form_add.add_email.value;
-    const pasw = form_add.add_pasw.value;
-
-    console.log(email, pasw)
-
-    auth.createUserWithEmailAndPassword(email, pasw).then( cred =>{
-      console.log( cred.user );
-      
-
-      form_add.add_email.value = "";
-      form_add.add_pasw.value = "";
-    })
-    
- })
- 
-
-// SIGN OUT
-
- $("#signout").on("click", (e)=>{
-    e.preventDefault();
-    auth.signOut()
-})
-
-
-// LOG IN
-$(form_login).on("submit", (e)=>{
-    e.preventDefault();
-    const email = form_login.login_email.value;
-    const pasw = form_login.login_pasw.value; 
-
-
-    auth.signInWithEmailAndPassword(email, pasw).then(cred =>{
-      console.log(cred.user)
-    })
-
-    form_login.login_email.value = "";
-    form_login.login_pasw.value = "";
-})
-
-
-// AUTH CHANGE
-auth.onAuthStateChanged(user => {
-  console.log("STATE CHANGED: ", user);
-
-  if(user){
-
-  }else{
-    
-  }
-
-})
-
-
-
-
 
 
 
@@ -212,58 +66,49 @@ auth.onAuthStateChanged(user => {
 
 // ------------------------------------------------
 
- // change border color on click
-$("main p").on("click", function(e){
-  $(this).css({"border-left-color":"darkcyan"})
-})
+
 
 
 
 // ARRAY CREATOR
 
-function obj(pos, bool, color) {
+function obj(pos, type) {
   this.pos = pos;
-  this.bool = bool;
-  this.color = color;
+  this.type = type;
 }
 
 let state = [ ]
 
 //FILL STATE ARRAY
-$("main p").each( function(item){
-
-  let boolean = true;
-  if( $(this).css("border-left-color") == "rgb(73, 73, 73)" ){ boolean = false; }
-
-  let next = new obj(item, boolean, $(this).css("border-left-color") )
-  state.push(  next  ) 
-
-})
-
-// console.log(state)
-
-
-
-
-const updateState = () => {
-  let newState = []
-  $("main p").each( function(item) {
-
-    let boolean = true;
-    if( $(this).css("border-left-color") == "rgb(73, 73, 73)" ){ boolean = false; }
-  
-    let next = new obj(item, boolean, $(this).css("border-left-color") )
-    newState.push(  next  ) 
-  
+const initialise = () => {
+  $(".mul").each( function(item){
+    let next = new obj(item, "new")
+    state.push(  next  ) 
   })
-
-  console.log(newState)
-  
-  if(newState != state){
-    state = newState
-  }
-
 }
+initialise();
+
+console.log( $( "[name*='re']" ) )
+
+
+
+// const updateState = () => {
+//   let newState = []
+//   $("main p").each( function(item) {
+
+    
+//     if( $(this).css("border-left-color") == "rgb(73, 73, 73)" || $(this).css("border-left-color") == "rgb(36, 36, 36)" ){ boolean = false; }
+  
+//     let next = new obj(item, boolean, $(this).css("border-left-color") )
+//     newState.push(  next  ) 
+  
+//   })
+  
+//   if(newState != state){
+//     state = newState
+//   }
+
+// }
 
 
 
@@ -303,6 +148,163 @@ const addcolor = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$("main p").on("click", function(e) {
+  console.log("this")
   
+  $(this).css({"border-left-color":"darkcyan"}) //change color
+  $(this).attr("state","read") //change state
+  // run update
+  setTimeout( ()=>{ 
+    // updateState()
+    console.log(state)  
+  }, 100 );
+
+})
     
+
+
+const findAllRead = ()=>{
   
+  for( i = 0; $( "[state*='read']" )[i] != undefined; i++){
+    let item = $( "[state*='read']" )[i]
+    // console.log( item, item.getAttribute("name"))
+    let name = $("[state*='read']")[i].getAttribute("name");
+    let state = $("[state*='read']")[i].getAttribute("state");
+
+    console.log(name, state)
+
+
+    db.collection("users").add({
+      elemid: name,
+      statename: state
+
+      
+    })
+
+  
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// $( "[state*='read']" ).each( (e)=>{
+//   console.log(e.target, this, $(this), "00909")
+// } )
+
+
+// // change border color on click
+// $("main p").on("click", function(item) {
+//   console.log( this )
+//   // console.log(item);
+//   if( $(this).css("border-left-color") == "rgb(0, 139, 139)" ){
+    
+//     $(this).css({"border-left-color":"rgb(73, 73, 73)"}); //CHANGE COLOR
+//     // state[item].type = "new"  // SET ARRAY
+  
+//     state.forEach( (e)=>{
+//       console.log(e)
+//     } )
+//     // console.log(state[item])
+//     // console.log(state)
+    
+
+//   }else{   
+//     $(this).css({"border-left-color":"darkcyan"}) 
+//     // state["item"].type = "read"  // SET ARRAY
+//     // console.log(state[item])
+//     // console.log(state)
+//     state.forEach( (e)=>{
+//       console.log(e, e.pos, item, "----")
+//       if(e.pos == item){console.log("hurray")}
+//       e
+//     } )
+//   }
+
+//   setTimeout( ()=>{ 
+//     updateState()
+//     // console.log(state)  
+//   }, 100 );
+  
+  
+
+
+
+
+  
+// })
+
+
+// console.log( $("main p")[0], "hello" )
+  
+//     $("main p")[0]
+
+//     $("main p").on("click", (e)=>{
+
+//       console.log( e.target )
+//       // e.stopPropagation();
+//       // let i = 0;
+//       $("main p").each( (event)=>{
+//         // console.log(event)
+//         // if( e.target ){}
+//       } )
+
+
+//     })
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+

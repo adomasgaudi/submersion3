@@ -48,32 +48,35 @@
                         
                     </ul>
                     <ul>
-                        <li>
-                            <button onclick="popup_open()">Log&#x2011;in</button>
+                        <li id="signout"><button onclick="popup_open()" id="signoutbtn" >Sign&#x2011;out</button></li>
+                        <li id="signin" > 
+                            <button onclick="popup_open()"  >Sign&#x2011;in</button>
+                            
                             
                             <div class="screencover" id="screencover">
                                 <div class="popup" id="" >
-                                    <!-- LOGIN LOGIN LOGIN -->
+                                    <!-- signin signin signin -->
                                     <h2>Log in</h2>
-                                    <form action="" id="form_login">
-                                        <input type="text" name="login_email" placeholder="email" autocomplete="on" >
-                                        <input type="text" name="login_pasw" placeholder="password" autocomplete="off" >
-                                        <button type="submit" onclick="">login</button>
+                                    <form action="" id="form_signin">
+                                        <input type="text" name="signin_email" placeholder="email" autocomplete="on" >
+                                        <input type="text" name="signin_pasw" placeholder="password" autocomplete="off" >
+                                        <button type="submit" onclick="">sign-in</button>
                                     </form>
-                                    <button type="button" id="signout" onclick="">signout</button>
-                                    <!-- ADD ADD ADD ADD -->
-                                    <h2>Add account</h2>
-                                    <form action="" id="form_add">
-                                        <input type="text" name="add_email" placeholder="email" autocomplete="on" >
-                                        <input type="text" name="add_pasw" placeholder="password" autocomplete="off" >
-                                        <button type="submit" onclick="">add account</button>
+                                    <!-- <button type="button" id="signout" onclick="">signout</button> -->
+                                    <!-- new new new new -->
+                                    <h2>new account</h2>
+                                    <form action="" id="form_new">
+                                        <input type="text" name="new_email" placeholder="email" autocomplete="on" >
+                                        <input type="text" name="new_pasw" placeholder="password" autocomplete="off" >
+                                        <input type="text" name="bio" placeholder="short bio" autocomplete="off" >
+                                        <button type="submit" onclick="">new account</button>
                                     </form>
-                                    <button onclick="popup_close()">cancel</button>
+                                    <button onclick="popup_close()">back</button>
 
                                 </div>
                             </div>
                         </li>
-                        <li><a href="" id="user">-----</a></li>
+                        <li id="user">-----</li>
                         
                     </ul>
                     
@@ -91,12 +94,12 @@
             <section>
                 <main>
                     <div class="container">
-                        <h1 id="h1" onclick="runbtn()"> your title</h1>
-                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur incidunt molestiae ad, nihil et, vel enim error quidem cumque nostrum pariatur. Quas necessitatibus perspiciatis voluptates laudantium temporibus beatae fuga saepe! </p>
+                        <h1 id="h1" > your title</h1>
+                        <p  name="re mul main ta" id="a" > <span > Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur incidunt molestiae ad, nihil et, vel enim error quidem cumque nostrum pariatur. Quas necessitatibus perspiciatis voluptates laudantium temporibus beatae fuga saepe! </span> </p>
 
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem sit reprehenderit corporis provident, dolorum neque reiciendis obcaecati minus dicta nam praesentium tempore vitae labore molestiae incidunt modi magni voluptatem nobis temporibus, eum sed amet. Tempora, voluptate? Exercitationem libero quasi hic pariatur soluta neque consectetur sit, ex suscipit impedit alias voluptatum id laudantium dolores molestias sint esse, cupiditate nemo deserunt nulla nihil aut? Sapiente praesentium, numquam autem enim incidunt, quod a eaque beatae minima quos, reiciendis officiis optio quam rem! Eum voluptatibus minima suscipit exercitationem porro ducimus maxime ut facilis maiores quia numquam quis amet non, totam quaerat molestiae animi enim. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde impedit pariatur, sunt ad ipsam nulla quidem nisi odit facere? Ipsa laudantium sint, modi facilis quis dolor perspiciatis voluptates ratione consequatur!</p>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi, incidunt. Atque neque ex ipsa quos cupiditate quisquam. Ex aspernatur inventore doloribus voluptatem enim ut, commodi sunt ea asperiores, rem voluptas. </p>
-                        <p>Lorem, ipsum dolor.</p>
+                        <p name="re mul main tb" >  <span >Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem sit reprehenderit corporis provident, dolorum neque reiciendis obcaecati minus dicta nam praesentium tempore vitae labore molestiae incidunt modi magni voluptatem nobis temporibus, eum sed amet. Tempora, voluptate? Exercitationem libero quasi hic pariatur soluta neque consectetur sit, ex suscipit impedit alias voluptatum id laudantium dolores molestias sint esse, cupiditate nemo deserunt nulla nihil aut? Sapiente praesentium, numquam autem enim incidunt, quod a eaque beatae minima quos, reiciendis officiis optio quam rem! Eum voluptatibus minima suscipit exercitationem porro ducimus maxime ut facilis maiores quia numquam quis amet non, totam quaerat molestiae animi enim. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde impedit pariatur, sunt ad ipsam nulla quidem nisi odit facere? Ipsa laudantium sint, modi facilis quis dolor perspiciatis voluptates ratione consequatur!</span> </p>
+                        <p  name="re mul main tb"> <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi, incidunt. Atque neque ex ipsa quos cupiditate quisquam. Ex aspernatur inventore doloribus voluptatem enim ut, commodi sunt ea asperiores, rem voluptas. </span> </p>
+                        <p name="re mul main tb" > <span ></span> Lorem, ipsum dolor.</p>
                     </div>
                 </main>
         
