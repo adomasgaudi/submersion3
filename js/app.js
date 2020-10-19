@@ -1,56 +1,31 @@
 // alert("10/17/2020 21:13");
 // console.log("10/17/2020 21:13");
+/////////////////////////////////////////////////////////////////
 
 
-// const log = (name) => {return console.log(name)};
-// log("loglog")
-
-// Check if a new cache is available on page load.
-// window.addEventListener('load', function(e) {
-
-//     window.applicationCache.addEventListener('updateready', function(e) {
-//       if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
-//         // Browser downloaded a new app cache.
-//         // Swap it in and reload the page to get the new hotness.
-//         window.applicationCache.swapCache();
-//         if (confirm('A new version of this site is available. Load it?')) {
-//           window.location.reload();
-//         }
-//       } else {
-//         // Manifest didn't changed. Nothing new to server.
-//       }
-//     }, false);
-  
-//   }, false);
+let fusers = db.collection("users");
 
 
-    // function runbtn(){
-    //     console.log("alert");
-    //   alert("console.log")
-    // }
 
-    
+
 
    
-    
-    
-    function popup_close(){
-      $("#screencover").css('display', 'none');
-    }
+  // POPUP  
+  
+function popup_close(){
+  $("#screencover").css('display', 'none');
+}
 
-    function popup_open(){
-      $("#screencover").css('display', 'block');
-    }
-
-
-    // document.getElementById("screencover").addEventListener("click", (w)=>{
-    //   $("#screencover").css('display', 'none');
-    // })
+function popup_open(){
+  $("#screencover").css('display', 'block');
+}
 
 
 
 
-    ////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////
 
 
 
@@ -61,14 +36,7 @@
 
 
 
-    ///////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
+///////////////////////////////////////////////////////////////////////////
 
 
 
@@ -77,8 +45,15 @@
 
 
  
- const form_add = document.querySelector("#form_add");
- const form_login = document.querySelector("#form_login");
+
+
+
+
+
+
+
+
+
 
  //check
 //  console.log(form_add, form_login)
@@ -93,6 +68,8 @@
      
    }
  
+
+   //FIRESTORE OLD FUNCTIONS
  
  function renderuser(doc) {
 
@@ -138,7 +115,6 @@
  }
  
  
- 
  db.collection("users").get().then((snapshot)=>{
     //  console.log(snapshot.docs)
      snapshot.docs.forEach( doc => {
@@ -161,53 +137,61 @@
  
  //FORMS
  
+
+// CONSTS
+ const form_add = document.querySelector("#form_add");
+ const form_login = document.querySelector("#form_login");
+
+
  //ADD USER
- form_add.addEventListener("submit", (e)=>{
+ $(form_add).on("submit", (e) => {
+
      e.preventDefault();
-     db.collection("users").add({
-         name: form_add.add_name.value,
-         score: "0"
- 
-     })
-     form_add.name.value = "";
+
+    const email = form_add.add_email.value;
+    const pasw = form_add.add_pasw.value;
+
+    console.log(email, pasw)
+
+    auth.createUserWithEmailAndPassword(email, pasw).then( cred =>{
+      console.log( cred.user );
+      
+
+      form_add.add_email.value = "";
+      form_add.add_pasw.value = "";
+    })
+    
  })
  
 
+// SIGN OUT
+
+ $("#signout").on("click", (e)=>{
+    e.preventDefault();
+    auth.signOut()
+})
 
 
+// LOG IN
+$(form_login).on("submit", (e)=>{
+    e.preventDefault();
+    const email = form_login.login_email.value;
+    const pasw = form_login.login_pasw.value; 
 
 
- 
- 
- // LOGIN
-     form_login.addEventListener("submit", (e)=>{
-         e.preventDefault();
-     
- 
+    auth.signInWithEmailAndPassword(email, pasw).then(cred =>{
+      console.log(cred.user)
+    })
 
-        console.log(form_login.login_name.value, "- just logged in")
-         db.collection("users").where("name", "==", form_login.login_name.value).get().then((snapshot)=>{
-                 snapshot.docs.forEach(doc => {
-                     let name = doc.data().name
-                     document.getElementById("user").textContent = name;
-                     
-                 })
-         })
+    form_login.login_email.value = "";
+    form_login.login_pasw.value = "";
+})
 
-         //check for all names
-         db.collection("users").get().then((sn)=>{
 
-            // console.log(sn.docs)
-            sn.docs.forEach( doc => {
-                console.log(doc.data().name);
-                
-            } )
-         })    
- 
-         
-     
-     });
- 
+// AUTH CHANGE
+auth.onAuthStateChanged(user => {
+  console.log("STATE CHANGED: ", user);
+})
 
 
 
@@ -217,89 +201,24 @@
 
 
 
+    
 
-
-
-
-
-    // DISPLAY CURRENT USER
-     $("#score").text("zero");
-     let current_user = $("#user").get(0).textContent ;
-     console.log(current_user, "is now");
-
-     //bring current user score
-    //  console.log("score")
-    //  db.collection("users").where("name", "==", current_user).get().then((snapshot)=>{
-
-    //     snapshot.docs.forEach(doc => {
-    //       let score = doc.data().score;
-    //       $("#score").text(score) 
-    //       console.log("hiii")
-    //       console.log(score, "score");
-          
-    //     })
-    //   })
- 
-
-
-
-
-
-
-
-
+// ------------------------------------------------
 
  // change border color on click
 $("main p").on("click", function(e){
   $(this).css({"border-left-color":"darkcyan"})
-  console.log($(this).css("border-left-color"))
 })
 
 
 
-$("main p").each( item => {
-  console.log(item, "hi");
-
-
-  // $(item).on("click", function(e){
-  //   console.log("it worked!")
-  // })
-
-})
-
-console.log(  $("main").css("background-color") )
-// console.log($("main p")[2].css("border-left-color"));
-
-let textState = [];
-
-$("main p").each(function(item){
-  textState.push( $(this).css("border-left-color") );
-})
-
-console.log(textState, textState.length);
-
-// $("main p").length
-
-function count() {
-  for(i = 0; i < textState.length; i++){
-    
-    if( textState[0] == "rgb(73, 73, 73)" ){
-      console.log(i, "good")
-    }
-  }
-}
-count()
-
+// ARRAY CREATOR
 
 function obj(pos, bool, color) {
   this.pos = pos;
   this.bool = bool;
   this.color = color;
 }
-
-
-
-// ARRAY CREATOR
 
 let state = [ ]
 
@@ -314,18 +233,7 @@ $("main p").each( function(item){
 
 })
 
-
-console.log(state)
-
-
-
-
-
-
-
-
-
-
+// console.log(state)
 
 
 
@@ -354,11 +262,12 @@ const updateState = () => {
 
 const updatePage = () => {
   
-    $("main p").each( function(item){
+
+    $("main p").each( item => {
+
       console.log(state[item].color)
-       
-      $(this).css({"color": state[item].color})
-      // $(this).css({"color": "red"})
+      let color = state[item].color
+      $(this).css("border-left-color", color);
 
     })
 
@@ -368,23 +277,25 @@ const updatePage = () => {
 }
 
 
+// ADD COLOR TO DATA BASE
+const addcolor = () => {
+  console.log(current_user, "up top");
+  
+ }
 
-// var i = 0;
-// while( (child = child.previousSibling) != null ) {
-//   i++;
-// }
+  fusers.onSnapshot(snapshot=>{
+    let changes = snapshot.docChanges();
 
+    changes.forEach(change => {
+      // console.log(change.doc.data())
+    })
 
-
-
-
-
-
-
-
-
-
-
+    // console.log(changes)
+  })
 
 
 
+
+  
+    
+  
