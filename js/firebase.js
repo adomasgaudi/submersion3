@@ -75,45 +75,55 @@ let downloadedArr = [];
 
 
 
-let changeCol=(name, col)=>{
-    console.log("color change", name, col)
-    $("[name='"+name+"']").css("border-left-color",col);
-  }
-
-let changeState = (name, state)=>{
-    console.log("state change", name, state)
-    $("[name='"+name+"']").attr("state","read");
-  }
+let changeCol = (name, col)=>{    $("[name*='"+name+"']").css("border-left-color",col);} // console.log("color change", name, col) 
+let changeState = (name, state)=>{    $("[name*='"+name+"']").attr("state",state); }// console.log("state change", name, state) 
 
 
+
+
+
+
+
+
+
+
+
+// let returnArr ;
 
 let downloadStates = () => {
-    
-    let downArr = [];
-    
-
+    console.log("downloadStates is running")
 
     db.collection("texts").doc(creditToken).collection("articleStates")
-    // .where("state", "==", "read")
+    .where("state", "==", "read")
     .get()
     .then( snap => {
-        i = 0;
-        snap.forEach( function(doc,index){
-            // doc.data() is never undefined for query doc snapshots
-            // todo !!!!!!!
+        
+        let i = 0;
+        snap.forEach( function(doc){
+            let str = doc.id;
+            if( str.includes("re")  ){
+                console.log(i, doc.id, doc.data().state )
+                if( doc.data().state == "read"){
+    
+                    changeCol( doc.id, "darkcyan"  )
+                    changeState( doc.id, "read" )
+                }else {
+                    // console.log()
+                    changeCol(doc.id , "black");
+                    changeState( doc.id , "new");
+                }
+                i++;
+            } 
+            console.log("wrong id")
 
-            console.log("------ ", index, doc);
-            downArr.push([])
-            console.log(downArr)
-            downArr[i].push(doc.id);
-            downArr[i].push(doc.data().state);
-            i++;
             
-            // console.log( "downloaded: ",doc.id, " => ", doc.data(), downArr , " into ------", downloadedArr);
         });
-        downloadedArr = downArr;
-            return downloadedArr;
+        
+
+        
+        
     })
+
     .catch(function(error) {
         console.log("Error getting documents: ", error);
     });
@@ -122,44 +132,41 @@ let downloadStates = () => {
 
 }
 
-let changePage = () => {
-    for(i=0; i < downloadedArr.length; i++ ){
-    
-        // change color
-        if(downloadedArr[i][1] = "read"){
-            changeCol( downloadedArr[i][0], "green");
-            changeState( downloadedArr[i][0], "read");
 
-        }else {
-            changeCol(downloadedArr[i][0], "blue");
-            changeState( downloadedArr[i][0], "new");
-        }
-        
-    }
-    
-
-}
 
 
 
 const updateVal = () => {
     downloadStates()
-    setTimeout(()=>{ changePage()  }, 1000)
+    // setTimeout(()=>{ changePage()  }, 1000)
 }
 
 
 
+
+
+// /////////////////////////////////////////////////////////////////
+// const resetVal = () => {
+//     for(i = 0; i < $( "[name*='re']" ).length ; i++){
+//         changeCol(  "re", "blue" );
+//         changeState( "re", "new")
+//     }
+// }
+// /////////////////////////////////////////////////////////////////
+
 const findAllRead = ()=>{
     let arr  = [];
-    for( i = 0; $( "[state*='read']" )[i] != undefined; i++){
-      let item = $( "[state*='read']" )[i]
-      let name = $("[state*='read']")[i].getAttribute("name");
-      let state = $("[state*='read']")[i].getAttribute("state"); 
+    console.log($( "[name*='re']" ))
+    for( i = 0; $( "[name*='re']" )[i] != undefined; i++){
+      let el = $( "[name*='re']" )[i]
+      let name = el.getAttribute("name");
+      let state = el.getAttribute("state"); 
 
       let nextArr = [name,state] 
-      arr.push(nextArr);  console.log( "findallRead: iter=",i,arr)
+      arr.push(nextArr);  //console.log( "findallRead: iter=",i,arr)
   
     }; 
+
     return arr 
   }
 
@@ -236,23 +243,31 @@ $(form_new).on("submit", (e) => {
    const pasw = form_new.new_pasw.value;   console.log("new user: ", email, pasw);
 
    auth.createUserWithEmailAndPassword(email, pasw).then( cred =>{
-       // 15th episode
-    //    console.log(cred, cred.user, cred.user.uid);
-       //update while i have the cred
+       
     creditToken = cred.user.uid;
-    // console.log(findAllRead())
-    
-    // console.log(blah, blah[0], blah[0].state)
-    return db.collection('texts').doc(cred.user.uid).set({
-        bio: form_new.bio.value,
-        // state: state,
-
-
-
-
+    db.collection("texts").doc(creditToken).collection("articleStates").add({
+        empty: "hi"
     })
-    //  console.log( cred.user );
+
+    
+
+
+
+
+
+    return db.collection('texts').doc(creditToken).set({
+        bio: form_new.bio.value,
+        // state: state
+    })
+
+    
+
    }).then( ()=>{
+
+    // db.collection("texts").doc(creditToken).collection("articleStates").doc(hel)
+    // .delete().then(function() {  console.log("Document successfully deleted!");})
+    // .catch(function(error) { console.error("Error removing document: ", error);  });
+
     // form_new.new_email.value = "";
     // form_new.new_pasw.value = "";
     popup_close();  
@@ -336,7 +351,8 @@ auth.onAuthStateChanged(user => {
     });
 
     creditToken = user.uid
-    
+    console.log("values updated")
+    updateVal();
 
  }else{
     $("#signout").css({"display":"none"});
