@@ -27,6 +27,9 @@
         // db.settings({ timestampsInSnapshots: true});
         
 
+
+
+
 ////////////////////////////////////////////////////////////
 
 
@@ -48,35 +51,182 @@
 
 
 
- 
- 
- // POPUP  
-function popup_close(){    $("#screencover").slideUp(); }
-  
-function popup_open(){    $("#screencover").slideDown();}
-  
- 
- 
 
 
 
 
 
 
- 
- 
- 
+
+
+
+
+
+
+
 
 // CONSTS
 const form_new = document.querySelector("#form_new");
 const form_signin = document.querySelector("#form_signin");
 
+let creditToken;    
+let downloadedArr = [];
+
+
+
+
+let changeCol=(name, col)=>{
+    console.log("color change", name, col)
+    $("[name='"+name+"']").css("border-left-color",col);
+  }
+
+let changeState = (name, state)=>{
+    console.log("state change", name, state)
+    $("[name='"+name+"']").attr("state","read");
+  }
+
+
+
+let downloadStates = () => {
+    
+    let downArr = [];
+    
+
+
+    db.collection("texts").doc(creditToken).collection("articleStates")
+    // .where("state", "==", "read")
+    .get()
+    .then( snap => {
+        i = 0;
+        snap.forEach( function(doc,index){
+            // doc.data() is never undefined for query doc snapshots
+            // todo !!!!!!!
+
+            console.log("------ ", index, doc);
+            downArr.push([])
+            console.log(downArr)
+            downArr[i].push(doc.id);
+            downArr[i].push(doc.data().state);
+            i++;
+            
+            // console.log( "downloaded: ",doc.id, " => ", doc.data(), downArr , " into ------", downloadedArr);
+        });
+        downloadedArr = downArr;
+            return downloadedArr;
+    })
+    .catch(function(error) {
+        console.log("Error getting documents: ", error);
+    });
+
+    
+
+}
+
+let changePage = () => {
+    for(i=0; i < downloadedArr.length; i++ ){
+    
+        // change color
+        if(downloadedArr[i][1] = "read"){
+            changeCol( downloadedArr[i][0], "green");
+            changeState( downloadedArr[i][0], "read");
+
+        }else {
+            changeCol(downloadedArr[i][0], "blue");
+            changeState( downloadedArr[i][0], "new");
+        }
+        
+    }
+    
+
+}
+
+
+
+const updateVal = () => {
+    downloadStates()
+    setTimeout(()=>{ changePage()  }, 1000)
+}
+
+
+
+const findAllRead = ()=>{
+    let arr  = [];
+    for( i = 0; $( "[state*='read']" )[i] != undefined; i++){
+      let item = $( "[state*='read']" )[i]
+      let name = $("[state*='read']")[i].getAttribute("name");
+      let state = $("[state*='read']")[i].getAttribute("state"); 
+
+      let nextArr = [name,state] 
+      arr.push(nextArr);  console.log( "findallRead: iter=",i,arr)
+  
+    }; 
+    return arr 
+  }
+
+
+function uploadStates(){  
+
+
+
+    let arr = findAllRead();
+    console.log("uploadStates-- " ,creditToken, arr.length, arr )
+    for(i = 0; i < arr.length; i++){
+
+        string = [arr[i][0]] 
+        console.log('i=',i, "arr.l=", arr.length, "doc.id=",string[0], "doc().state=",arr[i][1] );
+
+        db.collection("texts").doc(creditToken).collection("articleStates").doc(string[0]).set({
+                state: arr[i][1],
+            })
+            .then(function() {
+                    console.log("Document successfully written!");
+                }).catch(function(error) {
+
+                    console.error("Error writing document: ", error);
+                });
+            
+           
+    }
+
+
+}
+
+  
+
+
+ 
+ // POPUP  
+ function popup_close(){    $("#screencover").slideUp(); }
+  
+ function popup_open(){    $("#screencover").slideDown();}
 
 
 
 
 
-let creditToken;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //new USER
 $(form_new).on("submit", (e) => {
@@ -87,7 +237,7 @@ $(form_new).on("submit", (e) => {
 
    auth.createUserWithEmailAndPassword(email, pasw).then( cred =>{
        // 15th episode
-       console.log(cred, cred.user, cred.user.uid);
+    //    console.log(cred, cred.user, cred.user.uid);
        //update while i have the cred
     creditToken = cred.user.uid;
     // console.log(findAllRead())
@@ -103,12 +253,18 @@ $(form_new).on("submit", (e) => {
     })
     //  console.log( cred.user );
    }).then( ()=>{
-    form_new.new_email.value = "";
-    form_new.new_pasw.value = "";
+    // form_new.new_email.value = "";
+    // form_new.new_pasw.value = "";
     popup_close();  
    });
 
 });
+
+
+
+
+
+
 
 
 
@@ -129,20 +285,29 @@ $("#signoutbtn").on("click", (e)=>{
 
 
 
+
+
+
+
+
+
 // LOG IN
 $(form_signin).on("submit", (e)=>{
-   e.preventDefault();
-   const email = form_signin.signin_email.value;
-   const pasw = form_signin.signin_pasw.value; 
+    e.preventDefault();
+    const email = form_signin.signin_email.value;
+    const pasw = form_signin.signin_pasw.value; 
 
 
-   auth.signInWithEmailAndPassword(email, pasw).then(cred =>{
-     console.log("cred.user: ",cred.user)
-   }).then( ()=>{
+    auth.signInWithEmailAndPassword(email, pasw).then(cred =>{
+        creditToken = cred.user.uid
+        console.log(" LOGGED IN ", email, pasw, creditToken)
+        updateVal();
+        
+        console.log("done, done")
+    })
 
-       form_signin.signin_email.value = "";
-       form_signin.signin_pasw.value = "";
-   })
+    
+   
 
 })
 
@@ -152,19 +317,16 @@ $(form_signin).on("submit", (e)=>{
 
 
 
-function displayName(xxx) {
-    $("#user").text(xxx);
-}
 
 
 // AUTH CHANGE
 auth.onAuthStateChanged(user => {
- console.log("STATE CHANGED: ", user);
+ console.log("STATE CHANGED: ");
 
  if(user){
      $("#signout").css({"display":"block"});
      $("#signin").css({"display":"none"});
-     displayName(user.email);
+     $("#user").text(user.email)
 
     db.collection("texts").onSnapshot(snapshot=>{
         // setupGuides(snapshot.docs)
@@ -174,6 +336,7 @@ auth.onAuthStateChanged(user => {
     });
 
     creditToken = user.uid
+    
 
  }else{
     $("#signout").css({"display":"none"});
@@ -190,26 +353,5 @@ auth.onAuthStateChanged(user => {
 
 
 
-function fire( ){
-
-    console.log("credittoken test:",creditToken);
-    let blah = findAllRead()
-    
-    db.collection('texts').doc(creditToken).set({
-        state: blah[0].state,
-        pos: blah[0].pos
-    })
-
-
-}
-
-
-
-
-
-
-
-
-
-
+         
 
