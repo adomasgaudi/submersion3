@@ -8,62 +8,6 @@
 
 
 
-
-   
-  // POPUP  
-  
-function popup_close(){
-  // $("#screencover").css('display', 'none');
-  $("#screencover").slideUp();
-
-}
-
-function popup_open(){
-  $("#screencover").slideDown();
-}
-
-
-
-
-
-
-////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
-
-
-
-///////////////////////////////////////////////////////////////////////////
-
-
-
-    
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
 // ------------------------------------------------
 
 
@@ -72,24 +16,28 @@ function popup_open(){
 
 // ARRAY CREATOR
 
-function obj(pos, type) {
+function obj(pos, state) {
   this.pos = pos;
-  this.type = type;
+  this.state = state;
 }
 
-let state = [ ]
+// let state = [ ]
 
 //FILL STATE ARRAY
-const initialise = () => {
-  $(".mul").each( function(item){
-    let next = new obj(item, "new")
-    state.push(  next  ) 
-  })
-}
-initialise();
+// const initialise = () => {
+//   console.log(  "init test ", $("[name*='re']")  )
+//   $("[name*='re']").each( function(item){
+//     let next = new obj(item, "new");
+//     state.push(  next  ) ;  
+//   })
+// }
+// initialise();
 
-console.log( $( "[name*='re']" ) )
 
+
+
+
+/////////////////////////////////////////
 
 
 // const updateState = () => {
@@ -112,37 +60,19 @@ console.log( $( "[name*='re']" ) )
 
 
 
-const updatePage = () => {
-  
-
-    $("main p").each( item => {
-
-      console.log(state[item].color)
-      let color = state[item].color
-      $(this).css("border-left-color", color);
-
-    })
 
 
 
 
-}
 
-
-// ADD COLOR TO DATA BASE
-const addcolor = () => {
-  console.log(current_user, "up top");
-  
- }
-
-  fusers.onSnapshot(snapshot=>{
+  db.collection('texts').onSnapshot(snapshot=>{
     let changes = snapshot.docChanges();
 
+    console.log("changes test :", changes);
     changes.forEach(change => {
-      // console.log(change.doc.data())
+      console.log("changes.doc.data test :", change.doc.data())
     })
 
-    // console.log(changes)
   })
 
 
@@ -156,24 +86,19 @@ const addcolor = () => {
 
 
 
-
-
-
-
-
-
-
-
+// 
 
 $("main p").on("click", function(e) {
-  console.log("this")
+  console.log("this test:", this, $(this), e , e.target);
   
   $(this).css({"border-left-color":"darkcyan"}) //change color
   $(this).attr("state","read") //change state
-  // run update
+  
   setTimeout( ()=>{ 
+    //upload to firebase
+    db.collection('texts')
     // updateState()
-    console.log(state)  
+    // console.log(state)  
   }, 100 );
 
 })
@@ -181,7 +106,7 @@ $("main p").on("click", function(e) {
 
 
 const findAllRead = ()=>{
-  
+  let arr  = [];
   for( i = 0; $( "[state*='read']" )[i] != undefined; i++){
     let item = $( "[state*='read']" )[i]
     // console.log( item, item.getAttribute("name"))
@@ -189,17 +114,13 @@ const findAllRead = ()=>{
     let state = $("[state*='read']")[i].getAttribute("state");
 
     console.log(name, state)
+    let nextObj = new obj(name, state);
+    
+    arr.push(nextObj);
 
-
-    db.collection("users").add({
-      elemid: name,
-      statename: state
-
-      
-    })
-
-  
   }
+  console.log(arr);
+  return arr 
 }
 
 
@@ -240,7 +161,7 @@ const findAllRead = ()=>{
 //   if( $(this).css("border-left-color") == "rgb(0, 139, 139)" ){
     
 //     $(this).css({"border-left-color":"rgb(73, 73, 73)"}); //CHANGE COLOR
-//     // state[item].type = "new"  // SET ARRAY
+//     // state[item].state = "new"  // SET ARRAY
   
 //     state.forEach( (e)=>{
 //       console.log(e)
@@ -251,7 +172,7 @@ const findAllRead = ()=>{
 
 //   }else{   
 //     $(this).css({"border-left-color":"darkcyan"}) 
-//     // state["item"].type = "read"  // SET ARRAY
+//     // state["item"].state = "read"  // SET ARRAY
 //     // console.log(state[item])
 //     // console.log(state)
 //     state.forEach( (e)=>{

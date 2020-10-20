@@ -1,4 +1,4 @@
- console.log("FIRE!")
+ 
  
  // <!-- TODO: new SDKs for Firebase products that you want to use
     //      https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -21,11 +21,11 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
 
-        // firebase.analytics();
+        
         const db = firebase.firestore();
         const auth = firebase.auth();
-        
         // db.settings({ timestampsInSnapshots: true});
+        
 
 ////////////////////////////////////////////////////////////
 
@@ -39,83 +39,6 @@
 
 
 
-//  //check
-// //  console.log(form_new, form_signin)
- 
-//  function findattr(attribute, value, element_type)    {
-//      element_type = element_type || "*";
- 
-//      var All = document.getElementsByTagName(element_type);
-//      for (var i = 0; i < All.length; i++)       {
-//        if (All[i].getAttribute(attribute) == value) { return All[i]; }
-//      }
-     
-//    }
- 
-
-//    //FIRESTORE OLD FUNCTIONS
- 
-//  function renderuser(doc) {
-
-//     //  // creates elements
-//     //  let lidoc = document.createElement("li");
-//     //  let namespan = document.createElement("span");
-//     //  let paswspan = document.createElement("span");
-//     //  let scorespan = document.createElement("span");
-//     //  let cross = document.createElement("div");
- 
-//      //future
-//     //  lidoc.setAttribute("data-id", doc.id);
- 
-//      //fills elements
-//     //  namespan.textContent = "name: " + doc.data().name + " " ;
-//     //  namespan.setAttribute("name", doc.data().name )
-//     //  paswspan.textContent = "pasw: " + doc.data().pasw + " " ;
-//     //  scorespan.textContent = "score: " + doc.data().score + " " ; 
-//     //  cross.textContent = "delete";
-//     //  cross.classList += "button";
- 
-//     //  lidoc.appendChild(namespan);
-//     //  lidoc.appendChild(paswspan);
-//     //  lidoc.appendChild(scorespan);
-//     //  lidoc.appendChild(cross)
- 
-//     //  userlist.appendChild(lidoc)
- 
- 
-//     //  cross.addEventListener("click", (e)=>{
-//     //      e.stopPropagation();
-//     //      let id = e.target.parentElement.getAttribute("data-id");
-//     //      db.collection("users").doc(id).delete();
- 
-//     //      console.log("deleted?", db.collection("users").doc(id) )
-//     //      console.log(    "if this works...",  db.collection('users').doc(id).get().then((doc) => {doc.get("name")})        );
-//     //  })
- 
- 
- 
- 
-     
-//  }
- 
- 
-//  db.collection("users").get().then((snapshot)=>{
-//     //  console.log(snapshot.docs)
-//      snapshot.docs.forEach( doc => {
-//         //  console.log(doc.data());
-//         //  renderuser(doc);
-//      } )
-//  })
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
 
 
 
@@ -124,15 +47,24 @@
 
 
 
- ////////////////////////////////////////////////////////////
 
- let fusers = db.collection("users");
+ 
+ 
+ // POPUP  
+function popup_close(){    $("#screencover").slideUp(); }
+  
+function popup_open(){    $("#screencover").slideDown();}
+  
+ 
+ 
+
+
 
 
 
 
  
- //FORMS
+ 
  
 
 // CONSTS
@@ -140,33 +72,48 @@ const form_new = document.querySelector("#form_new");
 const form_signin = document.querySelector("#form_signin");
 
 
+
+
+
+
+let creditToken;
+
 //new USER
 $(form_new).on("submit", (e) => {
 
     e.preventDefault();
-
    const email = form_new.new_email.value;
-   const pasw = form_new.new_pasw.value;
-
-   console.log(email, pasw)
+   const pasw = form_new.new_pasw.value;   console.log("new user: ", email, pasw);
 
    auth.createUserWithEmailAndPassword(email, pasw).then( cred =>{
+       // 15th episode
+       console.log(cred, cred.user, cred.user.uid);
+       //update while i have the cred
+    creditToken = cred.user.uid;
+    // console.log(findAllRead())
+    
+    // console.log(blah, blah[0], blah[0].state)
+    return db.collection('texts').doc(cred.user.uid).set({
+        bio: form_new.bio.value,
+        // state: state,
 
 
-    return db.collection('users').doc(cred.user.uid).set({
-        bio: form_new.bio
+
+
     })
-
-     console.log( cred.user );
-     
-     form_new.new_email.value = "";
-     form_new.new_pasw.value = "";
-
+    //  console.log( cred.user );
    }).then( ()=>{
-       
-   } )
-   
-})
+    form_new.new_email.value = "";
+    form_new.new_pasw.value = "";
+    popup_close();  
+   });
+
+});
+
+
+
+
+
 
 
 // SIGN OUT
@@ -177,6 +124,11 @@ $("#signoutbtn").on("click", (e)=>{
 })
 
 
+
+
+
+
+
 // LOG IN
 $(form_signin).on("submit", (e)=>{
    e.preventDefault();
@@ -185,18 +137,25 @@ $(form_signin).on("submit", (e)=>{
 
 
    auth.signInWithEmailAndPassword(email, pasw).then(cred =>{
-     console.log(cred.user)
+     console.log("cred.user: ",cred.user)
+   }).then( ()=>{
+
+       form_signin.signin_email.value = "";
+       form_signin.signin_pasw.value = "";
    })
 
-   form_signin.signin_email.value = "";
-   form_signin.signin_pasw.value = "";
 })
+
+
+
+
 
 
 
 function displayName(xxx) {
     $("#user").text(xxx);
 }
+
 
 // AUTH CHANGE
 auth.onAuthStateChanged(user => {
@@ -207,9 +166,19 @@ auth.onAuthStateChanged(user => {
      $("#signin").css({"display":"none"});
      displayName(user.email);
 
+    db.collection("texts").onSnapshot(snapshot=>{
+        // setupGuides(snapshot.docs)
+        // console.log(snapshot)
+    }, err => {
+        console.log("Adomas error here: ",err.message)
+    });
+
+    creditToken = user.uid
+
  }else{
     $("#signout").css({"display":"none"});
      $("#signin").css({"display":"block"});
+    // setupGuides([]) 
  }
 
 })
@@ -221,13 +190,18 @@ auth.onAuthStateChanged(user => {
 
 
 
+function fire( ){
+
+    console.log("credittoken test:",creditToken);
+    let blah = findAllRead()
+    
+    db.collection('texts').doc(creditToken).set({
+        state: blah[0].state,
+        pos: blah[0].pos
+    })
 
 
-
-
-
-
-
+}
 
 
 
