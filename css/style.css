@@ -95,24 +95,24 @@ footer li a:hover {
   margin: auto;
 }
 
-.index section main {
+.index section .single {
   width: 80%;
   max-width: 1200px;
   min-height: 100px;
   padding: 0;
 }
-.index section main p {
+.index section .single p {
   border: none;
 }
-.index section main h1 {
+.index section .single h1 {
   font-size: 40px;
 }
-.index section main .conatiner {
+.index section .single .conatiner {
   width: 100%;
   max-width: none;
   min-height: none;
 }
-.index section main .container__card {
+.index section .single .container__card {
   width: 100%;
   max-width: none;
   min-height: none;
@@ -120,14 +120,14 @@ footer li a:hover {
   flex-wrap: wrap;
   flex-direction: row;
 }
-.index section main a {
+.index section .single > a {
   min-width: 200px;
   width: 25%;
   max-width: none;
   min-height: none;
   margin: 1rem;
 }
-.index section main a .card {
+.index section .single > a .card {
   height: 300px;
   padding: 1rem;
 }
@@ -290,6 +290,43 @@ section {
   justify-content: center;
   align-items: center;
   padding-top: 2rem;
+}
+
+.single {
+  width: 80%;
+  max-width: 1200px;
+  min-height: 100px;
+  margin: auto;
+  padding: 0;
+}
+.single .box {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: none;
+  min-height: none;
+  display: flex;
+}
+.single .box .card {
+  width: 40%;
+  max-width: 250px;
+  min-height: 250px;
+  color: black;
+  text-decoration: none;
+  border: 2px solid coral;
+  border-radius: 20px;
+  display: block;
+  background: whitesmoke;
+  margin: 1rem;
+  padding: 1rem 1rem 1rem 2rem;
+}
+.single .box .card h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.single .box .card a {
+  text-decoration: none;
+  color: black;
 }
 
 main {

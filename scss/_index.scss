@@ -55,7 +55,7 @@
 
 .index{
     section{
-        main{
+        .single{
             p{border: none;}
             h1{ font-size: 40px;}
             @include box(80%, 1200px, 100px);
@@ -69,7 +69,7 @@
                 flex-wrap: wrap;
                 flex-direction: row;
             }
-            a{
+            >a{
                 
                 min-width: 200px;
                 @include box(25%, none, none);
