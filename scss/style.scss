@@ -253,6 +253,7 @@ section{
 
 main{ 
     @include box(50%, none, 100px); 
+    align-self: flex-start;
     padding-right: 1rem;
     .container{
         p{

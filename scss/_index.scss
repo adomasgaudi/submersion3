@@ -14,9 +14,23 @@
     section{
         main{
             // h1{color:red}
-
-            .card{
-                background: red;}
+            
+            a{
+                
+                color: black;
+                text-decoration: none;
+                .card{
+                    background:whitesmoke;
+                    border: 2px solid coral;
+                    border-radius: 20px;
+                    // a{ 
+                    //     p{
+                    //         color: black;
+                    //         text-decoration: none;
+                    //     }
+                    //  }
+                }
+            }
 
 
         }
@@ -29,7 +43,7 @@
 .index{
     header{
         height: 300px;
-        padding: 1px;
+        padding: 1px;   
         nav{
             // display: flex;
             align-items: center;
@@ -42,6 +56,8 @@
 .index{
     section{
         main{
+            p{border: none;}
+            h1{ font-size: 40px;}
             @include box(80%, 1200px, 100px);
             padding: 0;
             .conatiner{
@@ -53,13 +69,17 @@
                 flex-wrap: wrap;
                 flex-direction: row;
             }
-
-            .card{
+            a{
+                
+                min-width: 200px;
                 @include box(25%, none, none);
-                height: 300px;
                 margin: 1rem;
-            }
+                .card{
+                    height: 300px;
+                    padding: 1rem;
+                }
 
+            }    
 
 
 

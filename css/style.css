@@ -73,8 +73,14 @@ footer li a:hover {
   color: white;
 }
 
-.index section main .card {
-  background: red;
+.index section main a {
+  color: black;
+  text-decoration: none;
+}
+.index section main a .card {
+  background: whitesmoke;
+  border: 2px solid coral;
+  border-radius: 20px;
 }
 
 .index header {
@@ -95,6 +101,12 @@ footer li a:hover {
   min-height: 100px;
   padding: 0;
 }
+.index section main p {
+  border: none;
+}
+.index section main h1 {
+  font-size: 40px;
+}
 .index section main .conatiner {
   width: 100%;
   max-width: none;
@@ -108,12 +120,16 @@ footer li a:hover {
   flex-wrap: wrap;
   flex-direction: row;
 }
-.index section main .card {
+.index section main a {
+  min-width: 200px;
   width: 25%;
   max-width: none;
   min-height: none;
-  height: 300px;
   margin: 1rem;
+}
+.index section main a .card {
+  height: 300px;
+  padding: 1rem;
 }
 
 * {
@@ -280,6 +296,7 @@ main {
   width: 50%;
   max-width: none;
   min-height: 100px;
+  align-self: flex-start;
   padding-right: 1rem;
 }
 main .container p {
