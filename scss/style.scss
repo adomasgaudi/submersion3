@@ -242,7 +242,7 @@ header{
 
 
 
-
+ul,ol { padding-left: 1rem;  }
 
 section{
     @include box(100%, 100%, 100px);
@@ -258,15 +258,16 @@ section{
     margin: auto;
     padding: 0;
     
+
     .box{
         display: flex;
         justify-content: space-evenly;
         @include box(100%, none, none);
         display: flex;
-
+        
         
         .card{
-            @include box(40%, 250px, 250px);
+            @include box(40%, 350px, 250px);
 
             color: black;
             text-decoration: none;
@@ -281,6 +282,10 @@ section{
             a{ text-decoration: none; color: black }
 
 
+        }
+        @media only screen and (max-width: $breakPlus){
+            .card{ @include box(95%, 350px, 250px) }
+            flex-direction: column;
         }
 
         
