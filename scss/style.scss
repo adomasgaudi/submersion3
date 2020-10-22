@@ -242,7 +242,7 @@ header{
 
 
 
-
+ul,ol { padding-left: 1rem;  }
 
 section{
     @include box(100%, 100%, 100px);
@@ -251,22 +251,26 @@ section{
     padding-top: 2rem;
 }
 
-
+article{
+    margin: 1rem 0;
+}
+h3{font-size: 25px;}
 .single{
 
     @include box(80%, 1200px, 100px);
     margin: auto;
     padding: 0;
     
+
     .box{
         display: flex;
         justify-content: space-evenly;
         @include box(100%, none, none);
         display: flex;
-
+        
         
         .card{
-            @include box(40%, 250px, 250px);
+            @include box(40%, 350px, 250px);
 
             color: black;
             text-decoration: none;
@@ -282,12 +286,48 @@ section{
 
 
         }
+        @media only screen and (max-width: $breakPlus){
+            .card{ @include box(95%, 350px, 250px) }
+            flex-direction: column;
+        }
 
         
            
         
     }
 }
+
+
+
+
+.expTop {
+    
+    cursor: pointer;
+    
+    
+  }
+  
+ .expTop:hover {
+    background-color: rgb(209, 206, 206);
+  }
+  
+  .expBox {
+    padding-left: 18px;
+    display: none;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

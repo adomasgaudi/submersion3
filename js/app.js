@@ -62,30 +62,47 @@ let fakearray = [
 
 
 
-function arraymaker() {
-  let newArray = [];
-  let i=0;
-  fakearray.forEach( doc =>{
-    let newnewarray = []
-    newnewarray.push(doc.id)
-    newnewarray.push(doc.state)
-    console.log(newnewarray);
+// function arraymaker() {
+//   let newArray = [];
+//   let i=0;
+//   fakearray.forEach( doc =>{
+//     let newnewarray = []
+//     newnewarray.push(doc.id)
+//     newnewarray.push(doc.state)
+//     console.log(newnewarray);
 
-    newArray[i] = newnewarray
+//     newArray[i] = newnewarray
     
     
-    console.log(i, doc.id,    doc.state, newArray)
-    i++;
+//     console.log(i, doc.id,    doc.state, newArray)
+//     i++;
+//   });
+//   return newArray;
+
+// }
+
+// window.onbeforeunload = function(event)
+// {
+//     return confirm("Confirm refresh");
+// };
+
+
+
+
+
+
+
+
+//expandable text
+var coll = document.getElementsByClassName("expTop");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+
+  coll[i].addEventListener("click", function() {
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {      content.style.display = "none";    } 
+    else {content.style.display = "block";}
   });
-  return newArray;
-
-
-
-
 
 }
-
-
-
-
-

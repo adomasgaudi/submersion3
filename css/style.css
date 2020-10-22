@@ -281,6 +281,10 @@ header nav ul:last-child .popup {
     left: 10%;
   }
 }
+ul, ol {
+  padding-left: 1rem;
+}
+
 section {
   width: 100%;
   max-width: 100%;
@@ -290,6 +294,14 @@ section {
   justify-content: center;
   align-items: center;
   padding-top: 2rem;
+}
+
+article {
+  margin: 1rem 0;
+}
+
+h3 {
+  font-size: 25px;
 }
 
 .single {
@@ -309,7 +321,7 @@ section {
 }
 .single .box .card {
   width: 40%;
-  max-width: 250px;
+  max-width: 350px;
   min-height: 250px;
   color: black;
   text-decoration: none;
@@ -327,6 +339,29 @@ section {
 .single .box .card a {
   text-decoration: none;
   color: black;
+}
+@media only screen and (max-width: 430px) {
+  .single .box {
+    flex-direction: column;
+  }
+  .single .box .card {
+    width: 95%;
+    max-width: 350px;
+    min-height: 250px;
+  }
+}
+
+.expTop {
+  cursor: pointer;
+}
+
+.expTop:hover {
+  background-color: #d1cece;
+}
+
+.expBox {
+  padding-left: 18px;
+  display: none;
 }
 
 main {
