@@ -296,6 +296,14 @@ section {
   padding-top: 2rem;
 }
 
+article {
+  margin: 1rem 0;
+}
+
+h3 {
+  font-size: 25px;
+}
+
 .single {
   width: 80%;
   max-width: 1200px;
@@ -341,6 +349,19 @@ section {
     max-width: 350px;
     min-height: 250px;
   }
+}
+
+.expTop {
+  cursor: pointer;
+}
+
+.expTop:hover {
+  background-color: #d1cece;
+}
+
+.expBox {
+  padding-left: 18px;
+  display: none;
 }
 
 main {

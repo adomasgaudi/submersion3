@@ -251,7 +251,10 @@ section{
     padding-top: 2rem;
 }
 
-
+article{
+    margin: 1rem 0;
+}
+h3{font-size: 25px;}
 .single{
 
     @include box(80%, 1200px, 100px);
@@ -293,6 +296,38 @@ section{
         
     }
 }
+
+
+
+
+.expTop {
+    
+    cursor: pointer;
+    
+    
+  }
+  
+ .expTop:hover {
+    background-color: rgb(209, 206, 206);
+  }
+  
+  .expBox {
+    padding-left: 18px;
+    display: none;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
