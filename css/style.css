@@ -360,8 +360,18 @@ h3 {
 }
 
 .expBox {
+  margin: 0.5rem 0;
   padding-left: 18px;
   display: none;
+}
+
+h3 {
+  margin: 1rem 0;
+}
+
+h4 {
+  margin: 0.5rem 0;
+  font-size: 20px;
 }
 
 main {
