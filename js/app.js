@@ -102,18 +102,41 @@ let fakearray = [
     else {content.css("display","none")}
   });
 
+ 
+
 
   $(".popupTop").on("click", function(){
-    var content = $(this).parent().nextAll(".popupBox").eq( 0 );
+    var content = $(this).parent().nextAll(".popupBot").eq( 0 );
     if (content.css("display") == "none") {      
       content.css("display","block");    } 
     else {content.css("display","none")}
   });
 
+  $(".popupTop2").on("click", function(){
+    var content = $(this).parent().nextAll(".popupBot2").eq( 0 );
+    if (content.css("display") == "none") {      
+      content.css("display","block");    } 
+    else {content.css("display","none")}
+  });
+
+  
   $(".popupTop").on("click",function(){
     $(this).css("color","maroon")
   })
+  $(".popupTop2").on("click",function(){
+    $(this).css("color","maroon")
+  })
   // $(".popupTop:hover").css("color","red")
+
+
+
+
+  $(".artTop").on("click", function(){
+    var content = $(this).nextAll(".artBot").eq( 0 );
+    if (content.css("display") == "none") {      
+      content.css("display","block");    } 
+    else {content.css("display","none")}
+  });
   
 
 

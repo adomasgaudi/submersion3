@@ -255,9 +255,23 @@ article{
     margin: 1rem 0;
 }
 h3{font-size: 25px;}
+
+h3{ margin: 1rem 0 ; }
+h2{ margin: 1rem 0 ; }
+h4{margin: 0.5rem 0; font-size: 20px;}
+
+h1{
+    border-top: 2px solid coral;
+    border-bottom: 2px solid coral;
+    margin: 3rem 1rem;
+}
+
+p{ margin: 0.5rem 0;}
+
+
 .single{
 
-    @include box(80%, 1200px, 100px);
+    @include box(calc(50% + 250px + 1rem), 1200px, 100px);
     margin: auto;
     padding: 0;
     
@@ -303,9 +317,9 @@ h3{font-size: 25px;}
 .expTop {
     
     cursor: pointer;
-    border-left: 2px solid grey;    
+    padding-right: 2rem;
     &:hover{
-        border-left: 0.5rem solid grey;
+        border-right: 0.5rem solid grey;
         transition: 0.1s;
         width:100%;
     }
@@ -320,22 +334,35 @@ h3{font-size: 25px;}
     border-radius: 4px;
     // z-index: 10;
   }
-
-
-
-
-.popupTop{
+.artTop {
+    
     cursor: pointer;
-    // border-bottom: 1px solid coral;
+    padding-right: 2rem;
+    &:hover{
+        border-right: 0.5rem solid grey;
+        transition: 0.1s;
+        width:100%;
+    }
+  }
+  
+  .artBot {
+    margin: 0.2rem 0;
+    padding: 0.3rem 1rem ;
+    
+  }
+
+
+
+
+.popupTop, .popupTop2{
+    cursor: pointer;
     color: coral ;
     font-style: italic;
-    // position: relative;
-    // &:after{color: lightcoral;}
     &:hover{color: crimson; transition: 0.1s}
     &:active{color: red; transition: 0.1s}
     &::after{color: maroon; transition: 0.1s}
 }
-.popupBox{
+.popupBot, .popupBot2{
     margin: 0.2rem 0;
     padding: 2rem 1rem ;
     display: none;
@@ -346,13 +373,6 @@ h3{font-size: 25px;}
     width: 50%;
 }
 
-
-
-
-
-h3{ margin: 1rem 0 ; }
-h2{ margin: 1rem 0 ; }
-h4{margin: 0.5rem 0; font-size: 20px;}
 
 
 
@@ -378,7 +398,7 @@ main{
         
 
         // article{ padding-left: 1rem;}
-        h1, h2, h3, h4 { padding-left: 1rem;}
+        h2, h3, h4 { padding-left: 1rem;}
         ol, ul{ padding:  0.5rem 0rem 0.5rem 2rem;}
         p{
 
@@ -413,7 +433,7 @@ aside{
     .expTop {     }
     .expBox {     }
     .popupTop{  }
-    .popupBox{ width: 85%; margin: auto;}
+    .popupBot, .popupBot2{ width: 85%; margin: auto;}
     
     
     
@@ -454,7 +474,7 @@ aside{
     .expTop {     }
     .expBox {     }
     .popupTop{  }
-    .popupBox{ width: 90%; margin: auto;}
+    .popupBot, .popupBot2{ width: 90%; margin: auto;}
 
 
 

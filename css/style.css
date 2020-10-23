@@ -304,8 +304,31 @@ h3 {
   font-size: 25px;
 }
 
+h3 {
+  margin: 1rem 0;
+}
+
+h2 {
+  margin: 1rem 0;
+}
+
+h4 {
+  margin: 0.5rem 0;
+  font-size: 20px;
+}
+
+h1 {
+  border-top: 2px solid coral;
+  border-bottom: 2px solid coral;
+  margin: 3rem 1rem;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
 .single {
-  width: 80%;
+  width: calc(50% + 250px + 1rem);
   max-width: 1200px;
   min-height: 100px;
   margin: auto;
@@ -353,10 +376,10 @@ h3 {
 
 .expTop {
   cursor: pointer;
-  border-left: 2px solid grey;
+  padding-right: 2rem;
 }
 .expTop:hover {
-  border-left: 0.5rem solid grey;
+  border-right: 0.5rem solid grey;
   transition: 0.1s;
   width: 100%;
 }
@@ -370,25 +393,40 @@ h3 {
   border-radius: 4px;
 }
 
-.popupTop {
+.artTop {
+  cursor: pointer;
+  padding-right: 2rem;
+}
+.artTop:hover {
+  border-right: 0.5rem solid grey;
+  transition: 0.1s;
+  width: 100%;
+}
+
+.artBot {
+  margin: 0.2rem 0;
+  padding: 0.3rem 1rem;
+}
+
+.popupTop, .popupTop2 {
   cursor: pointer;
   color: coral;
   font-style: italic;
 }
-.popupTop:hover {
+.popupTop:hover, .popupTop2:hover {
   color: crimson;
   transition: 0.1s;
 }
-.popupTop:active {
+.popupTop:active, .popupTop2:active {
   color: red;
   transition: 0.1s;
 }
-.popupTop::after {
+.popupTop::after, .popupTop2::after {
   color: maroon;
   transition: 0.1s;
 }
 
-.popupBox {
+.popupBot, .popupBot2 {
   margin: 0.2rem 0;
   padding: 2rem 1rem;
   display: none;
@@ -399,19 +437,6 @@ h3 {
   width: 50%;
 }
 
-h3 {
-  margin: 1rem 0;
-}
-
-h2 {
-  margin: 1rem 0;
-}
-
-h4 {
-  margin: 0.5rem 0;
-  font-size: 20px;
-}
-
 main {
   width: 50%;
   max-width: none;
@@ -419,7 +444,7 @@ main {
   align-self: flex-start;
   padding-right: 1rem;
 }
-main .container h1, main .container h2, main .container h3, main .container h4 {
+main .container h2, main .container h3, main .container h4 {
   padding-left: 1rem;
 }
 main .container ol, main .container ul {
@@ -442,7 +467,7 @@ aside .container {
 }
 
 @media only screen and (max-width: 768px) {
-  .popupBox {
+  .popupBot, .popupBot2 {
     width: 85%;
     margin: auto;
   }
@@ -469,7 +494,7 @@ aside .container {
   }
 }
 @media only screen and (max-width: 430px) {
-  .popupBox {
+  .popupBot, .popupBot2 {
     width: 90%;
     margin: auto;
   }
