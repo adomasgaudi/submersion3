@@ -131,15 +131,24 @@ let fakearray = [
 
 
 
+  // $(".artTop").on("click", function(){
+  //   var content = $(this).nextAll(".artBot").eq( 0 );
+  //   if (content.css("display") == "none") {      
+  //     content.css("display","block");    } 
+  //   else {content.css("display","none")}
+  // });
+
   $(".artTop").on("click", function(){
     var content = $(this).nextAll(".artBot").eq( 0 );
     if (content.css("display") == "none") {      
-      content.css("display","block");    } 
-    else {content.css("display","none")}
+      content.slideDown()    } 
+    else {content.slideUp()}
   });
   
 
 
-
+  function popup_close(){    $("#screencover").slideUp(); }
+  
+  function popup_open(){    $("#screencover").slideDown();}
 
 
