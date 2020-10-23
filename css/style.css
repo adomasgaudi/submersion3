@@ -353,19 +353,57 @@ h3 {
 
 .expTop {
   cursor: pointer;
+  border-left: 2px solid grey;
 }
-
 .expTop:hover {
-  background-color: #d1cece;
+  border-left: 0.5rem solid grey;
+  transition: 0.1s;
+  width: 100%;
 }
 
 .expBox {
-  margin: 0.5rem 0;
-  padding-left: 18px;
+  margin: 0.2rem 0;
+  padding: 0.3rem 1rem;
   display: none;
+  background: white;
+  border: 2px solid grey;
+  border-radius: 4px;
+}
+
+.popupTop {
+  cursor: pointer;
+  color: coral;
+  font-style: italic;
+}
+.popupTop:hover {
+  color: crimson;
+  transition: 0.1s;
+}
+.popupTop:active {
+  color: red;
+  transition: 0.1s;
+}
+.popupTop::after {
+  color: maroon;
+  transition: 0.1s;
+}
+
+.popupBox {
+  margin: 0.2rem 0;
+  padding: 2rem 1rem;
+  display: none;
+  background: white;
+  border: 2px solid lightcoral;
+  border-radius: 4px;
+  position: absolute;
+  width: 50%;
 }
 
 h3 {
+  margin: 1rem 0;
+}
+
+h2 {
   margin: 1rem 0;
 }
 
@@ -381,16 +419,15 @@ main {
   align-self: flex-start;
   padding-right: 1rem;
 }
+main .container h1, main .container h2, main .container h3, main .container h4 {
+  padding-left: 1rem;
+}
+main .container ol, main .container ul {
+  padding: 0.5rem 0rem 0.5rem 2rem;
+}
 main .container p {
-  border-left: 0.5rem solid #494949;
-  padding-left: 0.5rem;
+  padding-left: 1rem;
 }
-main .container p:hover {
-  transform: translateX(1px);
-  transition: 0.2s;
-  border-left: 0.5rem solid #242424;
-}
-
 aside {
   width: 30%;
   max-width: 250px;
@@ -405,6 +442,11 @@ aside .container {
 }
 
 @media only screen and (max-width: 768px) {
+  .popupBox {
+    width: 85%;
+    margin: auto;
+  }
+
   section {
     display: flex;
     flex-flow: column wrap;
@@ -427,6 +469,11 @@ aside .container {
   }
 }
 @media only screen and (max-width: 430px) {
+  .popupBox {
+    width: 90%;
+    margin: auto;
+  }
+
   section {
     display: flex;
     flex-flow: column wrap;

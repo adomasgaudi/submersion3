@@ -93,16 +93,30 @@ let fakearray = [
 
 
 
-//expandable text
-var coll = document.getElementsByClassName("expTop");
-var i;
 
-for (i = 0; i < coll.length; i++) {
-
-  coll[i].addEventListener("click", function() {
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {      content.style.display = "none";    } 
-    else {content.style.display = "block";}
+  $(".expTop").on("click", function(){
+    console.log($(this).next().css("display"))
+    var content = $(this).next();
+    if (content.css("display") == "none") {      
+      content.css("display","block");    } 
+    else {content.css("display","none")}
   });
 
-}
+
+  $(".popupTop").on("click", function(){
+    var content = $(this).parent().nextAll(".popupBox").eq( 0 );
+    if (content.css("display") == "none") {      
+      content.css("display","block");    } 
+    else {content.css("display","none")}
+  });
+
+  $(".popupTop").on("click",function(){
+    $(this).css("color","maroon")
+  })
+  // $(".popupTop:hover").css("color","red")
+  
+
+
+
+
+

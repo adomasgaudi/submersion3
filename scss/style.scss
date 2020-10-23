@@ -303,21 +303,55 @@ h3{font-size: 25px;}
 .expTop {
     
     cursor: pointer;
-    
-    
-  }
-  
- .expTop:hover {
-    background-color: rgb(209, 206, 206);
+    border-left: 2px solid grey;    
+    &:hover{
+        border-left: 0.5rem solid grey;
+        transition: 0.1s;
+        width:100%;
+    }
   }
   
   .expBox {
-    margin: 0.5rem 0;
-    padding-left: 18px;
+    margin: 0.2rem 0;
+    padding: 0.3rem 1rem ;
     display: none;
+    background: white;
+    border: 2px solid grey;
+    border-radius: 4px;
+    // z-index: 10;
   }
 
+
+
+
+.popupTop{
+    cursor: pointer;
+    // border-bottom: 1px solid coral;
+    color: coral ;
+    font-style: italic;
+    // position: relative;
+    // &:after{color: lightcoral;}
+    &:hover{color: crimson; transition: 0.1s}
+    &:active{color: red; transition: 0.1s}
+    &::after{color: maroon; transition: 0.1s}
+}
+.popupBox{
+    margin: 0.2rem 0;
+    padding: 2rem 1rem ;
+    display: none;
+    background: white;
+    border: 2px solid lightcoral;
+    border-radius: 4px;
+    position: absolute;
+    width: 50%;
+}
+
+
+
+
+
 h3{ margin: 1rem 0 ; }
+h2{ margin: 1rem 0 ; }
 h4{margin: 0.5rem 0; font-size: 20px;}
 
 
@@ -343,15 +377,17 @@ main{
     .container{
         
 
-
+        // article{ padding-left: 1rem;}
+        h1, h2, h3, h4 { padding-left: 1rem;}
+        ol, ul{ padding:  0.5rem 0rem 0.5rem 2rem;}
         p{
 
-            border-left: .5rem solid col(side);
-            padding-left: .5rem;
+            // border-left: .5rem solid col(side);
+            padding-left: 1rem;
             &:hover {
-                transform: translateX(1px);
-                transition: .2s;
-                border-left: .5rem solid col(sided);
+                // transform: translateX(1px);
+                // transition: .2s;
+                // border-left: .5rem solid col(sided);
             }
         }
     }
@@ -372,6 +408,17 @@ aside{
 
 // MEDIA
 @media only screen and (max-width: $breakIpad) {
+    
+    
+    .expTop {     }
+    .expBox {     }
+    .popupTop{  }
+    .popupBox{ width: 85%; margin: auto;}
+    
+    
+    
+    
+    
     section{
         
         @include flex(column);
@@ -402,6 +449,18 @@ aside{
 
 // MEDIA
 @media only screen and (max-width: $breakPlus) {
+
+
+    .expTop {     }
+    .expBox {     }
+    .popupTop{  }
+    .popupBox{ width: 90%; margin: auto;}
+
+
+
+
+
+
     section{
         
         @include flex(column);
@@ -427,6 +486,19 @@ aside{
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
