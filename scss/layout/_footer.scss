@@ -1,0 +1,49 @@
+
+@import '../_variables';
+
+
+footer{
+
+    position: absolute; 
+    bottom: 0;
+    width: 100%;
+    .container{
+        @include box(80%, calc(50% + 250px + 1rem), 30px);
+        margin: auto;
+        ul{
+            list-style-type: none;
+            @include flex(row);
+            @include flexcenter();
+            margin: 1rem 0 ;
+        }
+        li{
+            a{
+                display: block;
+                text-decoration: none; 
+                text-align: center;
+                padding: .5rem;
+                .img { background: red }
+            }
+        }
+    }
+
+}
+
+
+@media only screen and (max-width: $breakPlus){
+    
+    footer{
+        .container{
+            @include box(95%, 95%, 30px);
+            
+            ul{
+                margin: 1rem 0 ;
+            }
+            li{
+                a{
+                    padding: 0 .2rem;
+                }
+            }
+        }
+    }
+}

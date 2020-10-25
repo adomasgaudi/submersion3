@@ -1,0 +1,53 @@
+
+@import '../variables';
+
+
+.expTop {
+    
+    cursor: pointer;
+    border-left: 2px solid grey;    
+    &:hover{
+        border-left: 0.5rem solid grey;
+        transition: 0.1s;
+        width:100%;
+    }
+  }
+  
+  .expBox {
+    margin: 0.2rem 0;
+    padding: 0.3rem 1rem ;
+    display: none;
+    background: white;
+    border: 2px solid grey;
+    border-radius: 4px;
+    // z-index: 10;
+  }
+
+
+
+
+.popupTop{
+    cursor: pointer;
+    // border-bottom: 1px solid coral;
+    color: coral ;
+    font-style: italic;
+    // position: relative;
+    // &:after{color: lightcoral;}
+    &:hover{color: crimson; transition: 0.1s}
+    &:active{color: red; transition: 0.1s}
+    &::after{color: maroon; transition: 0.1s}
+}
+.popupBox{
+    margin: 0.2rem 0;
+    padding: 2rem 1rem ;
+    display: none;
+    background: white;
+    border: 2px solid lightcoral;
+    border-radius: 4px;
+    position: absolute;
+    width: 50%;
+}
+
+
+
+

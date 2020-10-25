@@ -4,6 +4,37 @@
   padding: 0;
 }
 
+* {
+  outline-color: rgba(139, 3, 3, 0.514);
+  outline-width: thin;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  margin: 1rem 0;
+}
+
+h2 {
+  margin: 1rem 0;
+}
+
+h4 {
+  margin: 0.5rem 0;
+  font-size: 20px;
+}
+
 body {
   background: white;
   color: #181818;
@@ -73,82 +104,56 @@ footer li a:hover {
   color: white;
 }
 
-.index section main a {
-  color: black;
-  text-decoration: none;
-}
-.index section main a .card {
-  background: whitesmoke;
-  border: 2px solid coral;
-  border-radius: 20px;
-}
-
-.index header {
-  height: 300px;
-  padding: 1px;
-}
-.index header nav {
-  align-items: center;
-  padding: 2rem 0;
-}
-.index header nav a {
-  margin: auto;
-}
-
-.index section .single {
-  width: 80%;
-  max-width: 1200px;
-  min-height: 100px;
-  padding: 0;
-}
-.index section .single p {
-  border: none;
-}
-.index section .single h1 {
-  font-size: 40px;
-}
-.index section .single .conatiner {
-  width: 100%;
-  max-width: none;
-  min-height: none;
-}
-.index section .single .container__card {
-  width: 100%;
-  max-width: none;
-  min-height: none;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-.index section .single > a {
-  min-width: 200px;
-  width: 25%;
-  max-width: none;
-  min-height: none;
-  margin: 1rem;
-}
-.index section .single > a .card {
-  height: 300px;
-  padding: 1rem;
-}
-
 * {
-  outline-color: rgba(139, 3, 3, 0.514);
-  outline-width: thin;
   outline-style: dotted(o);
 }
 
-* {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
+.expTop {
+  cursor: pointer;
+  border-left: 2px solid grey;
+}
+.expTop:hover {
+  border-left: 0.5rem solid grey;
+  transition: 0.1s;
+  width: 100%;
 }
 
-h1 {
-  font-size: 50px;
+.expBox {
+  margin: 0.2rem 0;
+  padding: 0.3rem 1rem;
+  display: none;
+  background: white;
+  border: 2px solid grey;
+  border-radius: 4px;
 }
 
-h2 {
-  font-size: 30px;
+.popupTop {
+  cursor: pointer;
+  color: coral;
+  font-style: italic;
+}
+.popupTop:hover {
+  color: crimson;
+  transition: 0.1s;
+}
+.popupTop:active {
+  color: red;
+  transition: 0.1s;
+}
+.popupTop::after {
+  color: maroon;
+  transition: 0.1s;
+}
+
+.popupBox {
+  margin: 0.2rem 0;
+  padding: 2rem 1rem;
+  display: none;
+  background: white;
+  border: 2px solid lightcoral;
+  border-radius: 4px;
+  position: absolute;
+  width: 50%;
 }
 
 body {
@@ -300,10 +305,6 @@ article {
   margin: 1rem 0;
 }
 
-h3 {
-  font-size: 25px;
-}
-
 .single {
   width: 80%;
   max-width: 1200px;
@@ -349,67 +350,6 @@ h3 {
     max-width: 350px;
     min-height: 250px;
   }
-}
-
-.expTop {
-  cursor: pointer;
-  border-left: 2px solid grey;
-}
-.expTop:hover {
-  border-left: 0.5rem solid grey;
-  transition: 0.1s;
-  width: 100%;
-}
-
-.expBox {
-  margin: 0.2rem 0;
-  padding: 0.3rem 1rem;
-  display: none;
-  background: white;
-  border: 2px solid grey;
-  border-radius: 4px;
-}
-
-.popupTop {
-  cursor: pointer;
-  color: coral;
-  font-style: italic;
-}
-.popupTop:hover {
-  color: crimson;
-  transition: 0.1s;
-}
-.popupTop:active {
-  color: red;
-  transition: 0.1s;
-}
-.popupTop::after {
-  color: maroon;
-  transition: 0.1s;
-}
-
-.popupBox {
-  margin: 0.2rem 0;
-  padding: 2rem 1rem;
-  display: none;
-  background: white;
-  border: 2px solid lightcoral;
-  border-radius: 4px;
-  position: absolute;
-  width: 50%;
-}
-
-h3 {
-  margin: 1rem 0;
-}
-
-h2 {
-  margin: 1rem 0;
-}
-
-h4 {
-  margin: 0.5rem 0;
-  font-size: 20px;
 }
 
 main {
