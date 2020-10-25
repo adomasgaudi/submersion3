@@ -1,0 +1,160 @@
+@import './vars'; //VARS
+    @import './sub/reset';
+*{  outline-style: dotted(on); outline-style: dotted} //TEST 
+
+
+
+@import './layout/header';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// @include media(any){ html.normal{
+
+//        @import './sub/fonts';
+
+// } }
+
+
+
+// @include media(any) {body.normal {
+
+//     // @import './index';
+//     // @import './colors';
+    
+// }}
+
+
+
+
+// @import './layout/header';
+// @import './layout/single';
+// @import './sub/expand';
+// @import './layout/mainaside';
+// @import './layout/footer' ;
+
+
+
+
+
+
+// @include media(all) {
+//     html.normal {
+        
+        
+        
+//         body{min-height: 100vh; position: relative;}
+
+//         .main-container{
+//             @include box( 100%, 100%, 100vh);
+//             overflow: hidden;
+//             display: block;
+//             position: relative;
+//             padding-bottom: 200px;
+        
+//         }
+        
+//     }
+// }
+
+
+
+
+// @include media(any) {
+
+ 
+    
+//         // @import './index.scss';
+//     //     @import './sub/colors.scss';
+//     //     @import './sub/reset.scss';  
+        
+    
+// }
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+  
+   
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

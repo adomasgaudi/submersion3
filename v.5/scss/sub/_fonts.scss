@@ -1,0 +1,22 @@
+@import '../vars';
+
+
+
+@include media(any){ html.normal{
+
+    *{ font-family: 'Roboto', sans-serif; font-size: 16px;}
+    h1{ font-size: 50px;} // font size
+    h2{ font-size: 30px;} // font size
+    h3{ font-size: 25px;}  // font size
+    
+    h3{ margin: 1rem 0 ; }
+    h2{ margin: 1rem 0 ; }
+    h4{margin: 0.5rem 0; font-size: 20px;}
+    
+    h1{
+        // border-top: 2px solid coral;
+        // border-bottom: 2px solid coral;
+        margin: 3rem 1rem;
+    }
+
+} }

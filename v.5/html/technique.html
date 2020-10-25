@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script> -->
+
+    <!-- MY styles ---------------------------- -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    
+     
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>   
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>   
+
+    
+
+</head>
+<body class="normal">
+    
+
+
+
+
+
+
+    <div class="main-container">
+        
+            <header id="header" class="card-1">
+                <nav >
+        
+                    <ul>
+                        <li id="brandimg">
+                            <a href="/index.html"><img src="https://fontmeme.com/permalink/201016/d26616e75909643b3a9e801367608d7a.png" alt="famous-fonts" border="0" ></a>
+                        </li>
+                        <li id="brandimg2">
+                            <a href="/index.html"><img src="https://fontmeme.com/permalink/201018/1ee64f903a868304ce3ec9ffd8418a78.png" alt="famous-fonts" border="0"></a>
+                        </li>
+                        
+                        <li><a href="./begin.html">Begin</a></li>
+                        <!-- <li><button onclick="updateVal()" >restore</button></li> -->
+                        <!-- <li><button onclick="uploadStates()" >upload</button></li> -->
+                        
+                    </ul>
+                    <ul>
+                        <li id="signout"><button onclick="popup_open()" id="signoutbtn" >Sign&#x2011;out</button></li>
+                        <li id="signin" > 
+                            <button onclick="popup_open()"  >Sign&#x2011;in</button>
+                            
+                            
+                            <div class="screencover" id="screencover">
+                                <div class="popup" id="" >
+                                    <!-- signin signin signin -->
+                                    <h2>Log in</h2>
+                                    <form action="" id="form_signin">
+                                        <input type="text" name="signin_email" placeholder="email" autocomplete="on" >
+                                        <input type="text" name="signin_pasw" placeholder="password" autocomplete="off" >
+                                        <button type="submit" onclick="">sign-in</button>
+                                    </form>
+                                    <!-- <button type="button" id="signout" onclick="">signout</button> -->
+                                    <!-- new new new new -->
+                                    <h2>new account</h2>
+                                    <form action="" id="form_new">
+                                        <input type="text" name="new_email" placeholder="email" autocomplete="on" >
+                                        <input type="text" name="new_pasw" placeholder="password" autocomplete="off" >
+                                        <input type="text" name="bio" placeholder="short bio" autocomplete="off" >
+                                        <button type="submit" onclick="">new account</button>
+                                    </form>
+                                    <button onclick="popup_close()">back</button>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li id="user">-----</li>
+                        
+                    </ul>
+                    
+                </nav>
+            </header>
+        
+        
+
+
+
+
+
+            <div class="single">
+                <h1 >Theory for beginner or intermediate learners</h1>
+            </div>
+
+
+
+            <section>
+                <main>
+                    <div class="container">
+                        <!-- <h1></h1> -->
+                        <h3 class="artTop">Main parts of language learning</h3>
+                            
+                        <article class="artBot">
+                            <p>Language proficiency has many aspects to it, to make the categories of these aspects more clear I will take a look at it from a more of a neurological perspective. I will separate language learning into parts that corelate to the path that information takes through the different parts in your brain.</p>
+                            
+                            
+                        
+                            <ol>
+                                <li><strong class="expTop" >Recognition</strong>
+                                    <ul class="expBox" >
+                                        <li>Sound </li>
+                                        <li>Written </li>
+                                    </ul>
+                                </li>
+                                <li> <strong>Explicit memory / Concepts / Schemas</strong> </li>
+                                <li> <strong>Production</strong> </li>
+                                <li><strong class="expTop">Procedural memory</strong>
+                                    <ul class="expBox" >
+                                        <li>Words </li>
+                                        <li>Phrases </li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <p>Those main parts are <span class="popupTop">recognition</span>, knowledge and production.</p>
+                                <p class="popupBot">This one is a common fluency illusion problem as people think that they can produce whatever they can understand</p>
+                            <p class="expTop">Recognition meaning not understanding but the simple function of seeing or hearing language and being able to parse the sounds or letters. Whether you understand the meaning of the content is irrelevant at this point.</p>
+                                        <article class="expBox">
+                                            <p>
+                                            An interesting science regarding this specific point is about infant fluidity when it comes to acquiring the ability to recognise sounds... </p>
+                                        </article>
+                            <p>After your brain has figured out which sounds do the scribbles on the page corelate to, then the next task is to associate combinations of those sounds into <span class="popupTop" >concepts</span> that you <span class="popupTop2">already have in your brain</span>. Once you have the concepts then you can think about the meaning and related stuff. Btw, could be doing that thinking in your target language, native language or even in no language at all also known as mentalese</p> 
+                                        <p class="popupBot" >I think its important to note that these concepts can be very simple or could be very complex and they could be</p>   
+                                        <p class="popupBot2" >Colloquially known as mentalese.</p>   
+                            <p> The last step is to take those concepts and <span class="popupTop">produce</span> them into sounds. </p>
+                                        <p class="popupBot" >An interesting example of explicit and procedural memory could maybe be more vividly illustrated in the case of deaf people. The gestures that deaf people have to make could be explained explicitly, but its much easier to see how hand gestures could be automatic meaning procedural. Its sort of like learning to ride a bike or skating. ...</p> 
+                            <p> On top of this we have to make one more classification of explicit and procedural memory. Explicit memory is that knowledge of concepts that we can consciously think of, analyse, manipulate. Procedural memory is just what is sounds like. It makes procedures automatic. I takes, say, 5 actions and strings them together into an automatic chain that propagates without you having to think about it. </p>
+                            
+                            
+                            <p class="expTop" >If you check yourself on vocab.com you will find out your passive vocabulary size that you can recognize explicitly. 
+                            If you divide that number by 2 that will likely be your active vocabulary, meaning words that you can produce. 
+                            I think that your procedural vocabulary is likely even smaller. However its that procedural vocabulary attained through input is what we want. </p>
+                            <div class="expBox">
+                                <p>Because that means, it is going to be correct and we'll be able to produce it without thinking. After all procedural processes are subconscious, so you'll literaly won't have to think to produce a sentence (to some degree). We also want a large explicit recognition vocabulary, as it is still way faster than looking up words in a dictionary and it leads to procedural memory. 
+                                </p>
+                            </div>
+                            <p></p>
+
+                        </article>
+
+
+
+                    </div>
+                </main>
+                <!-- //////////////////////////////////////////////////// -->
+                <aside class="card-1">
+                    <div class="container" >
+                        <h3 class="expTop">Disclaimer:</h3>
+                        <p class="expBox">The ideas and systems and facts below are mostly my own. I will try to mark information that can be traced to reliable sources, however, for the most part everything will just be my opinion. So do with that what you will. :) I promise I will try to stay scientific :)</p>
+
+                    </div>
+                </aside>
+                
+            </section>
+
+
+
+
+            <div class="single">
+                <h1>------</h1>
+            </div>
+
+            <section>
+
+                <main>
+                    <div class="container">
+                        <h3>So how do we go about achieving those goals?</h3>
+                        <article>
+                            <p>To put it simply the almost everything we will attain with immersion, though different types of immersion. The explicit knowledge is not as reliant on immersion so we will be able to gain more of that with memorisation tools. To be more specific procedural knowledge of prases only comes from 100% comprehensible sentences which are very rare for a novice in the language.</p>
+                            <p></p>
+                        </article>
+                    </div>
+                </main>
+                <aside></aside>
+
+
+
+
+
+            </section>
+
+
+
+
+
+
+
+            <div class="single">
+                <h1>-----</h1>
+            </div>
+        
+            <section>
+                <main>
+                    <div class="container">
+                        <h3 id="h1" style="" class="artTop" > types</h3>
+                        <article class="artBot">
+                            <p> The following advice is designed for the Immigrant type learners that are in STAGE 2, however probably everything here will apply and be useful for other type of learners, as well as learners in other stages. More on other STAGES here. </p>
+                            <h3 class="expTop">Which learner type are you?</h3>
+                            <div class="expBox">
+                                <h4>There are 4 groups</h4>
+                                <ol>
+                                    <li>The Traveler</li>
+                                    <li>The Business-man</li>
+                                    <li>The Immigrant</li>
+                                    <li>The Spy</li>
+                                </ol>
+                                <p>The following will be for the "Immigrant" types but can be easily applied to "business-man" types as well only its a bit too perfectionist for their taste:)</p>
+                                
+                            </div>
+                            <h3 class="expTop">At which stage of learning are you?</h3>
+                            <div class="expBox">
+                                
+                                <p>In this page I'll be explaining how to acquire language if you're already in STAGE 2 or STAGE 3 which means that you have either a basic grasp of the fundamentals and that you can recognise more than half of the words. </p>
+                            </div>
+                        </article>
+
+                            <h3 class="artTop">goals</h3>
+                            <article class="artBot">
+                                <h3> The goals  </h3>
+                                <p>At the risk of sounding a bit unacademic I will admit, myself and I suspect most people too, though they might not admit it, are subconsciously driven by rather shallow language goals.</p>
+    
+                                <p>These subconscious goals might actually differ from the goals that a person thinks he/she has. And those goals are usually </p>
+                                <p>They would like to sound cool, which means effotlessly deal with certain common situations. Also native-like pronunciation, though trivial in everyday life, is also a marker of that "perfection" that many are striving for. I personaly know situaltions were, a mere pronunciation of a single letter, would result in an audience of admirers, that is a certain english pronunciation to lithuanians</p>
+    
+                                <p>here are the stages</p>
+                                <ol>
+                                    <li>STAGE 1 ---- 0 - 500 ---- "Deconstruction" </li>
+                                    <li>STAGE 2 ---- 500 - 2000 ---- "To survival" </li>
+                                    <li>STAGE 3 ---- 2000 - 4000 ---- "To functionality" </li>
+                                    <li>STAGE 4 ---- 4000 - 8000 ---- "To fluency" </li>
+                                    <li>STAGE 5 ---- 8000+ ---- " Beyond" </li>
+                                </ol>
+                                <p>I will not discuss STAGE 4 or 5 in this page</p>
+                                <p>Language ability, whether it be recognition or production, is recognised by most based on these criteria: </p>
+                                <ol>
+                                    <li>inter-topic vocabulary not topic vocabulary</li>
+                                    <li>language accuracy not percision</li>
+                                    <li>High speed </li>
+                                    <li> Perfect pronunciation </li>
+                                </ol>
+                                <p>Just so that you understand the difference, here is a list of certain obvious abilities that are not nesecarily as associated with language ability.</p>
+                                <ol>
+                                    <li> Large topic vocabulary </li>
+                                    <li> clear sentences </li>
+                                    <li> clear pronunciation </li>
+                                    <li> quick reply </li>
+                                    <li> knowledge of grammar </li>
+    
+                                </ol>
+                            </article>
+                            <h3 class="artTop">What to do</h3>
+                            <article class="artBot">
+                                <p>So if we agree on these, then what we'll need is.</p>
+                                <p>For all of these we will need natural immersion and procedural knowledge, not deep explicit knowledge and artificial vocab </p>
+                                <p>Natural immersion is pretty self-explanatory. How do we get procedural knowledge.</p>
+                                <p>Procedural knowledge is acquired not learned, unconsciously, through comprehensible input, messeges we understand. So What we need is as many comprehensible sentences as we can get. </p>
+                                <p>To do that we will need to improve our understanding of senteces and we can do that by using a myriad of tools, the major ones being: pop-ip dictionary, context and our memory</p>
+    
+                                <p>To begin with we'll start with the "Deconstruction" Stage </p>
+                                <p>The main goals of this stage are the same. However, since sheer frequency of the words that we are listening is so high, that mere few hours a week litteraly gives us the equivalent exposure to words as though we were studying the language for 15h/ day. </p>
+                                <p>In that kind of frequency study, natural immersion is more than enough for your brain to be able to pick up everything that it needs</p>
+                                <p>That is true, however, not so much for the grammar and sentences, because even though words repeat frequently, the phrases and sentences don't. In fact, phrases repeat so infrequently that it is practically impossible to get any sentences into procedural memory. </p>
+                            </article>
+                            <h3 class="artTop"> stages</h3>
+                            <article class="artBot">
+                                <p>The difference between the begining stage and the later stage, is something like, the difference between learning a new programing language and applying it to write a single working simple product and re-making that product 10 times to create 10 similar but slightly different products. Also going through the programming bootcamp is sort of like the way they generally teach languages is school through grammar. </p>
+                            
+                            </article>
+
+                            <h3 class="artTop">Conclusion</h3>
+                            <article class="artBot">
+                                <p>In short: ..........................................................</p>
+                                <div class="expand"></div>
+                                <p>In order to achieve a perceivably high level of language ability we have to not only improve but to improve in a certain way. Which means achieving procedural language ability and a high audio to visual ratio of ability. To do that we have to rely on immersion learning methods that foster acquisition and not learning. To most quickly improve our acquisition of out target language we have to find material that is comprehensible and interesting. That requires intrinsic goal related topic learing and from that respective context acquired voacabulary. To support comprehension in the moment we can use tools that give us definitions quickly and also imporve out memory, by selecting topic related vocabulary and memorising that vocabulary effectively with a specific ability in mind. That ability is recall of definition and the tool to help up reach that is modified ANKI.</p>
+                                <a href="">anki</a>
+                            </article>
+
+                    </div>
+                </main>
+        
+                <aside>
+                    <div class="asideTop" ><h2 id='score'>Lorem ipsum dolor sit amet.</h2></div>
+                    <div class="container">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates distinctio veritatis est numquam quos incidunt, quam tenetur totam reprehenderit laudantium qui cum vero corrupti, harum quas eveniet odio iste. Rerum vero unde dolor sed. Et eveniet, ut iste nisi pariatur fugiat impedit minima facilis porro placeat facere ipsam? Esse, labore.</p>
+                    </div>
+                </aside>
+            </section>
+        
+
+            <section>
+
+                <main>
+                    
+                </main>
+                <aside>
+
+                </aside>
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <!-- main-container -->
+        
+
+        
+
+
+    
+
+
+
+    <footer id="footer">
+        <div class="container">
+        
+            <ul>
+                
+                <li><a href="https://www.buymeacoffee.com/adomasgaudi" class="text" >Buy me a coffee</a></li>
+                <li>
+                    
+                    <a href="https://www.buymeacoffee.com/adomasgaudi" class="img" >
+                        
+                        <img src="/images/buymeacoffee.jpg" alt="buy me a coffee" width="30px">
+                    </a>
+                </li>
+                <li><a href="https://www.patreon.com/submersion" class="text">Pay my rent</a></li>
+                <li>
+                    <a href="https://www.patreon.com/submersion" class="img">
+                        <img src="/images/patreon.svg" alt="patreon" width="30px">
+                    </a>
+                </li>
+            </ul>
+        
+        </div>
+    </footer>
+
+        
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"> </script>
+    <script src="/js/firebase.js"></script>
+    <script src="/js/app.js"></script>
+
+
+</body>
+</html>

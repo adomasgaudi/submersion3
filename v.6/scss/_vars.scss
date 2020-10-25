@@ -1,0 +1,242 @@
+
+$breakIpadpro: 1100px ;
+$breakIpad: 768px ;
+$breakPlus: 430px;
+$breakPhone: 400px ;
+$breakSmall: 350px ;
+
+
+
+@mixin media($point) {
+  
+    $bp-pc: "only screen and (min-width: 900px )";
+    $bp-tablet: "only screen and (max-width: 900px)";
+    $bp-phone: "only screen and (max-width: 430px)";
+  
+    @if $point == pc {
+      @media #{$bp-pc} { @content; }
+    }
+    @else if $point == tablet {
+      @media #{$bp-tablet} { @content; }
+    }
+    @else if $point == phone {
+      @media #{$bp-phone}  { @content; }
+    }
+    @else if $point == any {
+       @content 
+    }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//COLORS ------------------------
+
+
+//color map
+$col: (
+    "dark": rgb(31, 31, 31),
+    "light": #EEF2F7,
+
+    // "col1": white,
+    "col1": rgb(1, 94, 94),
+    "col1l": rgb(134, 202, 202),
+    "col1d": rgb(0, 54, 54),
+    "col2": rgba(235, 154, 154, 0.616),
+
+    "side": rgb(73, 73, 73),
+    "sided": rgb(36, 36, 36),
+
+
+    //fonts
+    "f-light": white,
+    "f-dark": rgb(24, 24, 24),
+);
+
+@function col($name){
+    @return map-get($col, $name);
+}
+
+@function font($font_types){
+    @if $font_types == w {
+        @return map-get($col, f-light);
+    }
+    @else {
+        @return map-get($col, f-dark);
+    }
+}
+
+@mixin col($bg_col, $font_type ) {
+    
+    background: col($bg_col);
+    color: font($font_type);
+    
+
+}
+
+
+
+
+
+
+
+
+
+//shadows
+
+@mixin shadow1 {
+    box-shadow:
+  0 1px 1.8px rgba(0, 0, 0, 0.1),
+  0 1.5px 3.6px rgba(0, 0, 0, 0.082),
+  0 4.3px 6px rgba(0, 0, 0, 0.072),
+  0 11.2px 9.8px rgba(0, 0, 0, 0.063),
+  0 22.3px 16.3px rgba(0, 0, 0, 0.052),
+  0 37px 33px rgba(0, 0, 0, 0.033);
+}
+
+  @mixin shadow8 {
+      position:relative;
+          box-shadow:0 1px 4px rgba(0, 0, 0, 0.5), 
+          0 0 40px rgba(0, 0, 0, 0.03) inset;
+  }
+ 
+  @mixin shadow8both {
+  content:"";
+  position:absolute;
+  z-index:-1;
+  box-shadow:0 0 20px rgba(0,0,0,0.3);
+  top:10px;
+  bottom:10px;
+  left:0;
+  right:0;
+  border-radius:100px / 10px;
+  }
+
+  @mixin shadow8after {
+    right: 10px;
+    left: auto;
+    transform:skew(8deg) rotate(3deg);
+  }
+
+  @mixin shadow2 {
+      box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+  }
+  @mixin shadow3 {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  }
+  @mixin shadow4 {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  }
+
+
+
+
+
+
+
+  @mixin grad1pacific {
+    background: #34e89e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0f3443, #34e89e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0f3443, #34e89e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  @mixin grad1 {
+    background-image: linear-gradient(to right top, #0b7760, #00936f, #00b07d, #00cd88, #12eb90);
+  }
+
+  @mixin gradtext1 {
+    font-size: 72px;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// flex plus media direction
+@mixin flexcenter(){ 
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex($direction){
+    display: flex;
+    flex-flow: $direction wrap;
+}
+
+
+$cdark: black;
+$clight: white;
+
+
+
+
+
+
+
+
+
+
+
+//SIZE ----------------------------------------
+@mixin box($w, $maxw, $minh){
+    width: $w;
+    max-width: $maxw;
+    min-height: $minh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// TEST ----------------------------------------
+@function border($on){
+    @if $on == on { @return dotted; }
+    @else {@return none }
+}
+
+
+
+
