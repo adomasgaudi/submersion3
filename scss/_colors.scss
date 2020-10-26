@@ -1,0 +1,62 @@
+
+// COLORS -------------------------------------
+
+// body{ @include col(light, o ) ; }
+
+
+
+// $h_o: "w";
+// header{
+//     @include col(col1, $h_o );
+
+//     nav{
+//         @include col(col1, $h_o);
+//         li{@include col(col1, $h_o)}
+//         li > a{ color: font($h_o); text-decoration: none;};
+//         li > button{ 
+//             @include col(col1, $h_o);
+//             text-decoration: none;
+//             border: none; 
+//         };
+
+//         li > a:hover{@include col(col1d, $h_o)}  
+//         li:first-child:hover {@include col(col1d, $h_o)}   
+//         li > button:hover{@include col(col1d, $h_o)} 
+//         .popup {
+//             @include col(light, o)
+//         }
+//     }
+// }
+
+
+
+
+// section{ 
+    
+//     @include col(light, o );
+
+//     main{ @include col(light, o )}
+//     aside{ @include col(col1l, o)}
+// }
+
+
+
+
+
+
+// footer{ 
+//     @include col(dark, w);
+//     li a{ color: font(w) };
+//     li a:hover{@include col(col1d, w)}  
+    
+// }
+
+
+
+
+
+
+
+
+
+

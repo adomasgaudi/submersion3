@@ -1,12 +1,17 @@
 doctype html
 html
     head
-        link(rel="stylesheet" href="/css/style.css")
+        link(rel="stylesheet" href="/css/index.css")
         include html/reusable/head.html
 
 
     body
-        include html/indexmain.html 
+        .main-container 
+            include html/index/indexheader.html
+            include html/index/indexmain.html
+            
         include html/reusable/footer.html
+    
         
 
+//-  pug -w ./ -o ./ -P

@@ -1,5 +1,6 @@
 
 @import '../variables';
+@import '../colors';
 
 main{ 
     @include box(50%, none, 100px); 

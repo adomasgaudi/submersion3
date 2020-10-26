@@ -69,6 +69,35 @@ $col: (
 
 
 
+@mixin gradient1 {
+    background-image: linear-gradient(to right bottom, #085f5c, #09716d, #0a837f, #0a9691, #0ba9a3);
+}
+
+@mixin shadow1 {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+@mixin shadow2 {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+@mixin shadow3 {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

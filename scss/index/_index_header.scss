@@ -1,0 +1,25 @@
+@import '../_variables';
+@import '../colors';
+
+
+header{
+    
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+/////// colors
+
+
+header {
+   
+    
+    @include gradient1;
+    @include shadow2;
+
+
+}
