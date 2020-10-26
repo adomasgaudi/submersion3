@@ -6,12 +6,12 @@
 
 
 
+@import './part/resets';
+@import './part/fonts';
 
 
 //TEST 
 
-@import './part/resets';
-@import './part/fonts';
 
 
 *{    outline-style: none;  }
@@ -20,98 +20,19 @@
 
 
 
-@import './part/expand';
 
 @import './layout/maincontainer';
+//////////////////////////////////////////
+//SPECIFIC
 @import './index/index_header';
 @import './index/index_main';
 
-section.paralax{
-    @import './index/index_paralax';
-}
-
-
-// @import './layout/header';
-// @import './layout/single';
-// @import './layout/mainaside';
+// section.paralax{
+//     @import './index/index_paralax';
+// }
+/////////////////////////////////////////
 @import './layout/footer';
 
-
-
-//     section{
-//         main{
-//             // h1{color:red}
-            
-//             a{
-                
-//                 color: black;
-//                 text-decoration: none;
-//                 .card{
-//                     background:whitesmoke;
-//                     border: 2px solid coral;
-//                     border-radius: 20px;
-//                     // a{ 
-//                     //     p{
-//                     //         color: black;
-//                     //         text-decoration: none;
-//                     //     }
-//                     //  }
-//                 }
-//             }
-
-
-//         }
-//     }
-
-
-// //sections
-
-
-
-//     header{
-//         height: 300px;
-//         padding: 1px;   
-//         nav{
-//             // display: flex;
-//             align-items: center;
-//             a{ margin: auto; }
-//             padding: 2rem 0;
-//         }
-//     }
-
-
-
-//     section{
-//         .single{
-//             p{border: none;}
-//             h1{ font-size: 40px;}
-//             @include box(80%, 1200px, 100px);
-//             padding: 0;
-//             .conatiner{
-//                 @include box(100%, none, none)
-//             }
-//             .container__card{
-//                 @include box(100%, none, none);
-//                 display: flex;
-//                 flex-wrap: wrap;
-//                 flex-direction: row;
-//             }
-//             >a{
-                
-//                 min-width: 200px;
-//                 @include box(25%, none, none);
-//                 margin: 1rem;
-//                 .card{
-//                     height: 300px;
-//                     padding: 1rem;
-//                 }
-
-//             }    
-
-
-
-//         }
-//     }
 
 
 

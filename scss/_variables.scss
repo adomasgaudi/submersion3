@@ -9,6 +9,7 @@ $breakSmall: 350px ;
 @mixin media($point) {
   
     $bp-pc: "only screen and (min-width: 900px )";
+    $bp-big: "only screen and (min-width: 430px)";
     $bp-tablet: "only screen and (max-width: 900px)";
     $bp-phone: "only screen and (max-width: 430px)";
   
@@ -22,7 +23,11 @@ $breakSmall: 350px ;
       @media #{$bp-phone}  { @content; }
     }
     @else if $point == any {
-       @content 
+       @content ;
+    }
+    @else if $point == big {
+        @media #{$bp-big}  { @content; }
+       
     }
   
 }
@@ -88,7 +93,8 @@ $col: (
 
 
 @mixin gradient1 {
-    background-image: linear-gradient(to right bottom, #085f5c, #09716d, #0a837f, #0a9691, #0ba9a3);
+    // background-image: linear-gradient(to right bottom, #085f5c, #09716d, #0a837f, #0a9691, #0ba9a3);
+    background-image: linear-gradient(to right, #085f5c, #09716d, #0a837f, #0a9691, #0ba9a3);
 }
 
 @mixin shadow1 {
