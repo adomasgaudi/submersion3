@@ -202,26 +202,38 @@ let fakearray = [
 
 
 
-  const url = request.url;
-  caches.open(cacheName).then(cache => {
-    cache.match(url).then(response => {
-      if(!response) {
-        return fetch(url);
-      }
   
-      const date = new Date(response.headers.get('date'))
-      // if cached file is older than 6 hours
-      if(Date.now() > date.getTime() + 1000 * 60 * 60 * 6){
-        return fetch(url);
-      }
-  
-      // else return cached version
-      return response;
-    })
-  })
+
+   $("nav a:nth-child(1)").on("click", function(e){
+    e.preventDefault();
+    
+     if($("header .menu").css("display") == "block"){ 
+      $("header .menu").css("display","none");
+      
+
+    }else{
+      $("header .signup").css("display","none");
+      $("header .menu").css("display","block");
+      $("header .menu a").css("border-top","1px solid blue");
+      $("header .menu a").css("border-bottom","1px solid blue");
+    }
+   })
 
 
+   $("nav a:last-of-type").on("click", function(e){
+    e.preventDefault();
+    if($("header .signup").css("display") == "block"){ 
+      $("header .signup").css("display","none");
+      
+
+    }else{
+      $("header .signup").css("display","block");
+      $("header .menu").css("display","none");
+      $("header .signup a").css("border-top","1px solid red");
+      $("header .signup a").css("border-bottom","1px solid red");
+    }
 
 
+   })
 
-    alert(); 
+

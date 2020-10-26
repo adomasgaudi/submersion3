@@ -1,29 +1,36 @@
 
 
-// @import './variables';
+@import './variables';
 // @import './colors';
 
 
 
 
+
+@import './part/resets';
+@import './part/fonts';
+
 //TEST 
-
-// @import './part/resets';
-// @import './part/fonts';
-
-// *{    outline-style: dotted(o);  }
+*{    outline-style: dotted(o);  }
 
 
 
 
 
-// @import './part/expand';
 
-// @import './layout/maincontainer';
-// @import './layout/header';
+
+@import './layout/maincontainer';
+//////////////////////////////////////////
+//SPECIFIC
+@import './layout/header';
 // @import './layout/single';
 // @import './layout/mainaside';
-// @import './layout/footer';
+
+// @import './part/expand';
+/////////////////////////////////////////
+@import './layout/footer';
+
+
 
 
 

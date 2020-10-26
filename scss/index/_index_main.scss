@@ -27,7 +27,8 @@
 
 @include media(any){
     
-    //FONTS
+
+    //FONTS //colors
     h1{
         font-size: 60px;
         text-align: center; padding: 2rem 2rem; 
@@ -36,12 +37,26 @@
     }
     
     section.blackboard{
+        
+        background-image: url(/images/blackboard.jpg); 
+        background-size: cover;
+        
+        
         h1{font-size: 40px;}
             color: white;
         button {
-            
+            display: none;
             font-size: 20px;
             font-weight: bold;
+            @include shadow2; transition: .5s;
+            &:hover{ @include shadow3; transition: .5s;}
+            @include shadowblack1;
+                &:hover{
+
+                    @include shadowblack2;
+                    box-shadow: inset -104px 14px 62px -3px rgba(0,0,0,0.2);
+                    transition: 5s;
+                }
         }
     }
 
@@ -54,6 +69,18 @@
             text-shadow: rgba(black, 0.5) 0 10px 10px;
         }
         text-shadow: rgba(black, 0.5) 0 10px 10px;
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .card{
+            // background: black;
+            // background: url(/images/mountain.jpg);
+            background-image: url(/images/mountain.jpg);
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            // border: 1px solid white;
+        }
     }
     /////////////////////////////////////////////////
 
@@ -62,6 +89,18 @@
 
 
     //////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -85,8 +124,8 @@
             align-content: center;
             
             button {
-                padding: 1rem;
-                width: 200px;
+                padding: .5rem 2rem;
+                // width: 200px;
                 border-radius: 50px;
             }
         }    
@@ -129,8 +168,7 @@
             height: 350px;
             margin: 2rem 1rem;
             border-radius: 10px;
-            @include shadow2; transition: .5s;
-            &:hover{ @include shadow3; transition: .5s;}
+            
         
             padding: 1rem;
             text-align: left;
@@ -199,44 +237,3 @@
 
 
 
-//////////////////////////////////////////////////////////////
-/////// COLORS
-@include media(any){
-
-    
-        section.blackboard{
-           
-        
-            background-image: url(/images/blackboard.jpg); 
-            background-size: cover;
-            
-            .single{
-    
-                button{
-                    @include shadowblack1;
-                    &:hover{
-    
-                        @include shadowblack2;
-                        box-shadow: inset -104px 14px 62px -3px rgba(0,0,0,0.2);
-                        transition: 5s;
-                    }
-                }
-            }
-        }
-    
-    
-        section.second{
-            a{
-                text-decoration: none;
-                color: white;
-            }
-            .card{
-                // background: black;
-                // background: url(/images/mountain.jpg);
-                background-image: url(/images/mountain.jpg);
-                background-position: center; /* Center the image */
-                background-repeat: no-repeat; /* Do not repeat the image */
-                // border: 1px solid white;
-            }
-        }
-}
