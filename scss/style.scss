@@ -11,7 +11,7 @@
 @import './part/fonts';
 
 //TEST 
-*{    outline-style: dotted(o);  }
+*{    outline-style: none;  }
 
 
 
@@ -23,8 +23,8 @@
 //////////////////////////////////////////
 //SPECIFIC
 @import './layout/header';
-// @import './layout/single';
-// @import './layout/mainaside';
+@import './layout/single';
+@import './layout/mainaside';
 
 // @import './part/expand';
 /////////////////////////////////////////

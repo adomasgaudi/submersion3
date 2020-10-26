@@ -237,18 +237,18 @@ let fakearray = [
    })
 
 
-    var xhr = new XMLHttpRequest;
+    // var xhr = new XMLHttpRequest;
     // xhr.open('GET', 'test.html?_=' + new Date().getTime());
-    //xhr.setRequestHeader('Cache-Control', 'no-cache');
+    // //xhr.setRequestHeader('Cache-Control', 'no-cache');
+    // xhr.setRequestHeader('cache-control', 'no-cache, must-revalidate, post-check=0, pre-check=0');
+    // xhr.setRequestHeader('cache-control', 'max-age=0');
+    // xhr.setRequestHeader('expires', '0');
+    // xhr.setRequestHeader('expires', 'Tue, 01 Jan 1980 1:00:00 GMT');
+    // xhr.setRequestHeader('pragma', 'no-cache');
     // xhr.send();
-    xhr.setRequestHeader('cache-control', 'no-cache, must-revalidate, post-check=0, pre-check=0');
-    xhr.setRequestHeader('cache-control', 'max-age=0');
-    xhr.setRequestHeader('expires', '0');
-    xhr.setRequestHeader('expires', 'Tue, 01 Jan 1980 1:00:00 GMT');
-    xhr.setRequestHeader('pragma', 'no-cache');
 
     // http.setRequestHeader("Cache-Control", "no-cache, no-store, must-revalidate");
-    alert();
+    // alert();
   //  console.log(xhr.send())
 
 
