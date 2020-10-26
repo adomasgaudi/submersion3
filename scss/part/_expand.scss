@@ -5,10 +5,10 @@
 .expTop {
     
     cursor: pointer;
-    border-left: 2px solid grey;    
+    padding-right: 2rem;
     &:hover{
-        border-left: 0.5rem solid grey;
-        transition: 0.1s;
+        border-bottom: 0.5rem solid grey;
+        transition: 0.5s;
         width:100%;
     }
   }
@@ -22,22 +22,42 @@
     border-radius: 4px;
     // z-index: 10;
   }
-
-
-
-
-.popupTop{
+.artTop {
+    border-right: .5rem solid crimson;
     cursor: pointer;
-    // border-bottom: 1px solid coral;
+    padding-right: 2rem;
+    &:hover{
+        position: relative;
+        // border-bottom: 0.5rem solid grey;
+        // font-size: 1.8em;
+        // transform: translateY(-0.5rem);
+        transition: 0.5s;
+        width:100%;
+
+    }
+  }
+  
+  .artBot {
+    // border-top: 2px solid coral;
+    margin: 0.2rem 0;
+    padding: 0.3rem 1rem ;
+    // box-shadow: 0px 0px 32px -17px black;
+    // border-radius: 10px;
+    
+  }
+
+
+
+
+.popupTop, .popupTop2{
+    cursor: pointer;
     color: coral ;
     font-style: italic;
-    // position: relative;
-    // &:after{color: lightcoral;}
     &:hover{color: crimson; transition: 0.1s}
     &:active{color: red; transition: 0.1s}
     &::after{color: maroon; transition: 0.1s}
 }
-.popupBox{
+.popupBot, .popupBot2{
     margin: 0.2rem 0;
     padding: 2rem 1rem ;
     display: none;

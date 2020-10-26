@@ -11,7 +11,7 @@
 @import './part/fonts';
 
 //TEST 
-*{    outline-style: none;  }
+*{    outline-style: dotted;  }
 
 
 
@@ -26,7 +26,8 @@
 @import './layout/single';
 @import './layout/mainaside';
 
-// @import './part/expand';
+@import './part/expand';
+
 /////////////////////////////////////////
 @import './layout/footer';
 

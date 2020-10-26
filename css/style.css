@@ -36,7 +36,7 @@ h4 {
 }
 
 * {
-  outline-style: none;
+  outline-style: dotted;
 }
 
 body {
@@ -147,6 +147,89 @@ aside {
   width: 90%;
   max-width: 90%;
   min-height: 100px;
+}
+.single .box__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.single .box__card .card {
+  width: 250px;
+  height: 350px;
+  margin: 2rem 1rem;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, #085f5c, #09716d, #0a837f, #0a9691, #0ba9a3);
+  padding: 1rem;
+  overflow: hidden;
+}
+.single .box__card .card a {
+  color: white;
+  text-decoration: none;
+}
+
+.expTop {
+  cursor: pointer;
+  padding-right: 2rem;
+}
+.expTop:hover {
+  border-bottom: 0.5rem solid grey;
+  transition: 0.5s;
+  width: 100%;
+}
+
+.expBox {
+  margin: 0.2rem 0;
+  padding: 0.3rem 1rem;
+  display: none;
+  background: white;
+  border: 2px solid grey;
+  border-radius: 4px;
+}
+
+.artTop {
+  border-right: 0.5rem solid crimson;
+  cursor: pointer;
+  padding-right: 2rem;
+}
+.artTop:hover {
+  position: relative;
+  transition: 0.5s;
+  width: 100%;
+}
+
+.artBot {
+  margin: 0.2rem 0;
+  padding: 0.3rem 1rem;
+}
+
+.popupTop, .popupTop2 {
+  cursor: pointer;
+  color: coral;
+  font-style: italic;
+}
+.popupTop:hover, .popupTop2:hover {
+  color: crimson;
+  transition: 0.1s;
+}
+.popupTop:active, .popupTop2:active {
+  color: red;
+  transition: 0.1s;
+}
+.popupTop::after, .popupTop2::after {
+  color: maroon;
+  transition: 0.1s;
+}
+
+.popupBot, .popupBot2 {
+  margin: 0.2rem 0;
+  padding: 2rem 1rem;
+  display: none;
+  background: white;
+  border: 2px solid lightcoral;
+  border-radius: 4px;
+  position: absolute;
+  width: 50%;
 }
 
 footer {
