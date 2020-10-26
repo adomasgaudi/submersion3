@@ -81,6 +81,11 @@ h1 {
   font-family: "Playfair Display";
 }
 
+p.small {
+  font-size: 11px;
+  text-align: center;
+}
+
 section.blackboard {
   background-image: url(/images/blackboard.jpg);
   background-size: cover;
