@@ -197,4 +197,31 @@ let fakearray = [
   // const app = new Vue({
   //   el: '#app' });
 
-    // alert(); 
+
+
+
+
+
+  const url = request.url;
+  caches.open(cacheName).then(cache => {
+    cache.match(url).then(response => {
+      if(!response) {
+        return fetch(url);
+      }
+  
+      const date = new Date(response.headers.get('date'))
+      // if cached file is older than 6 hours
+      if(Date.now() > date.getTime() + 1000 * 60 * 60 * 6){
+        return fetch(url);
+      }
+  
+      // else return cached version
+      return response;
+    })
+  })
+
+
+
+
+
+    alert(); 
