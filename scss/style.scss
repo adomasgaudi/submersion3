@@ -1,37 +1,55 @@
 
 
-@import './variables';
-// @import './colors';
+@import './part/variables';
 
 
 
 
 
 @import './part/resets';
-@import './part/fonts';
+@import './layout/maincontainer';
 
 //TEST 
-*{    outline-style: dotted;  }
+*{    
+    outline-style: dotted;  
+}
 
-
-
-
-
-
-
-@import './layout/maincontainer';
-//////////////////////////////////////////
-//SPECIFIC
+/////////////////////////////////////
 @import './layout/header';
+
+
+
+
+
+
+// layout
 @import './layout/single';
 @import './layout/mainaside';
 
+// features
+@import './part/fonts';
+@import './part/colors';
 @import './part/expand';
 
-/////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////
 @import './layout/footer';
 
-
+// "workbench.activityBar.visible": false
 
 
 

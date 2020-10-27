@@ -1,15 +1,33 @@
-@import '../_variables';
-@import '../colors';
+@import '../part/variables';
+@import '../part/colors';
 
-*{font-family: 'Roboto', sans-serif; font-size: 16px;}
-h1{ font-size: 60px;
-    // color: red !important;
+
+
+@include media(any){
+    *{font-family: 'Roboto', sans-serif; font-size: 16px;}
+
+    h1{ 
+        font-size: 60px;
+        margin: 2rem 0;
+        text-align: center;
+    }
+    h2{ 
+        font-size: 30px;
+        text-align: center;
+        border-radius:5px;
+        padding: 1rem;
+    }
+
+    
+    h3{ margin: 1rem 0 ; }
+    h2{ margin: 1rem 0 ; }
+    h4{margin: 0.5rem 0; font-size: 20px;}
 }
-h2{ font-size: 30px;}
 
-
-
-
-h3{ margin: 1rem 0 ; }
-h2{ margin: 1rem 0 ; }
-h4{margin: 0.5rem 0; font-size: 20px;}
+@include media(phone){
+    h1{
+        font-size: 50px;
+        margin: 2rem 0;
+        text-align: center;
+    }
+}

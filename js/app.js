@@ -202,3 +202,37 @@ $(".artTop").on("click", function(){
   //  console.log(xhr.send())
 
 
+let length = 218;
+// let i = 1;
+function go(){
+  // $(".titlespin").on("click", (e)=>{
+    // e.preventDefault();
+
+  for(i=0; i<3; i++){
+
+    setTimeout( ()=>{ 
+      console.log(i);
+      $(".titlespin a").css({
+        "transform":"translateX(-"+length+"px)",
+        "transition":"1s"
+      })
+      // i++;
+      if(i == 3){
+        i = 0;
+      }
+    
+    }, 3000 );
+  }
+
+}
+go();
+
+
+
+// }}
+
+
+
+
+
+

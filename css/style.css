@@ -9,36 +9,6 @@
   outline-width: thin;
 }
 
-* {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-}
-
-h1 {
-  font-size: 60px;
-}
-
-h2 {
-  font-size: 30px;
-}
-
-h3 {
-  margin: 1rem 0;
-}
-
-h2 {
-  margin: 1rem 0;
-}
-
-h4 {
-  margin: 0.5rem 0;
-  font-size: 20px;
-}
-
-* {
-  outline-style: dotted;
-}
-
 body {
   min-height: 100vh;
   position: relative;
@@ -52,6 +22,10 @@ body {
   display: block;
   position: relative;
   padding-bottom: 200px;
+}
+
+* {
+  outline-style: dotted;
 }
 
 header {
@@ -117,44 +91,32 @@ header .fa-user:active {
   color: white;
 }
 
-ul, ol {
-  padding: 0.5rem 0.5rem 0.5rem 1.2rem;
-}
-
 section {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-main {
-  width: 90%;
-  max-width: 90%;
-  min-height: 100px;
-}
-
-p {
-  margin: 0.5rem 0;
-}
-
-aside {
-  width: 90%;
-  max-width: 90%;
-  min-height: 100px;
-}
-
-.single {
-  width: 90%;
-  max-width: 90%;
-  min-height: 100px;
-}
-.single .box__card {
-  display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
 }
-.single .box__card .card {
+section ul, section ol {
+  padding: 0.5rem 0.5rem 0.5rem 1.2rem;
+}
+section p {
+  margin: 0.5rem 0;
+}
+section main {
+  width: 90%;
+  max-width: 90%;
+  min-height: 100px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+section main article {
+  display: flex;
+  flex-flow: row wrap;
+}
+section main article .card {
   width: 250px;
   height: 350px;
   margin: 2rem 1rem;
@@ -162,33 +124,119 @@ aside {
   background-image: linear-gradient(to right, #085f5c, #09716d, #0a837f, #0a9691, #0ba9a3);
   padding: 1rem;
   overflow: hidden;
+  color: white;
 }
-.single .box__card .card a {
+section main article .card:nth-of-type(1) {
+  order: 1;
+}
+section main article .card:nth-of-type(2) {
+  order: 3;
+}
+section main article .card a {
   color: white;
   text-decoration: none;
 }
+section main article .card .titlespin {
+  display: flex;
+  overflow: hidden;
+  flex-direction: row;
+}
+section main article .card .titlespin a {
+  min-width: 100%;
+}
+section main article .card #attention_img {
+  order: 2;
+}
+section aside {
+  width: 90%;
+  max-width: 90%;
+  min-height: 100px;
+}
+section .single {
+  width: 90%;
+  max-width: 90%;
+  min-height: 100px;
+}
+section img {
+  width: 100%;
+  height: auto;
+  margin: 2rem auto;
+  max-width: 500px;
+}
 
+@media only screen and (min-width: 430px) {
+  main .card:nth-of-type(1) {
+    order: 1;
+  }
+  main .card:nth-of-type(2) {
+    order: 2;
+  }
+  main #attention_img {
+    order: 3;
+  }
+}
+* {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 60px;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 30px;
+  text-align: center;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+h3 {
+  margin: 1rem 0;
+}
+
+h2 {
+  margin: 1rem 0;
+}
+
+h4 {
+  margin: 0.5rem 0;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 430px) {
+  h1 {
+    font-size: 50px;
+    margin: 2rem 0;
+    text-align: center;
+  }
+}
 .expTop {
   cursor: pointer;
-  padding-right: 2rem;
+  margin-bottom: 0px;
+  padding-right: 0.3rem;
+  border-right: 2px solid coral;
+  transition: 0.5s;
 }
-.expTop:hover {
-  border-bottom: 0.5rem solid grey;
+.expTop:hover, .expTop:active, .expTop:after {
+  border-bottom: 0.5rem solid coral;
+  border-right: 0;
   transition: 0.5s;
   width: 100%;
 }
 
 .expBox {
-  margin: 0.2rem 0;
-  padding: 0.3rem 1rem;
+  border-right: 2px solid coral;
+  padding: 0.5rem 1rem;
   display: none;
   background: white;
-  border: 2px solid grey;
-  border-radius: 4px;
 }
 
 .artTop {
-  border-right: 0.5rem solid crimson;
+  background-image: linear-gradient(to right, #0ba9a3, #2fa9a4, #42a9a5, #51a9a5, #5ea9a6);
+  color: #fafafa;
   cursor: pointer;
   padding-right: 2rem;
 }
@@ -200,7 +248,7 @@ aside {
 
 .artBot {
   margin: 0.2rem 0;
-  padding: 0.3rem 1rem;
+  padding: 0.3rem 0;
 }
 
 .popupTop, .popupTop2 {

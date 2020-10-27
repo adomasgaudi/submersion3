@@ -1,9 +1,9 @@
 
-$breakIpadpro: 1100px ;
-$breakIpad: 768px ;
-$breakPlus: 430px;
-$breakPhone: 400px ;
-$breakSmall: 350px ;
+// $breakIpadpro: 1100px ;
+// $breakIpad: 768px ;
+// $breakPlus: 415px;
+// $breakPhone: 375px ;
+// $breakSmall: 315px ;
 
 
 @mixin media($point) {
@@ -96,6 +96,15 @@ $col: (
     // background-image: linear-gradient(to right bottom, #085f5c, #09716d, #0a837f, #0a9691, #0ba9a3);
     background-image: linear-gradient(to right, #085f5c, #09716d, #0a837f, #0a9691, #0ba9a3);
 }
+
+@mixin gradient2 {
+    background-image: linear-gradient(to right top, #e7cfdc, #e0d4e8, #d5d9f0, #cbe0f3, #c4e5f0, #c1e8ef, #c0ebed, #c1eee9, #bdf1ec, #b8f4ee, #b4f6f1, #aff9f4);
+    // background-image: linear-gradient(to right top, #f1e6ec, #eee8f1, #e9ebf5, #e6eef6, #e4f1f5, #e5f2f4, #e6f2f3, #e7f3f2, #e8f3f3, #e8f4f3, #e9f4f4, #eaf4f4);
+}
+@mixin gradient3 {
+    background-image: linear-gradient(to right, #0ba9a3, #2fa9a4, #42a9a5, #51a9a5, #5ea9a6);
+}
+
 
 @mixin shadow1 {
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
