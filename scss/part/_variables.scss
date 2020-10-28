@@ -12,6 +12,7 @@
     $bp-big: "only screen and (min-width: 430px)";
     $bp-tablet: "only screen and (max-width: 900px)";
     $bp-phone: "only screen and (max-width: 430px)";
+    
   
     @if $point == pc {
       @media #{$bp-pc} { @content; }
@@ -23,7 +24,9 @@
       @media #{$bp-phone}  { @content; }
     }
     @else if $point == any {
-       @content ;
+//        @media #{$bp-any} {
+            @content ;
+//        }
     }
     @else if $point == big {
         @media #{$bp-big}  { @content; }

@@ -1,50 +1,78 @@
 
-@import '../part/variables';
+@import '../part/_variables.scss';
 
 
 
-
-@include media(any){ 
     
-    section{
-        
-        display: flex;
+   
+
+
+    
+section{
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+
+
+
+
+
+
+    //fonts
+    ul, ol{padding:  .5rem .5rem .5rem 1.2rem;
+    }
+    p{ margin: .5rem 0;}
+
+
+
+
+    main{
+
+        @include media(any){@include box(95%, 95%, 100px);}
+        @include media(big){@include box(80%, 80%, 100px);}
+        @include media(pc){@include box(60%, 60%, 100px);}
+        align-self: flex-start;
+
+        //inside
+        display:flex;
         flex-flow: row wrap;
         justify-content: center;
         align-items: center;
 
 
+        .box__card{
 
-
-
-
-
-        //fonts
-        ul, ol{padding:  .5rem .5rem .5rem 1.2rem;
-        }
-        p{ margin: .5rem 0;}
-
-
-        
-
-        main{
-            @include box(90%, 90%, 100px);
-
+            //inside
             display:flex;
             flex-flow: row wrap;
-            justify-content: center;
-            align-items: center;
-            article{
-                display:flex;
-            flex-flow: row wrap;
+            justify-content: space-around;
+            @include media(any){
+                .card:nth-of-type(1){ order: 1}
+                .card:nth-of-type(2){ order: 3}
+                #attention_img{ order: 2}
+            }
+            @include media(big){
+                .card:nth-of-type(1){ order: 1}
+                .card:nth-of-type(2){ order: 2}
+                #attention_img{ order: 3}
+            }
+            @include media(pc){
+                .card:nth-of-type(1){ order: 1}
+                .card:nth-of-type(2){ order: 2}
+                #attention_img{ order: 3}
+            }
+
             .card{ 
-                &:nth-of-type(1){ order: 1 }
-                &:nth-of-type(2){ order: 3 }
-                width: 250px;
+                width: 230px;
                 height:350px;
                 margin: 2rem 1rem;
                 border-radius: 5px;
                 @include gradient1;
+
+                //inside
                 padding: 1rem;
                 overflow: hidden;
                 color: white;
@@ -52,90 +80,82 @@
                     // font-family: ;
                     color: white;
                     text-decoration: none;
-    
+
                 }
-    
                 .titlespin{
                     a{min-width: 100%}
                     display: flex;
                     overflow: hidden;
                     flex-direction: row;
-    
-                }
-                
-                #attention_img{ order: 2}
-            }
-            
-                
-                
-                
+                }   
             }
 
-            
-        }
-    
-    
-        aside {
-            @include box(90%, 90%, 100px)
-        }
-
-
-
-
-        .single {
-            @include box(90%, 90%, 100px);
-    
-    
-        }
-    
-
-
-
-        // PARTS
-        img{ 
-            width: 100%; height: auto;
-            margin: 2rem auto;
-            max-width: 500px;
-            
-        }
-    
-    
+        }// box_card
         
             
-    
-           
-    
-        
-
-
-
-
-
-
-
-
-
-
-    }} // media section
-
-
-
-
-    @include media(big){
-
-        
-        main{
+            >article {
             
-            .card{ 
-                &:nth-of-type(1){ order: 1 }
-                &:nth-of-type(2){ order: 2 }
-            }
-            #attention_img{ order: 3}
         }
 
 
+    } //main
+
+
+    aside {
+        @include media(any){@include box(95%, 95%, 100px);}
+        @include media(big){@include box(80%, 80%, 100px);}
+        @include media(pc){@include box(20%, 20%, 100px);}
+        align-self: flex-start;
+    }
+
+
+    .single {
+        @include media(any){@include box(95%, 95%, 100px);}
+        @include media(big){@include box(90%, 90%, 100px);}
+        @include media(pc){@include box(80%, 80%, 100px);}
+
+        
+    }
+
+
+
+
+    // PARTS
+    img.schemepic{ 
+        width: 100%; height: auto;
+        margin: 2rem auto;
+        max-width: 500px;
 
     }
+
+    img.mainpic{ 
+            width: 100%;
+            margin: 2rem 0;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+} //section
+
+
+
+
+
+
+
 
 
 

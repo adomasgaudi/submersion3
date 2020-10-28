@@ -11,7 +11,7 @@
 
 //TEST 
 *{    
-    outline-style: dotted;  
+//    outline-style: dotted;  
 }
 
 /////////////////////////////////////
@@ -45,9 +45,11 @@
 
 
 
+//
+////////////////////////////////////
+@import './part/footer.scss';
 
-//////////////////////////////////
-@import './layout/footer';
+
 
 // "workbench.activityBar.visible": false
 

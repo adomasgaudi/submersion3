@@ -91,7 +91,9 @@ header {
         &:hover{ color: white;}
         &:active{ color: white;}
     }
-    @include gradient1;
+//    @include gradient1;
+    border: 2px solid darkcyan;
+    background: white;
     @include shadow2;
 
 
