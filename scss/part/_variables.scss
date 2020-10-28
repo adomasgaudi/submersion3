@@ -106,7 +106,19 @@ $col: (
 }
 @mixin gradient3 {
     background-image: linear-gradient(to right, #0ba9a3, #2fa9a4, #42a9a5, #51a9a5, #5ea9a6);
+}    
+
+
+@mixin gradient4 {
+    background: rgb(0,226,165);
+background: linear-gradient(90deg, rgba(0,226,165,1) 0%, rgba(0,219,179,1) 100%);
 }
+
+
+
+
+
+
 
 
 @mixin shadow1 {

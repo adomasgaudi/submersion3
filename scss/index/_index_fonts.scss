@@ -1,0 +1,13 @@
+@import './part/variables';
+
+
+h1{
+//    font-family:c
+    @include media(pc){       font-size:70px;    }
+    @include media(big){       font-size:50px;    }
+    @include media(any){       font-size:40px;    }
+    
+    color: black;
+    font-weight:100;
+    text-align: left;
+}

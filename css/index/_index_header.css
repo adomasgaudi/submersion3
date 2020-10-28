@@ -1,0 +1,13 @@
+@mixing gradient4 {
+  background: #299578;
+  background: linear-gradient(90deg, #299578 0%, #329d89 100%);
+}
+header {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: right;
+}
+
+header {
+  border-bottom: 1px solid black;
+}

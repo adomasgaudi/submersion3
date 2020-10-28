@@ -33,8 +33,9 @@ section{
 
         @include media(any){@include box(95%, 95%, 100px);}
         @include media(big){@include box(80%, 80%, 100px);}
-        @include media(pc){@include box(60%, 60%, 100px);}
+        @include media(pc){@include box(50%, 50%, 100px);}
         align-self: flex-start;
+        margin-right: .5rem;
 
         //inside
         display:flex;

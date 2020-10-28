@@ -1,0 +1,210 @@
+@import '../part/variables';
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+.box{
+    @include media(any){@include box(90%,90%,100px)}
+    @include media(pc){@include box(50%,50%,100px)}
+    ;
+}
+
+
+
+
+
+
+
+
+
+//FONTS //colors
+
+p.small{  text-align: center;}
+
+section.blackboard{
+
+    @include gradient4;
+    
+    border-bottom: 1px solid black;
+
+
+
+    button {
+        display: none;       }
+}
+
+
+section.second{
+
+    h2{
+        font-family: "Playfair Display";
+        font-size: 36px;
+        font-weight: 700;
+        text-shadow: rgba(black, 0.5) 0 10px 10px;
+    }
+    text-shadow: rgba(black, 0.5) 0 10px 10px;
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    .card{
+        // background: black;
+        // background: url(/images/mountain.jpg);
+        background-image: url(/images/mountain.jpg);
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        // border: 1px solid white;
+    }
+}
+/////////////////////////////////////////////////
+
+
+
+/////////////////////////////////////////////////
+//SIZES
+section.blackboard{
+
+    @include box( 100%, none, 2rem);
+    display: flex;
+    flex-flow: row wrap;
+    align-items: left;
+    justify-content: left;
+    //inside 
+    padding: 2rem;
+    
+    // vertical-align: middle;
+
+    .single{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        align-content: left;
+
+        button {
+            padding: .5rem 2rem;
+            // width: 200px;
+            border-radius: 50px;
+        }
+    }    
+}
+
+
+
+
+
+section.second{
+    @include box(100%, none, 100px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+
+    h1{ margin: 4rem 0; }
+
+    .single{ 
+        @include box(90%, none, 50px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container__card{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+
+    .card{
+
+        width: 250px;
+        height: 350px;
+        margin: 2rem 1rem;
+        border-radius: 10px;
+
+
+        padding: 1rem;
+        text-align: left;
+    }
+
+}
+    
+    
+
+
+
+
+
+
+/// PC
+@include media(big){
+    
+
+
+    section.blackboard{
+
+        .single{       }    
+
+    }
+
+
+
+
+
+    section.second{
+        // @include box(100%, none, 100px); //change
+
+        .single{ 
+            // @include box(90%, none, 50px); //ch
+            
+        }
+        .container__card{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .card{
+            
+            
+        }
+
+    }
+    
+    
+
+
+}
+
+
+//////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+

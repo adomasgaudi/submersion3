@@ -3,10 +3,11 @@
 
 header{
     
-    padding: .5rem;
+    padding: 1.5rem;
     display: flex;
-    justify-content: center;
-    margin-bottom: 2cm;
+    justify-content: right;
+//    margin-bottom: 2cm;
+    
 
 }
 
@@ -18,8 +19,13 @@ header{
 header {
    
     
-    @include gradient1;
+    
+    @include gradient4;
     @include shadow2;
+    border-bottom: 1px solid black;
+    
+    
+    
 
 
 }

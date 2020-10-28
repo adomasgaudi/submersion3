@@ -3,7 +3,7 @@
 
 
 
-@include media(any){
+
     *{font-family: 'Roboto', sans-serif; font-size: 16px;}
 
     h1{ 
@@ -11,6 +11,15 @@
         margin: 2rem 0;
         text-align: center;
     }
+    @include media(phone){
+        
+    h1{
+        font-size: 50px;
+        margin: 2rem 0;
+        text-align: center;
+    }
+}
+    
     h2{ 
         font-size: 30px;
         text-align: center;
@@ -22,12 +31,13 @@
     h3{ margin: 1rem 0 ; }
     h2{ margin: 1rem 0 ; }
     h4{margin: 0.5rem 0; font-size: 20px;}
-}
 
-@include media(phone){
-    h1{
-        font-size: 50px;
-        margin: 2rem 0;
-        text-align: center;
+
+    h1.index{
+        font-size: 60px;
+        text-align: center; padding: 2rem 2rem; 
+//        text-shadow: rgba(black, 0.3) 0 3px 3px;
+        font-family: "Playfair Display";
+        color: black;
     }
-}
+    p.small{ font-size: 11px; }

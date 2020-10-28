@@ -2,12 +2,12 @@
 
 
 @import './part/variables';
-@import './part/colors';
+//@import './part/colors';
 
 
 
 @import './part/resets';
-@import './part/fonts';
+@import './index/index_fonts';
 
 
 //TEST 
@@ -17,20 +17,20 @@
 *{    outline-style: none;  }
 
 
-
+ 
 
 
 
 @import './layout/maincontainer';
-//////////////////////////////////////////
-//SPECIFIC
+////////////////////////////////////////////
+////SPECIFIC
 @import './index/index_header';
-@import './index/index_main';
+@import './index/index_sec';
 
 // section.paralax{
 //     @import './index/index_paralax';
-// }
-/////////////////////////////////////////
+//// }
+///////////////////////////////////////////
 @import './layout/footer';
 
 
