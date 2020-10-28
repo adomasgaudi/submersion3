@@ -26,6 +26,31 @@ h1 {
   }
 }
 
+section.first {
+  background: #00e2a5;
+  background: linear-gradient(90deg, #00e2a5 0%, #00dbb3 100%);
+  border-bottom: 1px solid black;
+  margin-bottom: 2rem;
+}
+section.first button {
+  display: none;
+}
+
+section.second a {
+  text-decoration: none;
+  color: white;
+}
+section.second .card {
+  color: black;
+  border-bottom: 1px solid black;
+  background: whitesmoke;
+}
+section.second .card h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  margin-bottom: 0.5rem;
+}
+
 * {
   outline-style: none;
 }
@@ -58,70 +83,31 @@ header {
   border-bottom: 1px solid black;
 }
 
-.box {
+section.first {
+  width: 100%;
+  max-width: none;
+  min-height: 2rem;
+}
+section.first .single {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  align-content: left;
+  padding: 2rem;
+}
+section.first .single .box {
   width: 90%;
   max-width: 90%;
   min-height: 100px;
 }
 @media only screen and (min-width: 900px ) {
-  .box {
+  section.first .single .box {
     width: 50%;
     max-width: 50%;
     min-height: 100px;
   }
 }
-
-p.small {
-  text-align: center;
-}
-
-section.blackboard {
-  background: #00e2a5;
-  background: linear-gradient(90deg, #00e2a5 0%, #00dbb3 100%);
-  border-bottom: 1px solid black;
-}
-section.blackboard button {
-  display: none;
-}
-
-section.second {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
-}
-section.second h2 {
-  font-family: "Playfair Display";
-  font-size: 36px;
-  font-weight: 700;
-  text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
-}
-section.second a {
-  text-decoration: none;
-  color: white;
-}
-section.second .card {
-  background-image: url(/images/mountain.jpg);
-  background-position: center;
-  /* Center the image */
-  background-repeat: no-repeat;
-  /* Do not repeat the image */
-}
-
-section.blackboard {
-  width: 100%;
-  max-width: none;
-  min-height: 2rem;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: left;
-  justify-content: left;
-  padding: 2rem;
-}
-section.blackboard .single {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  align-content: left;
-}
-section.blackboard .single button {
+section.first .single button {
   padding: 0.5rem 2rem;
   border-radius: 50px;
 }
@@ -131,14 +117,11 @@ section.second {
   max-width: none;
   min-height: 100px;
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
   justify-content: center;
   align-content: center;
   align-items: center;
   text-align: center;
-}
-section.second h1 {
-  margin: 4rem 0;
 }
 section.second .single {
   width: 90%;
@@ -151,25 +134,27 @@ section.second .single {
 }
 section.second .container__card {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
   justify-content: space-evenly;
 }
 section.second .card {
-  width: 250px;
-  height: 350px;
-  margin: 2rem 1rem;
-  border-radius: 10px;
-  padding: 1rem;
+  width: 300px;
+  height: 120px;
+  margin: 1rem 1rem;
+  padding: 0.5rem;
   text-align: left;
 }
-
-@media only screen and (min-width: 430px) {
-  section.second .container__card {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
+section.second .card h2 {
+  width: 100%;
+  text-align: left;
 }
+section.second .card img {
+  width: 100px;
+  height: 100px;
+  float: right;
+  padding-top: 0.5rem;
+}
+
 footer {
   position: absolute;
   bottom: 0;
