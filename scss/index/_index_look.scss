@@ -41,8 +41,10 @@ section.second{
         
         h2{
             font-family: 'Roboto', sans-serif;
+            @include media(any){font-size: 22px;}
+            @include media(big){font-size: 26px;}
+            @include media(pc){font-size: 30px;}
             
-            font-size: 22px;
             margin-bottom: .5rem;
         }
         

@@ -50,6 +50,16 @@ section.second .card h2 {
   font-size: 22px;
   margin-bottom: 0.5rem;
 }
+@media only screen and (min-width: 430px) {
+  section.second .card h2 {
+    font-size: 26px;
+  }
+}
+@media only screen and (min-width: 900px ) {
+  section.second .card h2 {
+    font-size: 30px;
+  }
+}
 
 * {
   outline-style: none;
@@ -123,6 +133,46 @@ section.second {
   align-items: center;
   text-align: center;
 }
+section.second main {
+  width: 95%;
+  max-width: 95%;
+  min-height: 100px;
+  align-self: flex-start;
+}
+@media only screen and (min-width: 430px) {
+  section.second main {
+    width: 80%;
+    max-width: 80%;
+    min-height: 100px;
+  }
+}
+@media only screen and (min-width: 900px ) {
+  section.second main {
+    width: 50%;
+    max-width: 50%;
+    min-height: 100px;
+  }
+}
+section.second aside {
+  width: 95%;
+  max-width: 95%;
+  min-height: 100px;
+  align-self: flex-start;
+}
+@media only screen and (min-width: 430px) {
+  section.second aside {
+    width: 80%;
+    max-width: 80%;
+    min-height: 100px;
+  }
+}
+@media only screen and (min-width: 900px ) {
+  section.second aside {
+    width: 20%;
+    max-width: 20%;
+    min-height: 100px;
+  }
+}
 section.second .single {
   width: 90%;
   max-width: none;
@@ -144,13 +194,54 @@ section.second .card {
   padding: 0.5rem;
   text-align: left;
 }
+section.second .card img {
+  height: 100px;
+  width: 100px;
+}
+section.second .card p.longtext {
+  display: none;
+}
+section.second .card p.shorttext {
+  display: block;
+}
+@media only screen and (min-width: 430px) {
+  section.second .card {
+    width: 500px;
+    height: 140px;
+  }
+  section.second .card img {
+    height: 120px;
+    width: 120px;
+  }
+  section.second .card p.longtext {
+    display: block;
+  }
+  section.second .card p.shorttext {
+    display: none;
+  }
+}
+@media only screen and (min-width: 900px ) {
+  section.second .card {
+    width: 700px;
+    height: 160px;
+  }
+  section.second .card img {
+    height: 140px;
+    width: 140px;
+  }
+  section.second .card p.longtext {
+    display: block;
+  }
+  section.second .card p.shorttext {
+    display: none;
+  }
+}
 section.second .card h2 {
   width: 100%;
   text-align: left;
 }
 section.second .card img {
-  width: 100px;
-  height: 100px;
+  object-fit: cover;
   float: right;
   padding-top: 0.5rem;
 }
