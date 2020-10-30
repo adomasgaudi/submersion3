@@ -1,12 +1,14 @@
+include ./pugs/parts/_vars.pug
+
 doctype html
 html
     head
-        link(rel="stylesheet" href="./css/index.css")
+        link(rel="stylesheet" href=here+"css/style.css")
         include html/reusable/head.html
 
 
     body
-        .main-container 
+        .main-container  
             include html/index/index_header.html
             include html/index/index_sec.html
             
