@@ -1,0 +1,26 @@
+.container{
+    background: whitesmoke;
+
+    .box1{ background: bisque;}
+    .box2{ background: khaki;}
+
+
+
+
+    .card1{ 
+
+        img{ height: 100px; width: 120px; float: right;}
+        background: darkkhaki;
+        border: 1px solid darkgrey;
+        text-decoration: none; 
+        color:black;
+        &:hover{
+            background: rgb(109, 106, 62);
+            color: white;
+        }
+     }
+
+}
+
+
+// .c{ color: red; border: 1px solid #000;}

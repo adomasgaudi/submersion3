@@ -1,0 +1,24 @@
+.container {
+  background: whitesmoke;
+}
+.container .box1 {
+  background: bisque;
+}
+.container .box2 {
+  background: khaki;
+}
+.container .card1 {
+  background: darkkhaki;
+  border: 1px solid darkgrey;
+  text-decoration: none;
+  color: black;
+}
+.container .card1 img {
+  height: 100px;
+  width: 120px;
+  float: right;
+}
+.container .card1:hover {
+  background: #6d6a3e;
+  color: white;
+}
