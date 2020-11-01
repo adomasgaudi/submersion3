@@ -1,0 +1,215 @@
+@import '../bo_parts/variables';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// header{ 
+//     @include box(100%, 100%, 30px);
+    
+//     nav{
+//         @include box( 80%, calc(50% + 250px), 30px );
+//         margin: auto;
+
+//         @include flex(row);
+//         justify-content: space-between;
+        
+        
+//         #brandimg2{display: none;}
+
+//         ul{
+//             @include flex(row);
+//             align-items: center;
+//                 list-style-type: none;
+//                 overflow: hidden;
+
+//                 a{
+//                     display: block;
+//                     text-align: center;
+//                     padding: 1rem;
+//                     margin: 0;
+//                 }
+
+//             &:first-child{
+                
+//                 li{
+//                     // float: left;
+//                     text-align: center;
+                    
+//                     &:nth-child(1) a{
+//                         position: relative;
+//                         top: 4px;
+//                         padding: .5rem 1rem ;
+//                     }
+//                     &:nth-child(2) a{
+//                         position: relative;
+//                         top: 4px;
+//                         padding: .5rem 1rem ;
+//                     }
+                    
+//                 }
+//             }
+//             &:last-child { 
+                
+//                 // position: fixed;
+//                 // top: 0;
+//                 // right: calc((100% - 50% - 250px)/2);
+//                 display: flex;
+//                 align-items: center;
+//                 li{
+//                     text-align: center;
+//                     a{
+//                         position: relative;
+//                         padding: .5rem 1rem;
+//                     }
+//                     > button{
+//                         display: block;
+//                         text-align: center;
+//                         padding: .5rem 1rem;
+//                         margin: 0;
+//                     }
+//                 }
+//                 .screencover {
+//                     display: none;
+//                     position: absolute;
+                    
+//                     top: 0;
+//                     left: 0;
+//                     width: 100vw;
+//                     height: 100vh;
+//                     background: rgba(7, 7, 7, 0.562);
+//                 }
+                
+//                 .popup{
+                    
+//                     width: 250px ; 
+//                     height: 400px ; 
+//                     position: absolute;
+//                     top: 10%;
+//                     left: 40%;
+                    
+//                     // IN]
+//                     padding: 1rem;
+                    
+//                 }
+//             }
+
+//             // ul --- end
+//         }
+        
+//     }
+
+// }
+
+
+// @media only screen and (max-width: $breakIpad){
+//     #brandimg{display: none;}
+
+//     header{
+//         nav{
+//             @include box( 85%, none, 20px );
+//             #brandimg2{display: block;}
+//             ul{
+//                 display: flex;
+//                 align-items: center;
+//                 a, button{ 
+//                     padding: .5rem;
+//                 }
+//                 &:last-child{
+//                     .popup{
+//                         position: absolute;
+//                         top: 10%;
+//                         left: 20%;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// @media only screen and (max-width: $breakIpad){
+    
+//     header{
+//         nav{
+//             @include box( 95%, none, 20px );
+//             ul{
+                
+//                 &:last-child{
+//                     .popup{
+//                         top: 10%;
+//                         left: 10%;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+

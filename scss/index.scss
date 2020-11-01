@@ -1,37 +1,36 @@
 
 
 
-@import './part/variables';
-//@import './part/colors';
+// @import './bo_parts/variables';
 
 
 
-@import './part/resets';
-@import './index/index_look';
+@import './bo_parts/resets';
+// @import './bo_index/index_look';
 
 
-//TEST 
+// //TEST 
+ 
 
 
-
-*{    outline-style: none;  }
+// *{    outline-style: none;  }
 
 
  
 
 
 
-@import './layout/maincontainer';
-////////////////////////////////////////////
-////SPECIFIC
-@import './index/index_header';
-@import './index/index_sec';
+// @import './bo_layout/maincontainer';
+// ////////////////////////////////////////////
+// ////SPECIFIC
+// @import './bo_index/index_header';
+// @import './bo_index/index_sec';
 
-// section.paralax{
-//     @import './index/index_paralax';
-//// }
-///////////////////////////////////////////
-@import './layout/footer';
+// // section.paralax{
+// //     @import './index/index_paralax';
+// //// }
+// ///////////////////////////////////////////
+// @import './bo_layout/footer';
 
 
 

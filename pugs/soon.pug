@@ -1,17 +1,15 @@
 include ./parts/_vars.pug
 
 
-p Written with love by #{author}
-p This will be safe: #{theGreat}
-
-
 
 doctype html
 html
     head
-        
-        link(rel="stylesheet" href=here+"css/style.css" ) 
-        title Anki
+        //-this page is in a folder, thus "outside" = ../
+        link(rel="stylesheet" href= soonCss ) 
+        title Submerison/Anki
+        // -------------------------------------------------
+
         include ../html/reusable/head.html
 
 
@@ -19,11 +17,43 @@ html
         .main-container 
             include ../html/reusable/header.html
             
-            .section.
-               <h1>404 #[strong(class="golo" ) hihihi]page coming soon</h1>
-               #[p(class=""+cls) hihihi]
-                
-                //- include ../html/soon_sec.html 
+            .section
+                //- no class in _vars  
+                <h1>404 page coming #[strong(class=""+cls ) soon]</h1>
+                //- include ../html/soon_sec.html
 
-        ////////////////////////////////////////////    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // //////////////////////////////////////////    
         include ../html/reusable/footer.html 

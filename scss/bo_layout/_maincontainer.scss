@@ -1,0 +1,13 @@
+@import '../bo_parts/variables';
+
+
+body{min-height: 100vh; position: relative;}
+
+.main-container{
+    @include box( 100%, 100%, 100vh);
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 200px;
+
+}
