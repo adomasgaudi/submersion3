@@ -5,49 +5,131 @@ doctype html
 html
     head
         link(rel="stylesheet" href = beginCss )
+        link(rel="stylesheet" href = bootstrapCss )
         title My Site
-        include ../html/reusable/head.html
+        include ../bo_html_parts/reusable/head.html  
 
 
     body
-        //- .main-container 
-
-        nav.navbar.navbar-expand-lg.navbar-light.bg-light
-          a.navbar-brand(href='#') Submersion
-          button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
-            span.navbar-toggler-icon
-          #navbarSupportedContent.collapse.navbar-collapse
-            ul.navbar-nav.mr-auto
-              li.nav-item.active
-                a.nav-link(href='#')
-                  | Home 
-                  span.sr-only (current)
-              li.nav-item
-                a.nav-link(href='#') Link
-              li.nav-item.dropdown
-                a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
-                  | Dropdown
-                .dropdown-menu(aria-labelledby='navbarDropdown')
-                  a.dropdown-item(href='#') Action
-                  a.dropdown-item(href='#') Another action
-                  .dropdown-divider
-                  a.dropdown-item(href='#') Something else here
-              li.nav-item
-                a.nav-link.disabled(href='#') Disabled
-            form.form-inline.my-2.my-lg-0
-              input.form-control.mr-sm-2(type='search' placeholder='Search' aria-label='Search')
-              button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
-
-
-        .container
-          .container.col-md-8 md-8 column 
-          .container.col-md-4 md-4 column
+        .body-wrap
+          nav.navbar.navbar-expand-lg.navbar-light.bg-light
+            .container
+              a.navbar-brand(href='#') Submersion
+              button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+              #navbarSupportedContent.collapse.navbar-collapse
+                ul.navbar-nav.mr-auto
+                  li.nav-item.active
+                    a.nav-link(href='#')
+                      | Home 
+                      span.sr-only (current)
+                  li.nav-item
+                    a.nav-link(href='#') Link
+                  li.nav-item.dropdown
+                    a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                      | Dropdown
+                    .dropdown-menu(aria-labelledby='navbarDropdown')
+                      a.dropdown-item(href='#') Action
+                      a.dropdown-item(href='#') Another action
+                      .dropdown-divider
+                      a.dropdown-item(href='#') Something else here
+                  li.nav-item
+                    a.nav-link.disabled(href='#') Disabled
+                form.form-inline.my-2.my-lg-0
+                  input.form-control.mr-sm-2(type='search' placeholder='Search' aria-label='Search')
+                  button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
 
 
-        
+          section.container
+            .row
+              .single.col-12
+                h1.display-3 Life&nbsp;theory & Tool&nbsp;theory
+                
+
+          section.container
+            .row
+              main.col-md-8.p-3
+                h2 topic theme
+                article 
+                  p
+                    |Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, maiores eligendi, porro consequatur odio non esse labore, nam iure tempora dolores eveniet architecto quasi aperiam veritatis voluptatibus culpa! Sit totam asperiores ipsum perferendis. A tempora necessitatibus enim saepe  
+                  p
+                    | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi asperiores quos error quo distinctio dolorem velit consectetur rem! Incidunt asperiores quos fuga voluptatibus inventore consequuntur cupiditate obcaecati facilis earum, dignissimos quas velit veniam exercitationem, deleniti iusto sunt vitae hic quisquam similique eos eveniet aliquid eaque solut eius? Nisi, at nihil!
+                article
+                  .row.p-3
+                    .a-card
+                      .titlespin
+                        a(href='/html/time.html')
+                          h2 Finding Time
+                        a(href='/html/time.html')
+                          h2 Quantity of Attention
+                        a(href='/html/time.html')
+                          h2 Indirect learning
+                      ol
+                        li
+                          a(href='') Motivation
+                        li
+                          a(href='') Philosophy
+                        li
+                          a(href='') Habits
+                      p
+                        | the second group will focus on What to do during those times when you&apos;ve already decided to dedicate you time to language learning and then here we&apos;ll discuss how to best dedicate that time and what tools to use.
+                    .a-card
+                      a(href='/html/technique.html')
+                        h2 Tech &amp; Theory
+                      ol
+                        li
+                          a(href='') Constituents
+                        li
+                          a(href='') Decompositio
+                        li
+                          a(href='') Procedural 
+                        li
+                          a(href='') Comprehensible
+                        li
+                          a(href='') Active Study
+                      p
+                        | Everything else is under the &quot;Quality&quot; or &quot;Strategy&quot; or &quot;Technique&quot; section. This section explains the main goals of a language learner and the technology and strategy of achieving them. The 1st group is concerned with everything relating to motivation, philosophy, habits and all life choices that determine how how much time you will spend with the language and how focused, interested, motivated you will be.
+                    img#attention_img.schemepic.col-10.offset-1(src='/images/attention2_page-0001.jpg' alt='attention')
+                  p
+                    | Another way of looking at this is that, everything that lead up to you spending more time with your target language, is less directly related, while everything that you do once you&apos;re already during your dedicated language learning time is more directly related. You could think of it as trying to abtain time that will give you quantity of attention, and then once you have quantity, then what you decide to do with it determines the quality of that attention.
+                  ul
+                    li Quantity of Attention = Time dedicated
+                    li Quality of Attention = Efficiency / Strategy
 
 
-        //- include ../html/test_sec.html　   
+
+
+
+
+
+
+
+              aside.col-md-4.p-3 
+                table.table.table-hover
+                  tr
+                    th
+                    |table heading 1
+                    td
+                    |table heading 2
+                    img(src="https://picsum.photos/200/300", alt="lorempicsum").m-2
+                  tr
+                    th
+                    |table heading Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse enim ipsam fugiat ipsum quasi recusandae illum incidunt accusamus debitis, 
+                    td
+                    pre
+                      code document.write('') p tag
+                        kbd ctrl-shit
+              img.img-fluid(src="https://i.picsum.photos/id/618/200/300.jpg?hmac=t4SGgbCgeW1bbJFjW8RY4vawWUkBDkj5AVuhzkvFEek", alt="lorpicusm")
+                  
+          
+        include ../bo_html_parts/reusable/footer.html  
+        //- include ../html/test_sec.html　
+          
+          
+
+
+          
 
 
 
@@ -59,8 +141,14 @@ html
 
 
 
-        //- include ../html/reusable/footer.html 
-        include ../html/reusable/js.html 
+        include ../bo_html_parts/reusable/js.html 
+
+
+
+
+
+
+
 
 //-  pug -w ./ -o ./ -P
-//-  browser-sync start --server --files "*" 
+//-  browser-sync start --server --files "*"  

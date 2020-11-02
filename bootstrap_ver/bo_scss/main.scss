@@ -1,1 +1,36 @@
-*{color: red}
+
+//variables
+@import './bo_parts/resets';
+
+
+*{  
+    outline-color:darkred !important;     
+    outline-width: thin !important;
+    // outline: dotted;
+}
+
+
+
+
+
+//maincont
+@import './bo_layout/header';
+
+
+// section
+@import './bo_layout/sections';
+
+
+//fonts
+// colors
+// extra
+
+
+
+
+
+
+
+
+
+@import "./bo_layout/footer" ;

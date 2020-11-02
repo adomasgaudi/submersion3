@@ -1,3 +1,28 @@
+body, html {
+  min-height: 100vh;
+}
+
 * {
-  color: red;
+  outline-color: darkred !important;
+  outline-width: thin !important;
+}
+
+nav {
+  border-bottom: 2px solid #00e2a5;
+}
+
+h1 {
+  text-align: center;
+  font-size: 70px;
+}
+
+.body-wrap {
+  min-height: 100%;
+  margin-bottom: 200px;
+}
+
+footer {
+  height: 120px;
+  clear: both;
+  background: whitesmoke;
 }
