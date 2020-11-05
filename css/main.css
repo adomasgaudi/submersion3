@@ -1,0 +1,33 @@
+body {
+  min-height: 100vh;
+}
+
+.body-wrap {
+  min-height: 100vh;
+  margin-bottom: 250px;
+}
+
+header {
+  background: #00cc99;
+  border: 1px solid #000;
+}
+
+.jumbotron.col1 {
+  background: #00cc99;
+  border-bottom: 1px solid #000;
+}
+
+section .container img {
+  width: 100px;
+  height: 100px;
+  float: right;
+}
+section .container .col-md-6 {
+  border: 2px solid grey;
+}
+
+footer {
+  height: 100px;
+  background: black;
+  color: white;
+}
