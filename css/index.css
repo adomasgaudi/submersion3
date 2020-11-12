@@ -78,7 +78,7 @@ section .container:nth-of-type(2) .col-md-6 {
   border-bottom: 2px solid grey;
 }
 section:last-of-type {
-  background: coral;
+  background: #00cc99;
   text-align: center;
   padding: 20rem 0;
   margin-top: 10rem;
