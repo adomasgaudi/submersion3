@@ -1,37 +1,99 @@
-body {
-    min-height: 100vh;
-  }
-  
-  .body-wrap{
-    min-height: 100vh;
-    margin-bottom: 250px;
+
+
+
+//RESET
+body {    min-height: 100vh;  }
+
+*{
+  outline-width: thin !important;
+  // outline: dotted; 
+}
+
+ 
+
+
+
+// INDEX OUTLINE
+
+
+.body-wrap{
+  min-height: 100vh;
+  margin-bottom: 250px;
+}
+
+header{
+  background: rgb(0, 204, 153);
+  border: 1px solid #000;
+  nav{ 
+    .container{display: flex; align-items: center; span{margin: .2rem;} }}
+}
+
+.jumbotron.col1 { 
+  background: rgb(0, 204, 153);
+  border-bottom: 1px solid #000;
+}
+
+
+
+
+footer{
+  height: 100px;
+  background: rgb(32, 32, 32)  ;
+  color: white;
+  border-top: 1px solid rgb(0, 204, 153);
+  text-align: center;
+}
+
+
+
+
+
+
+//////////////////////////////////////////
+
+
+
+// IINDEX_SEC
+
+section{
+  &:last-of-type{ 
+    background: coral;
+    text-align: center;
+    padding: 20rem 0;
+    margin-top: 10rem;
   }
 
 
-  header{
-    background: rgb(0, 204, 153);
-    border: 1px solid #000;
-  }
-  .jumbotron.col1 { 
-    background: rgb(0, 204, 153);
-    border-bottom: 1px solid #000;
-  }
-  
+  .container{
 
-  section{
-    .container{
-      
+
+      // links
+      &:nth-of-type(1){
+        .gLine{border-bottom: 5px solid rgb(0, 204, 153);}
+
+        .linkBox{
+          background: whitesmoke; 
+          border-radius: 10px;
+          padding: 1rem;
+        }
+        
+      }
+    
+
+
+
+
+      &:nth-of-type(2){
+
         img{width:100px; height: 100px;float: right;}
         .col-md-6{
-          border: 2px solid grey;
+          border-bottom: 2px solid grey;
         }
-    
-    }}
+      }
+  
+  }
+}
 
 
 
-    footer{
-      height: 100px;
-      background: black  ;
-      color: white;
-    }
+  
