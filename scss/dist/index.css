@@ -13,7 +13,7 @@ body {
 
 header {
   background: #00cc99;
-  border: 1px solid #000;
+  border-bottom: 1px solid #000;
 }
 header nav .container {
   display: flex;
@@ -29,19 +29,33 @@ header nav .container span {
 }
 
 footer {
-  height: 100px;
+  min-height: 50px;
   background: #202020;
   color: white;
   border-top: 1px solid #00cc99;
   text-align: center;
+  padding-bottom: 2rem;
+}
+footer .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer a {
+  color: white;
+  font-weight: bold;
+  max-width: 100px;
+}
+footer img {
+  height: 3rem;
+  margin: 0.5rem;
+}
+@media (min-width: 768px) {
+  footer a {
+    max-width: none;
+  }
 }
 
-section:last-of-type {
-  background: coral;
-  text-align: center;
-  padding: 20rem 0;
-  margin-top: 10rem;
-}
 section .container:nth-of-type(1) .gLine {
   border-bottom: 5px solid #00cc99;
 }
@@ -49,6 +63,7 @@ section .container:nth-of-type(1) .linkBox {
   background: whitesmoke;
   border-radius: 10px;
   padding: 1rem;
+  margin: 0.5rem 0;
 }
 section .container:nth-of-type(2) img {
   width: 100px;
@@ -57,4 +72,18 @@ section .container:nth-of-type(2) img {
 }
 section .container:nth-of-type(2) .col-md-6 {
   border-bottom: 2px solid grey;
+}
+section:last-of-type {
+  background: coral;
+  text-align: center;
+  padding: 20rem 0;
+  margin-top: 10rem;
+}
+section:last-of-type .display-1 {
+  font-size: 4rem;
+}
+@media (min-width: 768px) {
+  section:last-of-type .display-1 {
+    font-size: 6rem;
+  }
 }

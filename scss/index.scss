@@ -1,0 +1,24 @@
+
+
+
+//RESET
+body {    min-height: 100vh;  }
+
+*{
+  outline-width: thin !important;
+  // outline: dotted !important;  
+  // color: red !important;
+}
+
+
+ 
+
+
+// INDEX OUTLINE
+
+@import "./parts/index_outline";
+
+
+// INDEX SEC
+@import "./parts/index_sec";
+

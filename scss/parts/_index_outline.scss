@@ -1,0 +1,50 @@
+
+.body-wrap{
+  min-height: 100vh;
+  margin-bottom: 250px;
+}
+
+header{
+  background: rgb(0, 204, 153);
+  border-bottom: 1px solid #000;
+  nav{ 
+    .container{display: flex; align-items: center; span{margin: .2rem;} }}
+}
+
+.jumbotron.col1 { 
+  background: rgb(0, 204, 153);
+  border-bottom: 1px solid #000;
+}
+
+
+
+
+footer{
+  min-height: 50px;
+  background: rgb(32, 32, 32)  ;
+  color: white;
+  border-top: 1px solid rgb(0, 204, 153);
+  text-align: center;
+  padding-bottom: 1rem;
+
+  .row{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    text-align: center;
+  }
+
+
+
+  a{color: white; 
+    font-weight: bold; 
+    max-width: 100px;
+  }
+  img{height: 3rem; margin: .5rem; }
+  
+  @media(min-width: 768px ){
+    a{max-width: none;}
+    .row{text-align: right;}
+  }
+}
+

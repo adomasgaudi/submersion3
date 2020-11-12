@@ -1,0 +1,53 @@
+.body-wrap {
+  min-height: 100vh;
+  margin-bottom: 250px;
+}
+
+header {
+  background: #00cc99;
+  border-bottom: 1px solid #000;
+}
+header nav .container {
+  display: flex;
+  align-items: center;
+}
+header nav .container span {
+  margin: 0.2rem;
+}
+
+.jumbotron.col1 {
+  background: #00cc99;
+  border-bottom: 1px solid #000;
+}
+
+footer {
+  min-height: 50px;
+  background: #202020;
+  color: white;
+  border-top: 1px solid #00cc99;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+footer .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+footer a {
+  color: white;
+  font-weight: bold;
+  max-width: 100px;
+}
+footer img {
+  height: 3rem;
+  margin: 0.5rem;
+}
+@media (min-width: 768px) {
+  footer a {
+    max-width: none;
+  }
+  footer .row {
+    text-align: right;
+  }
+}
