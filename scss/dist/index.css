@@ -7,7 +7,7 @@ body {
 }
 
 #devBtn {
-  display: none;
+  display: inline;
 }
 
 .devMode {
@@ -68,6 +68,9 @@ footer img {
   }
 }
 
+section ul {
+  padding-inline-start: 1rem;
+}
 section .linkBox {
   background: whitesmoke;
   border-radius: 10px;

@@ -8,8 +8,20 @@
 
 section{
   
+  .main{
+    @extend .col-lg-8 ;
+    @extend .col-md-6 ; 
+  }
 
+  .title {
+    // @extend .col;
+  }
 
+  ul{
+    padding-inline-start: 1rem;
+    
+  }
+  p{margin-bottom: .5rem;}
 
   .linkBox{
     background: whitesmoke; 

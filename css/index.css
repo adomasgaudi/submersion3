@@ -7,7 +7,7 @@ body {
 }
 
 #devBtn {
-  display: none;
+  display: inline;
 }
 
 .devMode {
@@ -68,6 +68,12 @@ footer img {
   }
 }
 
+section ul {
+  padding-inline-start: 1rem;
+}
+section p {
+  margin-bottom: 0.5rem;
+}
 section .linkBox {
   background: whitesmoke;
   border-radius: 10px;
@@ -86,7 +92,7 @@ section .container:nth-of-type(2) img {
   height: 100px;
   float: right;
 }
-section .container:nth-of-type(2) .col-md-6 {
+section .container:nth-of-type(2) .col-md-6, section .container:nth-of-type(2) .main {
   border-bottom: 2px solid grey;
 }
 section:last-of-type {
