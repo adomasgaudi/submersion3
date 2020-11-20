@@ -1,40 +1,43 @@
 
 
 
-@import './part/variables';
-//@import './part/colors';
 
+//RESET
+body {    min-height: 100vh;  }
 
+*{
+  outline-width: thin !important;
+  // outline: dotted !important;  
+  // color: blue !important;                     
+}
 
-@import './part/resets';
-@import './index/index_look';
-
-
-//TEST 
-
-
-
-*{    outline-style: none;  }
-
-
- 
-
-
-
-@import './layout/maincontainer';
-////////////////////////////////////////////
-////SPECIFIC
-@import './index/index_header';
-@import './index/index_sec';
-
-// section.paralax{
-//     @import './index/index_paralax';
-//// }
-///////////////////////////////////////////
-@import './layout/footer';
+#devBtn{ display: none;}
+.devMode{ display: none;}
 
 
 
 
 
+
+//anti - bootstrap
+ul{
+  padding-inline-start: 1rem;
+    
+}
+p{margin-bottom: .5rem;}
+
+ol{
+  li::marker{
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+// INDEX OUTLINE 
+
+@import "./parts/index_outline";
+
+
+// INDEX SEC
+@import "./parts/index_sec";
 
