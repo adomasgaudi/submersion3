@@ -4,6 +4,7 @@ body {
 
 * {
   outline-width: thin !important;
+  color: red !important;
 }
 
 #devBtn {
@@ -9554,7 +9555,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 section main {
-  color: blue;
+  color: yellow;
 }
 
 section ul {
