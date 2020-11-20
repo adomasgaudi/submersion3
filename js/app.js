@@ -30,18 +30,20 @@ document.querySelectorAll(".cardsrow img").forEach(e=>{
 (function (global) {
   var dc = {};
   
-  var ankiHtml = "./include/ankitut.html";
-
+  dc.artList = {}
+  dc.artList.anki = "./include/ankitut.html";
+  dc.artList.vids = "./include/vids.html";
+  // console.log(dc.artList.anki, dc.artList[anki])
 
   const insertHtml = (selector, html)=>{
     let element = document.querySelector(selector);
     element.innerHTML = html;
   }
 
-  dc.getHtml = function () {
-    console.log(  );
+  dc.getHtml = function (article) {
+    // console.log(article, artList[article]);
     $ajaxUtils.sendGetRequest(
-      ankiHtml,
+      dc.artList[article],
       function (receivedHtml) {
         console.log(receivedHtml, "inserted HTML yay!!!!!!!!!")
         insertHtml("#article",receivedHtml);
