@@ -107,7 +107,7 @@ html(lang="en")
                       h6 Tiny habits
                       p after I do [...] on saturday I will [...]
                     img(src="https://picsum.photos/200/300", alt="")
-                .card-con.devMode(onclick="$dc.getHtml()")
+                a.card-con.devMode(href="#jump" onclick="$dc.getHtml()")
                   .row
                     .description
                       h6 Anki explained
@@ -132,8 +132,10 @@ html(lang="en")
 
               
         //card-cont
+        hr#jump
         .container#article.devMode
           //- Filled with ajax
+        hr
           //-
 
           

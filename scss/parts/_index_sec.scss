@@ -19,6 +19,8 @@ section{
       @extend .row;
 
       .card-con{
+        color: black;
+        text-decoration: none;
         @extend .col-12;
         background: whitesmoke; 
         border-radius: 10px;
