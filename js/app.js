@@ -11,9 +11,14 @@ fetch("./include/footer.html")
   });
 
 
-
-
-
+// img width
+let height = document.querySelector(".cardsrow img").offsetHeight;
+let width = height + 24;
+let text = " "+ width + "px "
+console.log(height, height+30, text)
+document.querySelectorAll(".cardsrow img").forEach(e=>{
+  e.style.width = text;
+});
 
 
 
@@ -25,7 +30,7 @@ fetch("./include/footer.html")
 (function (global) {
   var dc = {};
   
-  var ankiHtml = "./htmls/ankitut.html";
+  var ankiHtml = "./include/ankitut.html";
 
 
   const insertHtml = (selector, html)=>{
@@ -39,7 +44,7 @@ fetch("./include/footer.html")
       ankiHtml,
       function (receivedHtml) {
         console.log(receivedHtml, "inserted HTML yay!!!!!!!!!")
-        insertHtml("#ankiExplained",receivedHtml);
+        insertHtml("#article",receivedHtml);
 
       },
       false);

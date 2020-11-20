@@ -13,30 +13,42 @@ section{
   
   main{
     @extend .col-lg-8, .col-md-6 ; 
-    // color: yellow;   
-    
     
 
-
-
-    .cards{
+    .cardsrow{
       @extend .row;
 
-
-      img{
-        @extend .col-2;
-        // width: 100px;
-        height: auto;
-      }
-      .description{
-        @extend .col-9;
-      }
       .card-con{
         @extend .col-12;
         background: whitesmoke; 
         border-radius: 10px;
         margin: .5rem 0;
         padding: .5rem;
+
+
+        &:hover {
+          background: rgb(216, 216, 216);
+        }
+
+      }
+
+      img{
+        height: 75px;
+        // height: auto;
+        // flex-basis: 0;
+        // flex-grow: 1;
+        // max-width: 100%;
+        position: relative;
+        padding-right: 1rem;
+        padding-left: .5rem;
+      }
+      .description{
+        @extend .col;
+
+        p{margin-bottom: 0rem;}
+
+
+
       }
 
 
@@ -47,25 +59,57 @@ section{
   } 
   aside{
     @extend .col-lg-4, .col-md-6 ;  
+    .linkBox{
+      background: whitesmoke; 
+      border-radius: 10px;
+      padding: 1rem;
+      margin: .5rem 0;
+    }
   }
 
   .title {
-    @extend .col;
+    @extend .col; 
+
+    text-align: center;
+
+
   }
+
+
+  .container{
+
+    
+
+
+    article{
+      background: whitesmoke; 
+      border-radius: 10px;
+      margin: .5rem 0;
+      padding: .5rem;
+
+      @extend .p-5;
+
+
+
+
+      h3{
+        @extend .display-4;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  
 
   
-  .linkBox{
-    background: whitesmoke; 
-    border-radius: 10px;
-    padding: 1rem;
-    margin: .5rem 0;
-  }
-
-
 
 
 
   .container{
+
+
+
+
+
 
 
       // links

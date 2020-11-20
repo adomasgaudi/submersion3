@@ -31,15 +31,15 @@ html(lang="en")
         .container
           .row
             .col
-              h2.h1.p-3.gLine Resourcessss       
+              h2.h1.p-3.gLine Resources       
           .row.flex-sm-row-reverse
 
-
-            //aside - links
+            // aside - links
+            // aside - links
             aside
 
               .row
-                .col
+                .title
                   h3 Links
 
               .row
@@ -83,6 +83,9 @@ html(lang="en")
                         | and 
                         a(href="https://www.researchgate.net/profile/Stephen_Krashen3") ResearchGate
                
+
+            //main - cards
+            //main - cards
             //main - cards
             main
               .row
@@ -91,66 +94,45 @@ html(lang="en")
                   hr
 
               //cards
-              .cards
+              .cardsrow 
                 .card-con
                   .row
                     .description
-                      h5 Card 1
-                      p  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, accusamus.
+                      h6 Article 1
+                      p  Future articles are coming. Expect them after january 1st:( 
                     img(src="https://picsum.photos/200/300", alt="")
-                .card-con
+                .card-con.devMode
                   .row
                     .description
-                      h5 Card 1
-                      p  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, accusamus.
+                      h6 Tiny habits
+                      p after I do [...] on saturday I will [...]
                     img(src="https://picsum.photos/200/300", alt="")
-                .card-con
+                .card-con.devMode(onclick="$dc.getHtml()")
                   .row
                     .description
-                      h5 Card 1
-                      p  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, accusamus.
+                      h6 Anki explained
+                      p anki settings, addons, theory
                     img(src="https://picsum.photos/200/300", alt="")
-                .card-con
+                .card-con.devMode
                   .row
                     .description
-                      h5 Card 1
-                      p  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, accusamus.
+                      h6 -------
+                      p  -------- --------- -------- -------- ------- - 
                     img(src="https://picsum.photos/200/300", alt="")
-                .card-con
+                .card-con.devMode
                   .row
                     .description
-                      h5 Card 1
-                      p  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, accusamus.
+                      h6 -------
+                      p  -------- --------- -------- -------- ------- - 
                     img(src="https://picsum.photos/200/300", alt="")
                 
             
-              hr
-              .row
-                
-                .col-12.devMode
-                  .col-12.linkBox
-                    h3 Tiny habits
-                    p choose your tiny habits, check out the format here 
-                      a(href="") this
-                    ul
-                      li after I do x on saturday I will open my fear setting journal.
 
-                
-                .col-12.devMode
-                  .col-12.linkBox
-                    h3.p-3 Theory Links
-                    ul
-                      li
-                        p(href="", onclick="$dc.getHtml()").
-                          anki explained
-            
-            
-            
-                     
-            
+
+
               
         //card-cont
-        .container#ankiExplained
+        .container#article.devMode
           //- Filled with ajax
           //-
 
