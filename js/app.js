@@ -2,7 +2,7 @@
 
 // AJAX html INCLUDES from css tricks
 
-fetch("./htmls/footer.html")
+fetch("./include/footer.html")
   .then(response => {
     return response.text()
   })

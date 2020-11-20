@@ -6,12 +6,45 @@
 @import "../../bootstrap-4.3.1/scss/bootstrap";
  
 
-section{
+section{ 
+
+
+
   
   main{
     @extend .col-lg-8, .col-md-6 ; 
-    color: yellow; 
-  }
+    // color: yellow;   
+    
+    
+
+
+
+    .cards{
+      @extend .row;
+
+
+      img{
+        @extend .col-2;
+        // width: 100px;
+        height: auto;
+      }
+      .description{
+        @extend .col-9;
+      }
+      .card-con{
+        @extend .col-12;
+        background: whitesmoke; 
+        border-radius: 10px;
+        margin: .5rem 0;
+        padding: .5rem;
+      }
+
+
+    }
+
+
+
+  } 
   aside{
     @extend .col-lg-4, .col-md-6 ;  
   }
@@ -20,12 +53,7 @@ section{
     @extend .col;
   }
 
-  ul{
-    padding-inline-start: 1rem;
-    
-  }
-  p{margin-bottom: .5rem;}
-
+  
   .linkBox{
     background: whitesmoke; 
     border-radius: 10px;
@@ -35,12 +63,6 @@ section{
 
 
 
-  ol{
-    li::marker{
-      font-size: 16px;
-      font-weight: bold;
-    }
-  }
 
 
   .container{
@@ -59,10 +81,10 @@ section{
 
       &:nth-of-type(2){
 
-        img{width:100px; height: 100px;float: right;}
-        .col-md-6{
-          border-bottom: 2px solid grey;
-        }
+        // img{width:100px; height: 100px;float: right;}
+        // .col-md-6{
+        //   border-bottom: 2px solid grey;
+        // }
       }
   
   }

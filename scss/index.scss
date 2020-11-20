@@ -8,14 +8,32 @@ body {    min-height: 100vh;  }
 *{
   outline-width: thin !important;
   // outline: dotted !important;  
-  color: green !important;            
+  // color: blue !important;                     
 }
 
 #devBtn{ display: inline;}
 .devMode{ display: none;}
 
 
-// INDEX OUTLINE
+
+
+
+
+//anti - bootstrap
+ul{
+  padding-inline-start: 1rem;
+    
+}
+p{margin-bottom: .5rem;}
+
+ol{
+  li::marker{
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+// INDEX OUTLINE 
 
 @import "./parts/index_outline";
 
