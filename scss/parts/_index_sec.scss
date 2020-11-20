@@ -3,18 +3,21 @@
 // *{color: red}
 
 
-
-
+@import "../../bootstrap-4.3.1/scss/bootstrap";
+ 
 
 section{
   
-  .main{
-    @extend .col-lg-8 ;
-    @extend .col-md-6 ; 
+  main{
+    @extend .col-lg-8, .col-md-6 ; 
+    color: blue; 
+  }
+  aside{
+    @extend .col-lg-4, .col-md-6 ;  
   }
 
   .title {
-    // @extend .col;
+    @extend .col;
   }
 
   ul{
