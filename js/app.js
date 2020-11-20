@@ -65,6 +65,8 @@ document.querySelectorAll(".cardsrow img").forEach(e=>{
   dc.devTog = function () {
     $(".devMode").css("display", "block")
     $(".col1").css("background", "crimson")
+    $("section:last-of-type").css("background", "crimson")
+
   }
 
 
