@@ -6,6 +6,14 @@ body {
   outline-width: thin !important;
 }
 
+#devBtn {
+  display: none;
+}
+
+.devMode {
+  display: none;
+}
+
 .body-wrap {
   min-height: 100vh;
   margin-bottom: 250px;
@@ -34,12 +42,13 @@ footer {
   color: white;
   border-top: 1px solid #00cc99;
   text-align: center;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 footer .row {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 footer a {
   color: white;
@@ -54,16 +63,23 @@ footer img {
   footer a {
     max-width: none;
   }
+  footer .row {
+    text-align: right;
+  }
 }
 
-section .container:nth-of-type(1) .gLine {
-  border-bottom: 5px solid #00cc99;
-}
-section .container:nth-of-type(1) .linkBox {
+section .linkBox {
   background: whitesmoke;
   border-radius: 10px;
   padding: 1rem;
   margin: 0.5rem 0;
+}
+section ol li::marker {
+  font-size: 16px;
+  font-weight: bold;
+}
+section .container:nth-of-type(1) .gLine {
+  border-bottom: 5px solid #00cc99;
 }
 section .container:nth-of-type(2) img {
   width: 100px;
@@ -74,7 +90,7 @@ section .container:nth-of-type(2) .col-md-6 {
   border-bottom: 2px solid grey;
 }
 section:last-of-type {
-  background: coral;
+  background: #00cc99;
   text-align: center;
   padding: 20rem 0;
   margin-top: 10rem;
