@@ -6,9 +6,12 @@
 @import "../../bootstrap-4.3.1/scss/bootstrap";
  
 
+
+
+
 section{ 
 
-
+  
 
   
   main{
@@ -21,15 +24,23 @@ section{
       .card-con{
         color: black;
         text-decoration: none;
-        @extend .col-12;
-        background: whitesmoke; 
-        border-radius: 10px;
+        @extend .col-12, .px-1;
         margin: .5rem 0;
-        padding: .5rem;
-
-
+        
+        
+        
         &:hover {
           background: rgb(216, 216, 216);
+        }
+        
+        
+        .card-conrow{
+          @extend .row;
+          margin-right: 0;
+          margin-left: 0;
+          background: whitesmoke; 
+          border-radius: 10px;
+          padding: .5rem;
         }
 
       }
@@ -41,7 +52,7 @@ section{
         // flex-grow: 1;
         // max-width: 100%;
         position: relative;
-        padding-right: 1rem;
+        padding-right: .5rem;
         padding-left: .5rem;
       }
       .description{
@@ -80,23 +91,46 @@ section{
 
   .container{
 
+    @extend .px-1;
+    
 
-    article{
+    .articlerow{
+      @extend .row;
+      margin-right: 0;
+      margin-left: 0;
       background: whitesmoke; 
       border-radius: 10px;
-      margin: .5rem 0;
       padding: .5rem;
+    }
 
+
+    article{
       @extend .p-2, .col-12;
+      // background: whitesmoke; 
+      // border-radius: 10px;
+      // margin: .5rem 0;
+      // padding: .5rem;
+
 
       h3{
         @extend .display-4;
         margin-bottom: 2rem;
       }
 
+      .iframerow{
+        @extend .row, .justify-content-center;
+      }
       iframe{
         width: 100%;
-        height: 100%;
+        @media (min-width: 768px) {
+          width: 80%;  
+        }
+
+        @extend .my-4;
+
+
+
+
       }
 
     }

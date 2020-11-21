@@ -25,7 +25,10 @@ html(lang="en")
             .col-md-6 
               h1.display-4 Language learning theory and tools for independent learners
               p.lead If the site looks weird, that's probably because your browser has not updated its cache.
-                
+     
+      
+        
+        
             
       section 
         .container
@@ -34,6 +37,7 @@ html(lang="en")
               h2.h1.p-3.gLine Resources       
           .row.flex-sm-row-reverse
 
+            
             // aside - links
             // aside - links
             aside
@@ -55,6 +59,8 @@ html(lang="en")
                         a(href="http://super-memory.com/articles/20rules.htm") Site 
                         |  and  
                         a(href="https://supermemo.guru/wiki/20_rules_of_knowledge_formulation") Wiki
+                        a(href="#jump") jump
+                
 
                 .col-12.devMode
                   .col-12.linkBox
@@ -95,37 +101,42 @@ html(lang="en")
 
               //cards
               .cardsrow 
-                .card-con
-                  .row
-                    .description
-                      h6 Article 1
-                      p  Future articles are coming. Expect them after january 1st:( 
-                    img(src="https://picsum.photos/200/300", alt="")
+
+                
+
                 .card-con.devMode
-                  .row
+                  .card-conrow
                     .description
-                      h6 Tiny habits
+                      h5 Tiny habits
                       p after I do [...] on saturday I will [...]
                     img(src="https://picsum.photos/200/300", alt="")
+
                 a.card-con.devMode(href="#jump" onclick="$dc.getHtml('anki')")
-                  .row
+                  .card-conrow
                     .description
-                      h6 Anki explained
+                      h5 Anki explained
                       p anki settings, addons, theory
                     img(src="https://picsum.photos/200/300", alt="")
-                a.card-con.devMode(href="#jump" onclick="$dc.getHtml('vids')")  
-                  .row
+
+                a.card-con(href="#jump" onclick="$dc.getHtml('vids')")  
+                  .card-conrow
                     .description
-                      h6 Vids
+                      h5 Vids
                       p most popular vids
                     img(src="https://picsum.photos/200/300", alt="")
+
                 .card-con.devMode
-                  .row
+                  .card-conrow
                     .description
-                      h6 -------
+                      h5 -------
                       p  -------- --------- -------- -------- ------- - 
                     img(src="https://picsum.photos/200/300", alt="")
-                
+                .card-con
+                  .card-conrow
+                    .description
+                      h5 Future article
+                      p  It's coming, but its still in the future. Going though time takes a while...
+                    img(src="https://picsum.photos/200/300", alt="")
             
 
 
@@ -133,7 +144,7 @@ html(lang="en")
               
         //card-cont
         hr#jump
-        .container#article.devMode
+        .container#article
           //- Filled with ajax
         hr
           //-

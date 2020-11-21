@@ -9,14 +9,7 @@ body {
 
 html {
   width: 100% !important;
-}
-
-#devBtn {
-  display: none;
-}
-
-.devMode {
-  display: none;
+  scroll-behavior: smooth;
 }
 
 ul {
@@ -62,7 +55,7 @@ footer {
   text-align: center;
   padding-bottom: 1rem;
 }
-footer .row, footer section main .cardsrow, section main footer .cardsrow {
+footer .row, footer section .container article .iframerow, section .container article footer .iframerow, footer section .container .articlerow, section .container footer .articlerow, footer section main .cardsrow .card-con .card-conrow, section main .cardsrow .card-con footer .card-conrow, footer section main .cardsrow, section main footer .cardsrow {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -81,7 +74,7 @@ footer img {
   footer a {
     max-width: none;
   }
-  footer .row, footer section main .cardsrow, section main footer .cardsrow {
+  footer .row, footer section .container article .iframerow, section .container article footer .iframerow, footer section .container .articlerow, section .container footer .articlerow, footer section main .cardsrow .card-con .card-conrow, section main .cardsrow .card-con footer .card-conrow, footer section main .cardsrow, section main footer .cardsrow {
     text-align: right;
   }
 }
@@ -661,7 +654,7 @@ pre code {
   margin-left: auto;
 }
 
-.row, section main .cardsrow {
+.row, section .container article .iframerow, section .container .articlerow, section main .cardsrow .card-con .card-conrow, section main .cardsrow {
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
@@ -6412,7 +6405,7 @@ button.bg-dark:focus {
   justify-content: flex-end !important;
 }
 
-.justify-content-center {
+.justify-content-center, section .container article .iframerow {
   justify-content: center !important;
 }
 
@@ -7371,7 +7364,8 @@ button.bg-dark:focus {
 }
 
 .mt-4,
-.my-4 {
+.my-4,
+section .container article iframe {
   margin-top: 1.5rem !important;
 }
 
@@ -7381,7 +7375,8 @@ button.bg-dark:focus {
 }
 
 .mb-4,
-.my-4 {
+.my-4,
+section .container article iframe {
   margin-bottom: 1.5rem !important;
 }
 
@@ -7448,7 +7443,9 @@ button.bg-dark:focus {
 }
 
 .pr-1,
-.px-1 {
+.px-1,
+section .container,
+section main .cardsrow .card-con {
   padding-right: 0.25rem !important;
 }
 
@@ -7458,7 +7455,9 @@ button.bg-dark:focus {
 }
 
 .pl-1,
-.px-1 {
+.px-1,
+section .container,
+section main .cardsrow .card-con {
   padding-left: 0.25rem !important;
 }
 
@@ -9766,18 +9765,22 @@ h3 {
 section main .cardsrow .card-con {
   color: black;
   text-decoration: none;
-  background: whitesmoke;
-  border-radius: 10px;
   margin: 0.5rem 0;
-  padding: 0.5rem;
 }
 section main .cardsrow .card-con:hover {
   background: #d8d8d8;
 }
+section main .cardsrow .card-con .card-conrow {
+  margin-right: 0;
+  margin-left: 0;
+  background: whitesmoke;
+  border-radius: 10px;
+  padding: 0.5rem;
+}
 section main .cardsrow img {
   height: 75px;
   position: relative;
-  padding-right: 1rem;
+  padding-right: 0.5rem;
   padding-left: 0.5rem;
 }
 section main .cardsrow .description p {
@@ -9792,10 +9795,11 @@ section aside .linkBox {
 section .title {
   text-align: center;
 }
-section .container article {
+section .container .articlerow {
+  margin-right: 0;
+  margin-left: 0;
   background: whitesmoke;
   border-radius: 10px;
-  margin: 0.5rem 0;
   padding: 0.5rem;
 }
 section .container article h3 {
@@ -9803,7 +9807,11 @@ section .container article h3 {
 }
 section .container article iframe {
   width: 100%;
-  height: 100%;
+}
+@media (min-width: 768px) {
+  section .container article iframe {
+    width: 80%;
+  }
 }
 section .container:nth-of-type(1) .gLine {
   border-bottom: 5px solid #00cc99;

@@ -13,10 +13,11 @@ body {    min-height: 100vh;  }
 
 html{
   width: 100% !important;
+  scroll-behavior: smooth;
 }
 
-#devBtn{ display: none;}
-.devMode{ display: none;}
+// #devBtn{ display: none;}
+// .devMode{ display: none;}
 
 
 
