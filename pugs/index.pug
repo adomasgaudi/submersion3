@@ -12,6 +12,7 @@ html(lang="en")
 
 
   body
+    
     .body-wrap
       header
         nav.navbar
@@ -30,14 +31,19 @@ html(lang="en")
         
         
             
-      section 
-        .container
-          .row
+      section#section1
+        .resources-top
+        .resources
+          .row 
             .col
-              h2.h1.p-3.gLine Resources       
+              a.title-res.gLine(href="#section1") Resources    
+                  
+        
+        .container
           .row.flex-sm-row-reverse
 
             
+            // aside - links
             // aside - links
             // aside - links
             aside
@@ -125,12 +131,13 @@ html(lang="en")
                       p most popular vids
                     img(src="https://picsum.photos/200/300", alt="")
 
-                .card-con.devMode
+                a.card-con.devMode(href="#jump" onclick="$dc.getHtml('rules')")  
                   .card-conrow
                     .description
-                      h5 -------
-                      p  -------- --------- -------- -------- ------- - 
+                      h5 rules
+                      p rules for learning
                     img(src="https://picsum.photos/200/300", alt="")
+
                 .card-con
                   .card-conrow
                     .description
@@ -166,6 +173,7 @@ html(lang="en")
               h2.display-1.p-3 Pages are being built
               p.h3 "Patience rewards those who let their expectations be guided by it.
               p.h3 Not their actions."
+              p.text-right - Tallbus Humbledoor 
                 hr
               p.h3
                 span(onclick="$dc.devopen()") So be patient
