@@ -1,0 +1,205 @@
+//import vars
+
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link( rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous")
+    link(rel="stylesheet", href="./css/index.css") 
+    title Submesion.com lol
+    link.link
+            
+
+
+  body
+    
+    .body-wrap
+      //- IS REPLACED WITH HEADER AND JUMBOTRON
+      header
+
+      section#section1
+
+
+        .resources-top
+          
+                  
+        
+        .container
+          .row.flex-sm-row-reverse
+
+            
+            // aside - links
+            // aside - links
+            // aside - links
+            aside
+
+              .row
+                .title
+                  h3 Links
+
+              .row
+                
+                .col-12
+                  .col-12.linkBox
+                    h3.p-3 ANKI Links
+                    ul  
+                      li
+                        a(href="https://ankiweb.net/shared/info/2005073038") My japanese anki card type
+                      li
+                        | "Effective learning: 20 rules of formulating knowledge"  
+                        a(href="http://super-memory.com/articles/20rules.htm") Site 
+                        |  and  
+                        a(href="https://supermemo.guru/wiki/20_rules_of_knowledge_formulation") Wiki
+                        a(href="#jump") jump
+                
+
+                .col-12.devMode
+                  .col-12.linkBox
+                    h3.p-3 ANKI 
+                    h4 Set-up
+                    ul  
+                      li
+                        a(href="https://foosoft.net/projects/yomichan/index.html#dictionaries") Yomichan dictionaries
+
+                .col-12.devMode
+                  .col-12.linkBox
+                    h3.p-3 Have suggestions? Confused? Want info?
+                    p Type in your suggestions and I will update the website to your satisfaction as best as I can.
+                    ul#link-base  
+                      li
+                        a(href="") suggestion x
+
+                    form(action="")
+                      label(for="link") Suggest new link:
+                      .input-group  
+                        input.form-control#link_name(type="text" placeholder="name" required)
+                        .input-group-append
+                        input.form-control#link_url(type="text" placeholder="url" required)
+                        .input-group-append
+                          input.btn.btn-outline-secondary(type="submit" value="add")
+
+                .col-12
+                  .col-12.linkBox
+                    h3.p-3 People I follow
+                    ul
+                      li
+                        a(href="https://massimmersionapproach.com/" target="_blank").
+                          MIA
+                      li
+                        a(href="https://www.youtube.com/user/MATTvsJapan" target="_blank").
+                          Matt vs Japan
+                      li
+                        a(href="https://www.youtube.com/channel/UCQFe3x4WAgm7joN5daMm5Ew" target="_blank").
+                          Immerse with Yoga
+                      li
+                        a(href="https://www.britvsjapan.com/" target="_blank").
+                          Brit vs Japan 
+                      li
+                        | Krashen -  
+                        a(href="http://www.sdkrashen.com/" target="_blank") website 
+                        | and 
+                        a(href="https://www.researchgate.net/profile/Stephen_Krashen3" target="_blank") ResearchGate
+
+                    
+
+               
+
+            //main - cards
+            //main - cards
+            //main - cards
+            main
+              .row
+                .title
+                  h3 Cards
+                  hr
+
+              //cards
+              .cardsrow 
+
+                
+
+                .card-con.devMode
+                  .card-conrow
+                    .description
+                      h5 Tiny habits
+                      p after I do [...] on saturday I will [...]
+                    img(src="https://picsum.photos/200/300", alt="")
+
+                a.card-con.devMode(href="#jump" onclick="$dc.getHtml('anki')")
+                  .card-conrow
+                    .description
+                      h5 Anki explained
+                      p anki settings, addons, theory
+                    img(src="https://picsum.photos/200/300", alt="")
+
+                a.card-con(href="#jump" onclick="$dc.getHtml('vids')")  
+                  .card-conrow
+                    .description
+                      h5 Vids
+                      p most popular vids
+                    img(src="https://picsum.photos/200/300", alt="")
+
+                a.card-con.devMode(href="#jump" onclick="$dc.getHtml('rules')")  
+                  .card-conrow
+                    .description
+                      h5 rules
+                      p rules for learning
+                    img(src="https://picsum.photos/200/300", alt="")
+
+                .card-con
+                  .card-conrow
+                    .description
+                      h5 Future article
+                      p  It's coming, but its still in the future. Going though time takes a while...
+                    img(src="https://picsum.photos/200/300", alt="")
+            
+
+
+
+              
+        //card-cont
+        hr#jump
+        .container#article
+          //- Filled with ajax
+        hr
+          //-
+
+          
+
+
+
+
+
+
+
+
+                 
+      section
+        .container
+          .row
+            .col-12
+              h2.display-1.p-3 Pages are being built
+              p.h3 "Patience rewards those who let their expectations be guided by it.
+              p.h3 Not their actions."
+              p.text-right - Tallbus Humbledoor 
+                hr
+              p.h3
+                span(onclick="$dc.devopen()") So be patient
+              p.h3#devBtn(onclick="$dc.devTog()") There you go
+              
+
+    footer 
+              
+    
+    script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous")
+    script(src="js/init-all.js")
+    //-imports scripts
+
+    
+
+
+
+
+
+    

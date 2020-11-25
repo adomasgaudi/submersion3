@@ -1,14 +1,10 @@
 
 
-// AJAX html INCLUDES from css tricks
 
-fetch("./include/footer.html")
-  .then(response => {
-    return response.text()
-  })
-  .then(data => {
-    document.querySelector("footer").innerHTML = data;
-  });
+ 
+
+
+
 
   window.onload = () => {
 

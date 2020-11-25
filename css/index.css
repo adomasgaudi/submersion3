@@ -12,14 +12,6 @@ html {
   scroll-behavior: smooth;
 }
 
-#devBtn {
-  display: none;
-}
-
-.devMode {
-  display: none;
-}
-
 ul {
   padding-inline-start: 1rem;
 }
@@ -42,11 +34,11 @@ header {
   background: #00cc99;
   border-bottom: 1px solid #000;
 }
-header nav .container, header nav section .resources, section header nav .resources {
+header nav .container, header nav .resources {
   display: flex;
   align-items: center;
 }
-header nav .container span, header nav section .resources span, section header nav .resources span {
+header nav .container span, header nav .resources span {
   margin: 0.2rem;
 }
 
@@ -447,13 +439,13 @@ template {
 
 h1, h2, h3, h4, h5, h6,
 .h1,
-section .resources .title-res, .h2, .h3, .h4, section .isSticky a, .h5, .h6 {
+.resources .title-res, .h2, .h3, .h4, .isSticky a, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
 }
 
-h1, .h1, section .resources .title-res {
+h1, .h1, .resources .title-res {
   font-size: 2.5rem;
 }
 
@@ -465,7 +457,7 @@ h3, .h3 {
   font-size: 1.75rem;
 }
 
-h4, .h4, section .isSticky a {
+h4, .h4, .isSticky a {
   font-size: 1.5rem;
 }
 
@@ -627,7 +619,7 @@ pre code {
   overflow-y: scroll;
 }
 
-.container, section .resources {
+.container, .resources {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -635,22 +627,22 @@ pre code {
   margin-left: auto;
 }
 @media (min-width: 576px) {
-  .container, section .resources {
+  .container, .resources {
     max-width: 540px;
   }
 }
 @media (min-width: 768px) {
-  .container, section .resources {
+  .container, .resources {
     max-width: 720px;
   }
 }
 @media (min-width: 992px) {
-  .container, section .resources {
+  .container, .resources {
     max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
-  .container, section .resources {
+  .container, .resources {
     max-width: 1140px;
   }
 }
@@ -3871,7 +3863,7 @@ input[type=button].btn-block {
   justify-content: space-between;
   padding: 0.5rem 1rem;
 }
-.navbar > .container, section .navbar > .resources,
+.navbar > .container, .navbar > .resources,
 .navbar > .container-fluid {
   display: flex;
   flex-wrap: wrap;
@@ -3943,7 +3935,7 @@ input[type=button].btn-block {
 }
 
 @media (max-width: 575.98px) {
-  .navbar-expand-sm > .container, section .navbar-expand-sm > .resources,
+  .navbar-expand-sm > .container, .navbar-expand-sm > .resources,
 .navbar-expand-sm > .container-fluid {
     padding-right: 0;
     padding-left: 0;
@@ -3964,7 +3956,7 @@ input[type=button].btn-block {
     padding-right: 0.5rem;
     padding-left: 0.5rem;
   }
-  .navbar-expand-sm > .container, section .navbar-expand-sm > .resources,
+  .navbar-expand-sm > .container, .navbar-expand-sm > .resources,
 .navbar-expand-sm > .container-fluid {
     flex-wrap: nowrap;
   }
@@ -3977,7 +3969,7 @@ input[type=button].btn-block {
   }
 }
 @media (max-width: 767.98px) {
-  .navbar-expand-md > .container, section .navbar-expand-md > .resources,
+  .navbar-expand-md > .container, .navbar-expand-md > .resources,
 .navbar-expand-md > .container-fluid {
     padding-right: 0;
     padding-left: 0;
@@ -3998,7 +3990,7 @@ input[type=button].btn-block {
     padding-right: 0.5rem;
     padding-left: 0.5rem;
   }
-  .navbar-expand-md > .container, section .navbar-expand-md > .resources,
+  .navbar-expand-md > .container, .navbar-expand-md > .resources,
 .navbar-expand-md > .container-fluid {
     flex-wrap: nowrap;
   }
@@ -4011,7 +4003,7 @@ input[type=button].btn-block {
   }
 }
 @media (max-width: 991.98px) {
-  .navbar-expand-lg > .container, section .navbar-expand-lg > .resources,
+  .navbar-expand-lg > .container, .navbar-expand-lg > .resources,
 .navbar-expand-lg > .container-fluid {
     padding-right: 0;
     padding-left: 0;
@@ -4032,7 +4024,7 @@ input[type=button].btn-block {
     padding-right: 0.5rem;
     padding-left: 0.5rem;
   }
-  .navbar-expand-lg > .container, section .navbar-expand-lg > .resources,
+  .navbar-expand-lg > .container, .navbar-expand-lg > .resources,
 .navbar-expand-lg > .container-fluid {
     flex-wrap: nowrap;
   }
@@ -4045,7 +4037,7 @@ input[type=button].btn-block {
   }
 }
 @media (max-width: 1199.98px) {
-  .navbar-expand-xl > .container, section .navbar-expand-xl > .resources,
+  .navbar-expand-xl > .container, .navbar-expand-xl > .resources,
 .navbar-expand-xl > .container-fluid {
     padding-right: 0;
     padding-left: 0;
@@ -4066,7 +4058,7 @@ input[type=button].btn-block {
     padding-right: 0.5rem;
     padding-left: 0.5rem;
   }
-  .navbar-expand-xl > .container, section .navbar-expand-xl > .resources,
+  .navbar-expand-xl > .container, .navbar-expand-xl > .resources,
 .navbar-expand-xl > .container-fluid {
     flex-wrap: nowrap;
   }
@@ -4082,7 +4074,7 @@ input[type=button].btn-block {
   flex-flow: row nowrap;
   justify-content: flex-start;
 }
-.navbar-expand > .container, section .navbar-expand > .resources,
+.navbar-expand > .container, .navbar-expand > .resources,
 .navbar-expand > .container-fluid {
   padding-right: 0;
   padding-left: 0;
@@ -4097,7 +4089,7 @@ input[type=button].btn-block {
   padding-right: 0.5rem;
   padding-left: 0.5rem;
 }
-.navbar-expand > .container, section .navbar-expand > .resources,
+.navbar-expand > .container, .navbar-expand > .resources,
 .navbar-expand > .container-fluid {
   flex-wrap: nowrap;
 }
@@ -7152,7 +7144,7 @@ button.bg-dark:focus {
 }
 
 @supports ((position: -webkit-sticky) or (position: sticky)) {
-  .sticky-top, section .resources .title-res {
+  .sticky-top, .resources .title-res {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -9735,7 +9727,7 @@ h3 {
     min-width: 992px !important;
   }
 
-  .container, section .resources {
+  .container, .resources {
     min-width: 992px !important;
   }
 
@@ -9826,29 +9818,6 @@ section .container article iframe, section .resources article iframe {
     width: 80%;
   }
 }
-section .resources {
-  height: none;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 10000;
-  background: white;
-  top: 0px;
-  transition: 1s;
-}
-section .resources a {
-  margin-bottom: 0px;
-}
-section .resources .gLine {
-  border-bottom: 5px solid #00cc99;
-}
-section .isSticky {
-  color: purple;
-  transition: 1s;
-}
-section .isSticky a {
-  transition: 1s;
-}
 section:last-of-type {
   background: #00cc99;
   text-align: center;
@@ -9862,4 +9831,29 @@ section:last-of-type .display-1 {
   section:last-of-type .display-1 {
     font-size: 6rem;
   }
+}
+
+.resources {
+  height: none;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+  background: black;
+  top: 0px;
+  transition: 1s;
+}
+.resources a {
+  margin-bottom: 0px;
+}
+.resources .gLine {
+  border-bottom: 5px solid #00cc99;
+}
+
+.isSticky {
+  color: purple;
+  transition: 1s;
+}
+.isSticky a {
+  transition: 1s;
 }
