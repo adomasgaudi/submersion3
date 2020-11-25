@@ -1,0 +1,46 @@
+main
+  .row
+    .title
+      h3 Cards
+      hr
+
+  //cards
+  .cardsrow 
+
+                  
+
+    .card-con.devMode
+      .card-conrow
+        .description
+          h5 Tiny habits
+          p after I do [...] on saturday I will [...]
+        img(src="https://picsum.photos/200/300", alt="")
+
+    a.card-con.devMode(href="#jump" onclick="$dc.getHtml('anki')")
+      .card-conrow
+        .description
+          h5 Anki explained
+          p anki settings, addons, theory
+        img(src="https://picsum.photos/200/300", alt="")
+
+    a.card-con(href="#jump" onclick="$dc.getHtml('vids')")  
+      .card-conrow
+        .description
+          h5 Vids
+          p most popular vids
+        img(src="https://picsum.photos/200/300", alt="")
+
+    a.card-con.devMode(href="#jump" onclick="$dc.getHtml('rules')")  
+      .card-conrow
+        .description
+          h5 rules
+          p rules for learning
+        img(src="https://picsum.photos/200/300", alt="")
+
+    .card-con
+      .card-conrow
+        .description
+          h5 Future article
+          p  It's coming, but its still in the future. Going though time takes a while...
+        img(src="https://picsum.photos/200/300", alt="")
+              
