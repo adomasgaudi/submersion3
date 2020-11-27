@@ -1,7 +1,8 @@
 
 
-
-import './dom'
+// import './test.css';
+import './dom';
+import './date';
 
 console.log("webpack")
-$dom.runs("bubba")
+$dom.runs("bubba hunnnnaa")
