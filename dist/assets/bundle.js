@@ -91,12 +91,18 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _src_mods_sec_one_sec_one_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _init_ajax_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5);
-/* harmony import */ var _init_ajax_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_init_ajax_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _app_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6);
-/* harmony import */ var _app_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_app_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _add_link_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7);
-/* harmony import */ var _add_link_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_add_link_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _src_mods_sec_one_sec_one_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_src_mods_sec_one_sec_one_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _src_mods_ajax_ajax_utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var _src_mods_ajax_ajax_utils__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_src_mods_ajax_ajax_utils__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _src_mods_ajax_iife__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
+/* harmony import */ var _src_mods_ajax_iife__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_src_mods_ajax_iife__WEBPACK_IMPORTED_MODULE_2__);
+///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////// 
+
 // AJAX html INCLUDES from css tricks
 
 
@@ -108,15 +114,14 @@ __webpack_require__.r(__webpack_exports__);
   }
 /////////////////////////////////////////////////////
 
-// const insertHtml = function (callback)
 
 
 
 
 
 
+//////////////////////////////////////
 // import main htmls
-
 
   fetchHtml("../../dist/includes/out_header_jumbo.html", (da)=>{
     $('[refer="out_header_jumbo"]').replaceWith(da);
@@ -128,8 +133,7 @@ __webpack_require__.r(__webpack_exports__);
   fetchHtml("../../dist/includes/sec_one.html", (da) =>{
     $('[refer="sec_one"]').replaceWith(da);
   }) 
-    
-  // @pepros-append ../../src/mods/sec_one/sec-one.js
+
 
 
   fetchHtml("../../dist/includes/sec_patience.html", (da)=>{
@@ -139,196 +143,42 @@ __webpack_require__.r(__webpack_exports__);
   fetchHtml("../../dist/includes/out_footer.html", (da)=>{
     $('[refer="out_footer"]').replaceWith(da);
   }) 
+//////////////////////////////////////
+
+
+// form mods
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// old import method
-
-// (function (global) {
-//   var dc = {};
-  
-//   dc.artList = {}
-//   dc.artList.anki = "./include/ankitut.html";
-//   dc.artList.vids = "./include/vids.html";
-//   // console.log(dc.artList.anki, dc.artList[anki])
-
-//   const insertHtml = (selector, html)=>{
-//     let element = document.querySelector(selector);
-//     element.innerHTML = html;
-//   }
-
-//   dc.getHtml = function (article) {
-//     // console.log(article, artList[article]);
-//     $ajaxUtils.sendGetRequest(
-//       dc.artList[article],
-//       function (receivedHtml) {
-//         // console.log(receivedHtml, "inserted HTML yay!!!!!!!!!")
-//         insertHtml("#article",receivedHtml);
-
-//         sizeFix();
-//       },
-//       false);
-//   }
-
-
-
-//   dc.devopen = function () {
-//     document.querySelector("#devBtn").style.display = "inline";
-//   }
-
-//   dc.devTog = function () {
-//     $(".devMode").css("display", "block")
-//     $(".col1").css("background", "crimson")
-//     $("section:last-of-type").css("background", "crimson")
-
-//   }
-
-
+// @pepros-append ../../src/mods/sec_one/sec-one.js
+// @pepros-append ./app.js
 
   
-//   global.$dc = dc;
-//   })(window);
+// import './init-ajax.js';
+// import './add-link.js';
+console.log('-------from init-all.js');
+
+
+
+
+
+
 
 /***/ }),
 /* 1 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _main_main_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
-/* harmony import */ var _main_main_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_main_main_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _mod_vids_vids_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
-/* harmony import */ var _mod_vids_vids_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_mod_vids_vids_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _mod_res_title_re_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4);
-/* harmony import */ var _mod_res_title_re_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_mod_res_title_re_js__WEBPACK_IMPORTED_MODULE_2__);
+// import "./main/main.js";
+// import "./mod-vids/vids.js";
+// import "./mod-res-title/re.js"; 
 
 
- 
+
+
+
 
 /***/ }),
 /* 2 */
-/***/ (function(module, exports) {
-
-
-
-// IMG FIX
-window.onload = () => {
-
-  let imgHeight = $('.cardsrow img').outerHeight();
-  document.querySelectorAll(".cardsrow img").forEach(e=>{
-    e.style.width = " "+ (imgHeight+24) + "px ";
-  });
-
-};
-
-console.log('main.js');
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports) {
-
-
-
-
-
-
-function sizeFix(){
-  let vidWidth = $('#article iframe').outerWidth();
-  let vidHeight;
-  console.log( vidWidth, vidHeight);
-  if(vidWidth > 500){
-    vidHeight = (vidWidth/16)*9;
-    console.log("16:9", vidWidth, vidHeight);
-  }else{
-    vidHeight = (vidWidth/4)*3;
-    console.log("4:3");
-  }
-  document.querySelectorAll("#article iframe").forEach(e=>{
-    e.style.height = " "+ (vidHeight) + "px ";
-  });
-}
-
-
-
-window.addEventListener('resize', function(){
-  sizeFix()
-});
-
-
-
-
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports) {
-
-
-// (function(global){    
-
-//  })(window);
-
-// window.onscroll = function() {scrollFunction()};
-
-// function scrollFunction() {
-//   let topbody = document.body.scrollTop;
-//   console.log(topbody)
-//   // document.querySelector("body").style.fontSize = "30px";
-//   // if (topbody.scrollTop > 50 ) {
-//   //   console.log('scrolling')
-//   // } else {
-//   //   console.log('scrolling2')
-//   //   document.querySelector("#sticky").style.fontSize = "90px";
-//   // }
-// }
-
-// get the sticky element
-// const stickyElm = document.querySelector('.resources')
-// let options = {
-//   // root: document.querySelector('.resources'),
-//   rootMargin: '0px',
-//   threshold: 1
-// }
-
-// const observer = new IntersectionObserver( 
-//   ([e]) => e.target.classList.toggle('isSticky', e.intersectionRatio < 1),
-//   options
-// );
-
-// observer.observe(stickyElm) 
-
-
-
-// //to check when element get's position sticky
-// var observer = new IntersectionObserver(function(entries) {
-//   // no intersection 
-//   if (entries[0].intersectionRatio === 0)
-//     document.querySelector(".resources").classList.add("isSticky");
-  
-//   else if (entries[0].intersectionRatio === 1)
-//     document.querySelector(".resources").classList.remove("isSticky");
-// }, 
-// { threshold: [0, 1] });
-
-
-// observer.observe(document.querySelector(".resources-top"));
-
-
-/***/ }),
-/* 5 */
 /***/ (function(module, exports) {
 
 
@@ -355,7 +205,7 @@ window.addEventListener('resize', function(){
   function handleResponse(request,responseHandler,isJsonResponse) {
     if ((request.readyState == 4) && (request.status == 200)) {
           
-      isJsonResponse == undefinded ? (isJsonResponse = true) : null;
+      (isJsonResponse == "undefinded") ? (isJsonResponse = true) : null;
 
       isJsonResponse 
       ? responseHandler(JSON.parse(request.responseText)) 
@@ -371,147 +221,65 @@ window.addEventListener('resize', function(){
   })(window);
 
 /***/ }),
-/* 6 */
+/* 3 */
 /***/ (function(module, exports) {
 
 
 
+// path is from /dist/assets/bundle.js
+                  //     ./ == assets
+                  //     ../ == dist
+                  //     ../../ == submersion3
 
 
 // old import method
 
-// (function (global) {
-//   var dc = {};
+(function (global) {
+  var dc = {};
   
-//   dc.artList = {}
-//   dc.artList.anki = "./include/ankitut.html";
-//   dc.artList.vids = "./include/vids.html";
-//   // console.log(dc.artList.anki, dc.artList[anki])
+  dc.articleList = {}
+  dc.articleList.vids = "../../dist/includes/artc_vids.html";
+  // console.log(dc.articleList['vids'])
+  // dc.articleList.anki = "./include/vids.html";
+  // console.log(dc.articleList.anki, dc.articleList[anki])
 
-//   const insertHtml = (selector, html)=>{
-//     let element = document.querySelector(selector);
-//     element.innerHTML = html;
-//   }
+  const insertHtml = (selector, html)=>{
+    let element = document.querySelector(selector);
+    element.innerHTML = html;
+  }
 
-//   dc.getHtml = function (article) {
-//     // console.log(article, artList[article]);
-//     $ajaxUtils.sendGetRequest(
-//       dc.artList[article],
-//       function (receivedHtml) {
-//         // console.log(receivedHtml, "inserted HTML yay!!!!!!!!!")
-//         insertHtml("#article",receivedHtml);
+  dc.getHtml = function (article) {
+    console.log(dc.articleList[article], 'is callled', $ajaxUtils)
+    // console.log(article, articleList[article]);
+    $ajaxUtils.sendGetRequest(
+      dc.articleList[article],
+      function (receivedHtml) {
+        console.log(receivedHtml, "inserted HTML yay!!!!!!!!!")
+        insertHtml("#article",receivedHtml);
 
-//         sizeFix();
-//       },
-//       false);
-//   }
+        sizeFix();
+      },
+      false);
+  }
 
 
 
-//   dc.devopen = function () {
-//     document.querySelector("#devBtn").style.display = "inline";
-//   }
+  dc.devopen = function () {
+    document.querySelector("#devBtn").style.display = "inline";
+  }
 
-//   dc.devTog = function () {
-//     $(".devMode").css("display", "block")
-//     $(".col1").css("background", "crimson")
-//     $("section:last-of-type").css("background", "crimson")
+  dc.devTog = function () {
+    $(".devMode").css("display", "block")
+    $(".col1").css("background", "crimson")
+    $("section:last-of-type").css("background", "crimson")
 
-//   }
+  }
 
 
 
   
-//   global.$dc = dc;
-//   })(window);
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports) {
-
-
-
-
-
-// // add a link to a list
-// let form = document.querySelector('form');
-// let input = document.querySelector('#link_name');
-// let list = document.querySelector('#link-base');
-
-
-// //BUiLD links
-// const buildLinks = function(varx, id){
-  
-//   let text = `
-//   <li data-id="${id}">
-//     <div class="row">
-    
-//       <div class="col-7"><a href="${varx.url}">${varx.name}</a></div>
-//       <div class="col-3">
-//       <span style="text-align: right">${varx.date.toDate().toDateString()}</span>
-//       </div>
-//       <div class="col-2">
-//         <button class="btn btn-danger btn-sm my-2" style="border-radius: 10%; ">Del</button>
-//       </div>
-
-//     </div>
-//   </li>
-//   `;
-
-//   //^^^^^^^^^//
-//   document.querySelector("#link-base").innerHTML += text;
-// }
-
-
-
-
-
-// // ADD link
-// form.addEventListener('submit', e => {
-//   e.preventDefault();
-//   input.value
-//   const now = new Date();
-//   const link = {
-//     name: form.link_name.value,
-//     url: form.link_url.value,
-//     date: firebase.firestore.Timestamp.fromDate(now)
-//   }
-
-
-//   db.collection('links').add(link).then(()=>{
-//     console.log('link added')
-//   })
-
-
-// })
-
-// // DELETE link
-// list.addEventListener('click', e=>{
-//   console.log(e.target.parentElement.parentElement.parentElement)
-//   if(e.target.tagName === 'BUTTON'){
-//     const id = e.target.parentElement.parentElement.parentElement.getAttribute('data-id');
-//     db.collection('links').doc(id).delete().then(()=>{
-//       console.log("deleted")
-//     });
-//   }
-//   // console.log(e.target.tagName)
-// })
-
-
-
-
-
-
-
-
-// //ASYNC
-// // on page start add links from firebase
-// db.collection('links').get().then((snap)=>{
-//   snap.docs.forEach((onedoc)=>{
-//     buildLinks(onedoc.data(), onedoc.id);
-//   })
-
-// }).catch(err => {console.log(err)})
+  global.$dc = dc;
+  })(window);
 
 /***/ })
 /******/ ]);

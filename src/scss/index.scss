@@ -26,9 +26,9 @@ html{
 
 
 // BOOT
-@import './scssboot/bootstrap-grid.scss';
-@import './scssboot/bootstrap-reboot.scss';
-@import './scssboot/bootstrap.scss';
+@import '../mods/scssboot/bootstrap.scss';
+@import '../mods/scssboot/bootstrap-reboot.scss';
+@import '../mods/scssboot/bootstrap-grid.scss';
 
 // INDEX OUTLINE 
 
@@ -76,19 +76,19 @@ html{
 
 
 
-// //anti - bootstrap
-// ul{
-//     padding-inline-start: 1rem;
-  
-//   }
+//anti - bootstrap
+ul,ol{
+    padding-inline-start: 1.5rem;
+  }
+// li{line-height: 1.25rem;}
 // p{margin-bottom: .5rem;}
 
-// ol{
-//     li::marker{
-//         font-size: 16px;
-//         font-weight: bold;
-//       }
-//     }
+ol,ul{
+    li::marker{
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
 
 
 

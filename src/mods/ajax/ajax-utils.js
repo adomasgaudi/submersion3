@@ -22,7 +22,7 @@
   function handleResponse(request,responseHandler,isJsonResponse) {
     if ((request.readyState == 4) && (request.status == 200)) {
           
-      isJsonResponse == undefinded ? (isJsonResponse = true) : null;
+      (isJsonResponse == "undefinded") ? (isJsonResponse = true) : null;
 
       isJsonResponse 
       ? responseHandler(JSON.parse(request.responseText)) 

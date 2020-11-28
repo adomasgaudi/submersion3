@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="./chat.css")
+    title Document
+  body
+    .container
+      h1 chat
+      .chat_bar hello chat
+      .chat_con
+        h2 chat room 1
+        ul
+          li hello
+          li hello
+          li hello
+          li hello
+          li hello
+          li hello
+          li hello
+          li hello
+        h3 input
+        input(type="text")
+        button send
+      include ../firebase/init-fire.pug  
+      script(src="./chat-dist.js") 

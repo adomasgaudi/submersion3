@@ -1,13 +1,74 @@
 
-section{ 
 
-  
+  .title {
+    @extend .col-12; 
+    text-align: center;
+    background: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(189, 189, 189);
+    // border-radius: 1px;
+    color: black;
+  }
+  .card_out{
+    @extend .col-12;
+    padding: 0 1rem;
+    
+  }
+  .gLine{border-bottom: 5px solid rgb(0, 204, 153);} 
+  .gtitle {
+    @extend .col-12, .gLine; 
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .linkBox{
+    background: rgb(255, 255, 255); 
+    // border-radius: 10px;
+    padding: 0 1rem ;
+    margin: .5rem 0;
+    @media (min-width: 768px) {
+       padding-left: 0;
+    }
+  }
 
-  
+  ////////////////////////////////////////
+  ////////////////////////////////////////
+  .resources{
+    @extend .container;
+    height: none;
+    background: white;
+    // position: sticky;
+    // top:0;
+    // z-index: 10000;
+
+    //link
+    a{ margin-bottom: 0px ; }        
+    transition: 1s;
+    // .title-res{
+    //   @extend  .h1, .sticky-top;
+    // } 
+     // }
+    // .isSticky{
+    //   a{
+    //     @extend .h4;
+    //     // padding-top: 0; 
+    //     // padding-bottom: 0;
+    //     transition: 1s;
+    //   } 
+    //   color: purple ;
+    //   // padding: 0;
+    //   transition: 1s;
+    //   // padding-top: calc(1em + 1px);
+    // }
+
+  }
+
+  ////////////////////////////////////////
+  ////////////////////////////////////////
   main{
     @extend .col-lg-8, .col-md-8 ; 
-    
-
+    padding-right: 20px;
+    @media (min-width: 768px) {
+      padding-right: .25rem;
+    }
     .cardsrow{
       @extend .row;
 
@@ -22,9 +83,6 @@ section{
         
         
         
-        &:hover {
-          background: rgb(216, 216, 216);
-        }
         
         
         .card-conrow{
@@ -34,6 +92,9 @@ section{
           background: whitesmoke; 
           border-radius: 10px;
           padding: .5rem;
+          &:hover {
+            background: rgb(216, 216, 216);
+          }
         }
 
       }
@@ -57,45 +118,36 @@ section{
     }
   }
   
-  // hr{padding: 0;}
-  .title {
-    @extend .col-12; 
-    text-align: center;
-    background: rgb(255, 255, 255);
-    border-bottom: 1px solid rgb(189, 189, 189);
-    // border-radius: 1px;
-    color: black;
-  }
-
-  .card_out{
-    @extend .col-12;
-    padding: 0 1rem;
-    
-  }
-
+  // //////////////////////////////////////
+  // //////////////////////////////////////
   aside{
-    @extend .col-lg-4, .col-md-4 ;  
-    .linkBox{
-      background: rgb(255, 255, 255); 
-      border-left: 5px solid rgb(92, 92, 92);
-      // border-radius: 10px;
-      padding: 0 1rem ;
-      margin: .5rem 0;
-      @media (min-width: 768px) {
-         padding-left: 0;
-      }
+    // .card_out{
+    //   @extend .col-12;
+    //   padding: 0 1rem;
+    // }
+    // .card_in{
+    //   @extend .col-12, .linkBox;
+    // }
+    ///////
+        
+    @extend .col-md-4;  
+    padding-left: 30px;
+    @media (min-width: 768px) {
+      padding-left: .25rem;
     }
 
-    .card_out{
-      @extend .col-12;
-      padding: 0 1rem;
+
+    .link_card_out{
+      border-left: 5px solid rgb(126, 126, 126);
+    }
+    .link_card_in{
+      @extend .col-12
     }
 
   }
 
-
-
-
+  ////////////////////////////////////////
+  ////////////////////////////////////////
   .container{
 
     @extend .px-1;
@@ -156,47 +208,3 @@ section{
 
 
   }
-  
-
-  .gLine{border-bottom: 5px solid rgb(0, 204, 153);} 
-  .gtitle {
-    @extend .col-12, .gLine; 
-    text-align: center;
-    margin-bottom: 3rem;
-  }
- 
-  
-  .resources{
-    @extend .container;
-    height: none;
-    background: white;
-    // position: sticky;
-    // top:0;
-    // z-index: 10000;
-
-    //link
-    a{ margin-bottom: 0px ; }        
-    transition: 1s;
-    // .title-res{
-    //   @extend  .h1, .sticky-top;
-    // } 
-  }
-          
-  // }
-  // .isSticky{
-  //   a{
-  //     @extend .h4;
-  //     // padding-top: 0; 
-  //     // padding-bottom: 0;
-  //     transition: 1s;
-  //   } 
-  //   color: purple ;
-  //   // padding: 0;
-  //   transition: 1s;
-  //   // padding-top: calc(1em + 1px);
-  // }
-
-  
- 
-
-}
