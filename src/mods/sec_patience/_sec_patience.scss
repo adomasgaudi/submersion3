@@ -1,0 +1,19 @@
+ //WARNING SIGN
+section{
+
+  &:last-of-type{ 
+   background:  rgb(0, 204, 153);
+   text-align: center;
+   padding: 20rem 0;
+   margin-top: 10rem;
+ 
+   .display-1{
+     font-size: 4rem;
+   }
+   @media (min-width: 768px){
+     .display-1{font-size: 6rem;}
+   }
+ 
+ }
+ 
+}

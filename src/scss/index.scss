@@ -1,53 +1,151 @@
 
-@import '../../scss/bootstrap.scss';
-@import '../../scss/bootstrap-reboot.scss';
-@import '../../scss/bootstrap-grid.scss';
-
-
 //RESET
 body {    min-height: 100vh;  }
-
-*{
-  outline-width: thin !important;
-  // outline: dotted !important;  
-  // color: blue !important;                     
-}
 
 html{
   width: 100% !important;
   scroll-behavior: smooth;
 }
-
-// For finished website
-// #devBtn{ display: none;}
-// .devMode{ display: none;} 
-
-
-
-
-
-
-//anti - bootstrap
-ul{
-  padding-inline-start: 1rem;
     
-}
-p{margin-bottom: .5rem;}
 
-ol{
-  li::marker{
-    font-size: 16px;
-    font-weight: bold;
-  }
-}
+
+
+
+    ///////////////////////////////////
+    ///////////////////////////////////
+    ///////////////////////////////////
+    ///////////////////////////////////
+    ///////////////////////////////////
+
+
+
+
+
+
+
+
+
+// BOOT
+@import './scssboot/bootstrap-grid.scss';
+@import './scssboot/bootstrap-reboot.scss';
+@import './scssboot/bootstrap.scss';
 
 // INDEX OUTLINE 
 
-@import "./parts/index_outline";
+
 
 
 // INDEX SEC
-@import "./parts/index_sec";
-// @import "../mod-res-title/re";
+@import "../mods/out_footer/out_footer";
+@import "../mods/out_header_jumbo/out_header_jumbo";
+@import "../mods/sec_one/sec_one";
+@import "../mods/sec_patience/sec_patience";
 
+
+// @import "../mods/zlearning/";
+// // @import "../mod-res-title/re";
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////
+//TESTING//
+*{
+  // outline: dotted !important;  
+  outline-width: thin !important;
+  // outline-color: blue !important;                     
+}
+
+// For finished website
+#devBtn{ display: none;}
+.devMode{ display: none;} 
+
+//////////////////////////////////////////////
+
+
+
+
+
+
+
+// //anti - bootstrap
+// ul{
+//     padding-inline-start: 1rem;
+  
+//   }
+// p{margin-bottom: .5rem;}
+
+// ol{
+//     li::marker{
+//         font-size: 16px;
+//         font-weight: bold;
+//       }
+//     }
+
+
+
+
+
+
+
+
+
+
+.body-wrap{
+  min-height: 100vh;
+  margin-bottom: 250px;
+}
+
+header{
+  background: rgb(0, 204, 153);
+  border-bottom: 1px solid #000;
+  nav{ 
+    .container{display: flex; align-items: center; span{margin: .2rem;} }}
+}
+
+.jumbotron.col1 { 
+  background: rgb(0, 204, 153);
+  border-bottom: 1px solid #000;
+}
+
+
+
+
+footer{
+  // @extend .container;
+  min-height: 50px;
+  background: rgb(32, 32, 32)  ;
+  color: white;
+  border-top: 1px solid rgb(0, 204, 153);
+  text-align: center;
+  padding-bottom: 1rem;
+
+  .row{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    text-align: center;
+  }
+
+
+
+  a{color: white; 
+    font-weight: bold; 
+    max-width: 100px;
+  }
+  img{height: 3rem; margin: .5rem; }
+  
+  @media(min-width: 768px ){
+    a{max-width: none;}
+    .row{text-align: right;}
+  }
+}
 

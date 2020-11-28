@@ -1,7 +1,7 @@
 // AJAX html INCLUDES from css tricks
 
 
-  const insertHtml = function(url, callback){
+  const fetchHtml = function(url, callback){
     fetch(url).then(response => {
       return response.text()
     })
@@ -9,79 +9,45 @@
   }
 /////////////////////////////////////////////////////
 
+// const insertHtml = function (callback)
 
 
 
 
 
 
+// import main htmls
 
-// import htmls from pugs
 
-  insertHtml("../../dist/includes/out_header_jumbo.html", (da)=>{
+  fetchHtml("../../dist/includes/out_header_jumbo.html", (da)=>{
     $('[refer="out_header_jumbo"]').replaceWith(da);
   }) 
+  console.log('hello');
   
-  insertHtml("../../dist/includes/sec_one.html", (da) =>{
+  
+
+  fetchHtml("../../dist/includes/sec_one.html", (da) =>{
     $('[refer="sec_one"]').replaceWith(da);
   }) 
-
-        insertHtml('../../dist/includes/aside.html', (da)=>{
-          $('[refer="aside"]').replaceWith(da);
-        })
-
-        insertHtml('../../dist/includes/main.html', (da)=>{
-          $('[refer="main"]').replaceWith(da);
-        })
+    import "../../src/mods/sec_one/sec-one.js";
+  // @pepros-append ../../src/mods/sec_one/sec-one.js
 
 
-
-
-
-
-
-
-  insertHtml("../../dist/includes/sec_patience.html", (da)=>{
+  fetchHtml("../../dist/includes/sec_patience.html", (da)=>{
     $('[refer="sec_patience"]').replaceWith(da);
   }) 
-  insertHtml("../../dist/includes/out_footer.html", (da)=>{
+
+  fetchHtml("../../dist/includes/out_footer.html", (da)=>{
     $('[refer="out_footer"]').replaceWith(da);
   }) 
-  insertHtml("../../dist/includes/out_scripts.html", (da)=>{
-    $('[refer="out_scripts"]').replaceWith(da);
-  }) 
- 
-
- 
-  // insertHtml("./include/footer.html", (da)=>{
-  //   $('footer').replaceWith(da);
-  // })
-
-
-  // insertHtml("./include/foot-scripts.html", (da)=>{
-  //   document.querySelector("body").innerHTML += da;
-  //   console.log('scripts were added ------------------')
-  // })
 
 
 
-  // insertHtml("./mod-res-title/re.html", (da)=>{
-  //   $('.resources-top').replaceWith(da);
-  //   $('.link').replaceWith(`<link rel="stylesheet", href="./mod-res-title/re.css">`);
-  // })
+// @prepros-append ./app.js
 
-
-
-
-
-
-// import './test.css';
-// import './init-ajax.js';
-// import '../digital_clock/date';
-
-// console.log("webpack")
-// $dom.runs("bubba hunnnnaa")
-  
+import './init-ajax.js';
+import './app.js';
+import './add-link.js';
 
 
 

@@ -1,0 +1,14 @@
+section:last-of-type {
+  background: #00cc99;
+  text-align: center;
+  padding: 20rem 0;
+  margin-top: 10rem;
+}
+section:last-of-type .display-1 {
+  font-size: 4rem;
+}
+@media (min-width: 768px) {
+  section:last-of-type .display-1 {
+    font-size: 6rem;
+  }
+}

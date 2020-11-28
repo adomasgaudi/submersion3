@@ -1,31 +1,24 @@
 
-// TEST
-// *{color: red}
-
-
-// @import "../../bootstrap-4.3.1/scss/bootstrap";
- 
-
-
-
-
 section{ 
 
   
 
   
   main{
-    @extend .col-lg-8, .col-md-6 ; 
+    @extend .col-lg-8, .col-md-8 ; 
     
 
     .cardsrow{
       @extend .row;
 
       .card-con{
+        @extend .col-12;
+
         color: black;
         text-decoration: none;
-        @extend .col-12, .px-1;
         margin: .5rem 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
         
         
         
@@ -60,33 +53,47 @@ section{
 
         p{margin-bottom: 0rem;}
 
-
-
       }
-
-
-    }
-
-
-
-  } 
-  aside{
-    @extend .col-lg-4, .col-md-6 ;  
-    .linkBox{
-      background: whitesmoke; 
-      border-radius: 10px;
-      padding: 1rem;
-      margin: .5rem 0;
     }
   }
-
+  
+  // hr{padding: 0;}
   .title {
-    @extend .col; 
-
+    @extend .col-12; 
     text-align: center;
+    background: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(189, 189, 189);
+    // border-radius: 1px;
+    color: black;
+  }
 
+  .card_out{
+    @extend .col-12;
+    padding: 0 1rem;
+    
+  }
+
+  aside{
+    @extend .col-lg-4, .col-md-4 ;  
+    .linkBox{
+      background: rgb(255, 255, 255); 
+      border-left: 5px solid rgb(92, 92, 92);
+      // border-radius: 10px;
+      padding: 0 1rem ;
+      margin: .5rem 0;
+      @media (min-width: 768px) {
+         padding-left: 0;
+      }
+    }
+
+    .card_out{
+      @extend .col-12;
+      padding: 0 1rem;
+    }
 
   }
+
+
 
 
   .container{
@@ -151,24 +158,30 @@ section{
   }
   
 
-  
+  .gLine{border-bottom: 5px solid rgb(0, 204, 153);} 
+  .gtitle {
+    @extend .col-12, .gLine; 
+    text-align: center;
+    margin-bottom: 3rem;
+  }
  
   
-  // .resources{
-  //   @extend .container;
-  //   height: none;
-  //   position: sticky;
-  //   top:0;
-  //   z-index: 10000;
-  //   background: white;
-  //   top: 0px;   
-  //   a{ margin-bottom: 0px ; }        
-  //   transition: 1s;
-  //   .title-res{
-  //     @extend  .h1, .sticky-top;
-  //   }
+  .resources{
+    @extend .container;
+    height: none;
+    background: white;
+    // position: sticky;
+    // top:0;
+    // z-index: 10000;
 
-  //   .gLine{border-bottom: 5px solid rgb(0, 204, 153);}       
+    //link
+    a{ margin-bottom: 0px ; }        
+    transition: 1s;
+    // .title-res{
+    //   @extend  .h1, .sticky-top;
+    // } 
+  }
+          
   // }
   // .isSticky{
   //   a{
@@ -184,71 +197,6 @@ section{
   // }
 
   
-
  
-
-
-
-
-
-  .container{
-
-    
-
-
-
-
-      // links
-      &:nth-of-type(1){
-        
-
-      }
-    
-
-      
-
-
-      
-  
-  }
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-  //WARNING SIGN
-
-  &:last-of-type{ 
-    background:  rgb(0, 204, 153);
-    text-align: center;
-    padding: 20rem 0;
-    margin-top: 10rem;
-
-    .display-1{
-      font-size: 4rem;
-    }
-    @media (min-width: 768px){
-      .display-1{font-size: 6rem;}
-    }
-
-
-
-
-
-
-  }
-
-
-
-
 
 }

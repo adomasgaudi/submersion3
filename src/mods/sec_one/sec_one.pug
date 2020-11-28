@@ -1,12 +1,13 @@
 section( refer="sec_one")
   .resources
-    h3 resources
+    .gtitle
+      h2.display-4 Resources
   .container
     .row.flex-sm-row-reverse
-      aside( refer="aside") aside 
+      include ./aside/aside.pug
       // aside - links --------------------------------------------
 
-      main( refer="main") main
+      include ./main/main.pug
       //main - cards ------------------------------------------------
                   
   //card-cont
