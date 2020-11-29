@@ -12,7 +12,7 @@
   var dc = {};
   
   dc.articleList = {}
-  dc.articleList.vids = "../../dist/includes/artc_vids.html";
+  dc.articleList.vids = "../../docs/includes/artc_vids.html";
   // console.log(dc.articleList['vids'])
   // dc.articleList.anki = "./include/vids.html";
   // console.log(dc.articleList.anki, dc.articleList[anki])
@@ -28,10 +28,9 @@
     $ajaxUtils.sendGetRequest(
       dc.articleList[article],
       function (receivedHtml) {
-        console.log(receivedHtml, "inserted HTML yay!!!!!!!!!")
+        // console.log(receivedHtml, "inserted HTML yay!!!!!!!!!")
         insertHtml("#article",receivedHtml);
-
-        sizeFix();
+        window.sizeFix();
       },
       false);
   }

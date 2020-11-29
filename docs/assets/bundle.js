@@ -86,99 +86,6 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _src_mods_sec_one_sec_one_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _src_mods_sec_one_sec_one_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_src_mods_sec_one_sec_one_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _src_mods_ajax_ajax_utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
-/* harmony import */ var _src_mods_ajax_ajax_utils__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_src_mods_ajax_ajax_utils__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _src_mods_ajax_iife__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
-/* harmony import */ var _src_mods_ajax_iife__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_src_mods_ajax_iife__WEBPACK_IMPORTED_MODULE_2__);
-///////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////// 
-
-// AJAX html INCLUDES from css tricks
-
-
-  const fetchHtml = function(url, callback){
-    fetch(url).then(response => {
-      return response.text()
-    })
-    .then(data => { callback(data) });
-  }
-/////////////////////////////////////////////////////
-
-
-
-
-
-
-
-//////////////////////////////////////
-// import main htmls
-
-  fetchHtml("../../dist/includes/out_header_jumbo.html", (da)=>{
-    $('[refer="out_header_jumbo"]').replaceWith(da);
-  }) 
-  console.log('hello');
-  
-  
-
-  fetchHtml("../../dist/includes/sec_one.html", (da) =>{
-    $('[refer="sec_one"]').replaceWith(da);
-  }) 
-
-
-
-  fetchHtml("../../dist/includes/sec_patience.html", (da)=>{
-    $('[refer="sec_patience"]').replaceWith(da);
-  }) 
-
-  fetchHtml("../../dist/includes/out_footer.html", (da)=>{
-    $('[refer="out_footer"]').replaceWith(da);
-  }) 
-//////////////////////////////////////
-
-
-// form mods
-
-
-
-// @pepros-append ../../src/mods/sec_one/sec-one.js
-// @pepros-append ./app.js
-
-  
-// import './init-ajax.js';
-// import './add-link.js';
-console.log('-------from init-all.js');
-
-
-
-
-
-
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-// import "./main/main.js";
-// import "./mod-vids/vids.js";
-// import "./mod-res-title/re.js"; 
-
-
-
-
-
-
-/***/ }),
-/* 2 */
 /***/ (function(module, exports) {
 
 
@@ -220,11 +127,6 @@ console.log('-------from init-all.js');
   global.$ajaxUtils = ajaxUtils;
   })(window);
 
-/***/ }),
-/* 3 */
-/***/ (function(module, exports) {
-
-
 
 // path is from /dist/assets/bundle.js
                   //     ./ == assets
@@ -238,7 +140,7 @@ console.log('-------from init-all.js');
   var dc = {};
   
   dc.articleList = {}
-  dc.articleList.vids = "../../dist/includes/artc_vids.html";
+  dc.articleList.vids = "../../docs/includes/artc_vids.html";
   // console.log(dc.articleList['vids'])
   // dc.articleList.anki = "./include/vids.html";
   // console.log(dc.articleList.anki, dc.articleList[anki])
@@ -254,10 +156,9 @@ console.log('-------from init-all.js');
     $ajaxUtils.sendGetRequest(
       dc.articleList[article],
       function (receivedHtml) {
-        console.log(receivedHtml, "inserted HTML yay!!!!!!!!!")
+        // console.log(receivedHtml, "inserted HTML yay!!!!!!!!!")
         insertHtml("#article",receivedHtml);
-
-        sizeFix();
+        window.sizeFix();
       },
       false);
   }
@@ -280,6 +181,183 @@ console.log('-------from init-all.js');
   
   global.$dc = dc;
   })(window);
+
+
+// path is from /dist/assets/bundle.js
+                  //     ./ == assets
+                  //     ../ == dist
+                  //     ../../ == submersion3
+
+
+// old import method
+
+(function (global) {
+  var dc = {};
+  
+  dc.articleList = {}
+  dc.articleList.vids = "../../docs/includes/artc_vids.html";
+  // console.log(dc.articleList['vids'])
+  // dc.articleList.anki = "./include/vids.html";
+  // console.log(dc.articleList.anki, dc.articleList[anki])
+
+  const insertHtml = (selector, html)=>{
+    let element = document.querySelector(selector);
+    element.innerHTML = html;
+  }
+
+  dc.getHtml = function (article) {
+    console.log(dc.articleList[article], 'is callled', $ajaxUtils)
+    // console.log(article, articleList[article]);
+    $ajaxUtils.sendGetRequest(
+      dc.articleList[article],
+      function (receivedHtml) {
+        // console.log(receivedHtml, "inserted HTML yay!!!!!!!!!")
+        insertHtml("#article",receivedHtml);
+        window.sizeFix();
+      },
+      false);
+  }
+
+
+
+  dc.devopen = function () {
+    document.querySelector("#devBtn").style.display = "inline";
+  }
+
+  dc.devTog = function () {
+    $(".devMode").css("display", "block")
+    $(".col1").css("background", "crimson")
+    $("section:last-of-type").css("background", "crimson")
+
+  }
+
+
+
+  
+  global.$dc = dc;
+  })(window);
+///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////// 
+
+// AJAX html INCLUDES from css tricks
+
+
+  const fetchHtml = function(url, callback){
+    fetch(url).then(response => {
+      return response.text()
+    })
+    .then(data => { callback(data) });
+  }
+/////////////////////////////////////////////////////
+
+
+
+
+
+
+
+//////////////////////////////////////
+// import main htmls
+
+  // fetchHtml("../../docs/includes/out_header_jumbo.html", (da)=>{
+  //   $('[refer="out_header_jumbo"]').replaceWith(da);
+  // }) 
+  // console.log('hello');
+  // fetchHtml("../../docs/includes/sec_one.html", (da) =>{
+  //   $('[refer="sec_one"]').replaceWith(da);
+  // }) 
+
+
+  // fetchHtml("../../docs/includes/sec_patience.html", (da)=>{
+  //   $('[refer="sec_patience"]').replaceWith(da);
+  // }) 
+
+  // fetchHtml("../../docs/includes/out_footer.html", (da)=>{
+  //   $('[refer="out_footer"]').replaceWith(da);
+  // }) 
+//////////////////////////////////////
+
+
+
+
+console.log('-------from init-all.js');
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////
+// section one
+/////////////////////////////////////////////////
+
+// console.log(document.querySelector('aside')) 
+// document.querySelector('.link_card_title').addEventListener('click',()=>{
+
+//   document.querySelector('.expand').classList.toggle('.expand_toggle');
+// })
+
+
+
+
+
+
+
+
+// (function (global) {
+//   var dc = {};
+
+
+window.sizeFix = function(){
+  let vidWidth = $('#article iframe').outerWidth();
+  let vidHeight;
+  console.log( vidWidth, vidHeight);
+  if(vidWidth > 500){
+    vidHeight = (vidWidth/16)*9; 
+    console.log("16:9", vidWidth, vidHeight);
+  }else{
+    vidHeight = (vidWidth/4)*3;
+    console.log("4:3");
+  }
+  document.querySelectorAll("#article iframe").forEach(e=>{
+    e.style.height = " "+ (vidHeight) + "px ";
+  });
+}
+
+
+
+window.addEventListener('resize', function(){
+  window.sizeFix()
+});
+
+
+
+
+  
+// global.$dc = dc;
+// })(window);
+
+
+
+// IMG FIX
+window.onload = () => {
+
+  let imgHeight = $('.cardsrow img').outerHeight();
+  document.querySelectorAll(".cardsrow img").forEach(e=>{
+    e.style.width = " "+ (imgHeight+24) + "px ";
+  });
+
+};
+
+console.log('main.js');
 
 /***/ })
 /******/ ]);

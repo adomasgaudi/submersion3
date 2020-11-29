@@ -1,7 +1,8 @@
  //WARNING SIGN
-section{
+section{ &:last-of-type{ 
 
-  &:last-of-type{ 
+
+
    background:  rgb(0, 204, 153);
    text-align: center;
    padding: 20rem 0;
@@ -13,7 +14,19 @@ section{
    @media (min-width: 768px){
      .display-1{font-size: 6rem;}
    }
+
+
+   .tasks{
+     text-align: left;
+   }
+
+
+
+
+
+
+
+
+
  
- }
- 
-}
+ }}

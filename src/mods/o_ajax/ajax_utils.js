@@ -35,4 +35,4 @@
     
 
   global.$ajaxUtils = ajaxUtils;
-  })(window);
+  })(window); 

@@ -576,7 +576,7 @@ pre code {
     max-width: 1140px;
   }
 }
-.row, .container article .iframerow, .resources article .iframerow, .container .articlerow, .resources .articlerow, main .cardsrow .card-con .card-conrow, main .cardsrow {
+.row, .container article .iframerow, .resources article .iframerow, .container .articlerow, .resources .articlerow, main .card-con .card-conrow {
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
@@ -587,7 +587,7 @@ pre code {
   margin-right: 0;
   margin-left: 0;
 }
-.no-gutters > .col, main .cardsrow .no-gutters > .description,
+.no-gutters > .col, main .no-gutters > .description,
 .no-gutters > [class*=col-] {
   padding-right: 0;
   padding-left: 0;
@@ -595,17 +595,17 @@ pre code {
 
 .col-xl,
 .col-xl-auto, .col-xl-12, .col-xl-11, .col-xl-10, .col-xl-9, .col-xl-8, .col-xl-7, .col-xl-6, .col-xl-5, .col-xl-4, .col-xl-3, .col-xl-2, .col-xl-1, .col-lg,
-.col-lg-auto, .col-lg-12, .col-lg-11, .col-lg-10, .col-lg-9, .col-lg-8, main, .col-lg-7, .col-lg-6, .col-lg-5, .col-lg-4, .col-lg-3, .col-lg-2, .col-lg-1, .col-md,
-.col-md-auto, .col-md-12, .col-md-11, .col-md-10, .col-md-9, .col-md-8, .col-md-7, .col-md-6, .col-md-5, .col-md-4, aside, .col-md-3, .col-md-2, .col-md-1, .col-sm,
-.col-sm-auto, .col-sm-12, .col-sm-11, .col-sm-10, .col-sm-9, .col-sm-8, .col-sm-7, .col-sm-6, .col-sm-5, .col-sm-4, .col-sm-3, .col-sm-2, .col-sm-1, .col, main .cardsrow .description,
-.col-auto, .col-12, .container article, .resources article, aside .link_card_in, main .cardsrow .card-con, .gtitle, .card_out, .title, .col-11, .col-10, .col-9, .col-8, .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col-1 {
+.col-lg-auto, .col-lg-12, .col-lg-11, .col-lg-10, .col-lg-9, .col-lg-8, main, .col-lg-7, .col-lg-6, .col-lg-5, .col-lg-4, aside, .col-lg-3, .col-lg-2, .col-lg-1, .col-md,
+.col-md-auto, .col-md-12, .col-md-11, .col-md-10, .col-md-9, .col-md-8, .col-md-7, .col-md-6, .col-md-5, .col-md-4, .col-md-3, .col-md-2, .col-md-1, .col-sm,
+.col-sm-auto, .col-sm-12, .col-sm-11, .col-sm-10, .col-sm-9, .col-sm-8, .col-sm-7, .col-sm-6, .col-sm-5, .col-sm-4, .col-sm-3, .col-sm-2, .col-sm-1, .col, main .description,
+.col-auto, .col-12, .container article, .resources article, aside .link_card_in, .gtitle, .card_out, .title, .col-11, .col-10, .col-9, .col-8, .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col-1 {
   position: relative;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
 }
 
-.col, main .cardsrow .description {
+.col, main .description {
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%;
@@ -702,7 +702,7 @@ pre code {
   max-width: 91.6666666667%;
 }
 
-.col-12, .container article, .resources article, aside .link_card_in, main .cardsrow .card-con, .gtitle, .card_out, .title {
+.col-12, .container article, .resources article, aside .link_card_in, .gtitle, .card_out, .title {
   flex: 0 0 100%;
   max-width: 100%;
 }
@@ -1080,12 +1080,12 @@ pre code {
     max-width: 25%;
   }
 
-  .col-md-4, aside {
+  .col-md-4 {
     flex: 0 0 33.3333333333%;
     max-width: 33.3333333333%;
   }
 
-  .col-md-5 {
+  .col-md-5, aside {
     flex: 0 0 41.6666666667%;
     max-width: 41.6666666667%;
   }
@@ -1095,12 +1095,12 @@ pre code {
     max-width: 50%;
   }
 
-  .col-md-7 {
+  .col-md-7, main {
     flex: 0 0 58.3333333333%;
     max-width: 58.3333333333%;
   }
 
-  .col-md-8, main {
+  .col-md-8 {
     flex: 0 0 66.6666666667%;
     max-width: 66.6666666667%;
   }
@@ -1291,7 +1291,7 @@ pre code {
     max-width: 25%;
   }
 
-  .col-lg-4 {
+  .col-lg-4, aside {
     flex: 0 0 33.3333333333%;
     max-width: 33.3333333333%;
   }
@@ -2108,7 +2108,7 @@ textarea.form-control {
   margin-right: -5px;
   margin-left: -5px;
 }
-.form-row > .col, main .cardsrow .form-row > .description,
+.form-row > .col, main .form-row > .description,
 .form-row > [class*=col-] {
   padding-right: 5px;
   padding-left: 5px;
@@ -10313,7 +10313,7 @@ html {
     max-width: 1140px;
   }
 }
-.row, .container article .iframerow, .resources article .iframerow, .container .articlerow, .resources .articlerow, main .cardsrow .card-con .card-conrow, main .cardsrow {
+.row, .container article .iframerow, .resources article .iframerow, .container .articlerow, .resources .articlerow, main .card-con .card-conrow {
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
@@ -10324,15 +10324,15 @@ html {
   margin-right: 0;
   margin-left: 0;
 }
-.no-gutters > .col, main .cardsrow .no-gutters > .description,
+.no-gutters > .col, main .no-gutters > .description,
 .no-gutters > [class*=col-] {
   padding-right: 0;
   padding-left: 0;
 }
 
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .container article, .resources article, aside .link_card_in, main .cardsrow .card-con, .gtitle, .card_out, .title, .col, main .cardsrow .description,
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .container article, .resources article, aside .link_card_in, .gtitle, .card_out, .title, .col, main .description,
 .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
-.col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, aside, .col-md-5, .col-md-6, .col-md-7, .col-md-8, main, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
+.col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, aside, .col-md-6, .col-md-7, main, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
 .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
 .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
 .col-xl-auto {
@@ -10342,7 +10342,7 @@ html {
   padding-left: 15px;
 }
 
-.col, main .cardsrow .description {
+.col, main .description {
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%;
@@ -10439,7 +10439,7 @@ html {
   max-width: 91.6666666667%;
 }
 
-.col-12, .container article, .resources article, aside .link_card_in, main .cardsrow .card-con, .gtitle, .card_out, .title {
+.col-12, .container article, .resources article, aside .link_card_in, .gtitle, .card_out, .title {
   flex: 0 0 100%;
   max-width: 100%;
 }
@@ -10817,12 +10817,12 @@ html {
     max-width: 25%;
   }
 
-  .col-md-4, aside {
+  .col-md-4 {
     flex: 0 0 33.3333333333%;
     max-width: 33.3333333333%;
   }
 
-  .col-md-5 {
+  .col-md-5, aside {
     flex: 0 0 41.6666666667%;
     max-width: 41.6666666667%;
   }
@@ -10832,12 +10832,12 @@ html {
     max-width: 50%;
   }
 
-  .col-md-7 {
+  .col-md-7, main {
     flex: 0 0 58.3333333333%;
     max-width: 58.3333333333%;
   }
 
-  .col-md-8, main {
+  .col-md-8 {
     flex: 0 0 66.6666666667%;
     max-width: 66.6666666667%;
   }
@@ -11028,7 +11028,7 @@ html {
     max-width: 25%;
   }
 
-  .col-lg-4 {
+  .col-lg-4, aside {
     flex: 0 0 33.3333333333%;
     max-width: 33.3333333333%;
   }
@@ -14517,30 +14517,31 @@ main {
     padding-right: 0.25rem;
   }
 }
-main .cardsrow .card-con {
+main .card-con {
+  display: block;
   color: black;
   text-decoration: none;
-  margin: 0.5rem 0;
+  margin-bottom: 0.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
-main .cardsrow .card-con .card-conrow {
+main .card-con .card-conrow {
   margin-right: 0;
   margin-left: 0;
   background: whitesmoke;
   border-radius: 10px;
   padding: 0.5rem;
 }
-main .cardsrow .card-con .card-conrow:hover {
+main .card-con .card-conrow:hover {
   background: #d8d8d8;
 }
-main .cardsrow img {
+main img {
   height: 75px;
   position: relative;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
 }
-main .cardsrow .description p {
+main .description p {
   margin-bottom: 0rem;
 }
 
@@ -14554,7 +14555,26 @@ aside {
 }
 aside .link_card_out {
   border-left: 5px solid #7e7e7e;
+  margin-bottom: 1rem;
 }
+aside .move_left, aside .link_card_title {
+  transform: translateX(-16px);
+  padding-left: 16px;
+}
+aside .link_card_title {
+  background: #7e7e7e;
+  color: white;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+aside .link_card_title:hover {
+  background: #5a5a5a;
+  transition: 0.1s;
+}
+aside .expand_toggle {
+  display: none;
+}
+
 .container .articlerow, .resources .articlerow {
   margin-right: 0;
   margin-left: 0;
@@ -14588,17 +14608,20 @@ section:last-of-type .display-1 {
     font-size: 6rem;
   }
 }
+section:last-of-type .tasks {
+  text-align: left;
+}
 
 * {
   outline-width: thin !important;
 }
 
 #devBtn {
-  display: none;
+  display: none !important;
 }
 
 .devMode {
-  display: none;
+  display: none !important;
 }
 
 ul, ol {
@@ -14640,7 +14663,7 @@ footer {
   text-align: center;
   padding-bottom: 1rem;
 }
-footer .row, footer main .cardsrow, main footer .cardsrow, footer main .cardsrow .card-con .card-conrow, main .cardsrow .card-con footer .card-conrow, footer .container .articlerow, .container footer .articlerow, footer .resources .articlerow, .resources footer .articlerow, footer .container article .iframerow, .container article footer .iframerow, footer .resources article .iframerow, .resources article footer .iframerow {
+footer .row, footer main .card-con .card-conrow, main .card-con footer .card-conrow, footer .container .articlerow, .container footer .articlerow, footer .resources .articlerow, .resources footer .articlerow, footer .container article .iframerow, .container article footer .iframerow, footer .resources article .iframerow, .resources article footer .iframerow {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14659,7 +14682,7 @@ footer img {
   footer a {
     max-width: none;
   }
-  footer .row, footer main .cardsrow, main footer .cardsrow, footer main .cardsrow .card-con .card-conrow, main .cardsrow .card-con footer .card-conrow, footer .container .articlerow, .container footer .articlerow, footer .resources .articlerow, .resources footer .articlerow, footer .container article .iframerow, .container article footer .iframerow, footer .resources article .iframerow, .resources article footer .iframerow {
+  footer .row, footer main .card-con .card-conrow, main .card-con footer .card-conrow, footer .container .articlerow, .container footer .articlerow, footer .resources .articlerow, .resources footer .articlerow, footer .container article .iframerow, .container article footer .iframerow, footer .resources article .iframerow, .resources article footer .iframerow {
     text-align: right;
   }
 }

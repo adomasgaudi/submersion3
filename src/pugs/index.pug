@@ -11,14 +11,11 @@ html(lang="en")
     
 
     .body-wrap
-        
-      header( refer="out_header_jumbo") 
+      include ../mods/out_header_jumbo/out_header_jumbo.pug
+      include ../mods/sec_one/sec_one.pug
+      include ../mods/sec_patience/sec_patience.pug
+    include ../mods/out_footer/out_footer.pug
       
-      section( refer="sec_one")
-      section( refer="sec_patience")
-
-    footer( refer="out_footer") 
-
     
      
     script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous")

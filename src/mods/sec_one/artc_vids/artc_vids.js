@@ -1,14 +1,16 @@
 
 
 
+// (function (global) {
+//   var dc = {};
 
 
-function sizeFix(){
+window.sizeFix = function(){
   let vidWidth = $('#article iframe').outerWidth();
   let vidHeight;
   console.log( vidWidth, vidHeight);
   if(vidWidth > 500){
-    vidHeight = (vidWidth/16)*9;
+    vidHeight = (vidWidth/16)*9; 
     console.log("16:9", vidWidth, vidHeight);
   }else{
     vidHeight = (vidWidth/4)*3;
@@ -22,8 +24,12 @@ function sizeFix(){
 
 
 window.addEventListener('resize', function(){
-  sizeFix()
+  window.sizeFix()
 });
 
 
 
+
+  
+// global.$dc = dc;
+// })(window);
